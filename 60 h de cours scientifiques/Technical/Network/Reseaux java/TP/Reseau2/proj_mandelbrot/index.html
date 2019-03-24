@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Mandelbrot</title>
+</head>
+<body>
+<!------------------------------------------------------------------------------
+Votre serveur doit modifier cette partie quand on recharge la page.
+L'image doit être celle calculée par votre serveur, l'url de l'image
+doit être mise à jour avec les valeurs demandées par l'utilisateur.
+Vous pouvez modifier la taille de l'image.
+
+-->
+<img id="img" src="mandelbrotset.png?Xmin=-2&Ymin=-1&Xmax=1&Ymax=1&Iteration=50"
+     width="600" height="400" style="border: 1px solid #000;">
+  </img>
+<!--
+
+
+Vous n'avez pas besoin de comprendre le reste de la page.
+Vous pouvez le modifier si vous le souhaitez.
+  
+ -------------------------------------------------------------------------------> 
+  <form method="get">
+    Xmin: <input type="text" name="Xmin" id="Xmin">, Ymin: <input type="text" name="Ymin" id="Ymin"><br>
+    Xmax: <input type="text" name="Xmax" id="Xmax">, Ymax: <input type="text" name="Ymax" id="Ymax"><br>
+    Iterations: <input type="text" name="Iteration" id="Iteration" value="50"><br>
+    <input type="submit" name="submit"> <input type="button" value="reset" onmousedown="resetZoom()">
+  </form>
+  
+  <div id="div" hidden style="border: 2px dotted #00F; position: absolute;" onmousedown="onmousedownimg(event)" ></div>
+
+
+  <script>
+    var QueryString = function () {
+    var query_string = {};
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++){
+		     var pair = vars[i].split("=");
+		     // If first entry with this name
+		     if (typeof query_string[pair[0]] === "undefined") {
+		     query_string[pair[0]] = decodeURIComponent(pair[1]);
+		     // If second entry with this name
+		     } else if (typeof query_string[pair[0]] === "string") {
+		     var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+		     query_string[pair[0]] = arr;
+		     // If third or later entry with this name
+		     } else {
+		     query_string[pair[0]].push(decodeURIComponent(pair[1]));
+		     }
+		     } 
+		     return query_string;
+		     }();
+
+   var xcmin= parseFloat(QueryString["Xmin"]);
+   var xcmax= parseFloat(QueryString["Xmax"]);
+   var ycmin= parseFloat(QueryString["Ymin"]);
+   var ycmax= parseFloat(QueryString["Ymax"]);
+   var nbiter = parseInt(QueryString["Iteration"]);
+		     
+   if(isNaN(xcmin)) xcmin=-2.0;
+   if(isNaN(xcmax)) xcmax=1.0;   
+   if(isNaN(ycmin)) ycmin=-1.0;
+   if(isNaN(ycmax)) ycmax=1.0;
+   if(isNaN(nbiter)) nbiter=50;		     
+   document.getElementById('Iteration').value=nbiter;	     
+		     
+    var img = document.getElementById('img');
+    var imgtop = img.getBoundingClientRect().top;
+		     var imgleft = img.getBoundingClientRect().left;
+		     
+    resetZoom = function(){
+		     document.getElementById('Xmin').value = "-2.0";
+		     document.getElementById('Xmax').value = "1.0";
+		     document.getElementById('Ymin').value = "-1.0";
+		     document.getElementById('Ymax').value = "1.0";
+		     change = false;
+		     div.hidden = 1;
+		     }
+    
+    double_of_pxW = function(x) {
+      return (xcmin + (xcmax-xcmin)*(x-imgleft) / (img.offsetWidth));
+    }
+
+    double_of_pxH = function(y) {
+      return (ycmin + (ycmax-ycmin)*(img.offsetHeight-(y-imgtop)) / (img.offsetHeight));
+    }
+    
+		     var div = document.getElementById('div');
+		     var x1 = imgleft
+		     var y1 = imgtop;
+		     var x2 = imgleft+img.offsetWidth;
+		     var y2 = imgtop + img.offsetHeight;
+    change = true;
+    function reCalc() { //This will restyle the div
+    if(change){
+		     var x3 = Math.min(x1,x2); //Smaller X
+		     x3 = Math.max(imgleft,x3);
+		     var x4 = Math.max(x1,x2); //Larger X
+		     x4 = Math.min(imgleft+img.offsetWidth,x4);
+		     var y3 = Math.min(y1,y2); //Smaller Y
+		     y3 = Math.max(imgtop,y3);
+		     var y4 = Math.max(y1,y2); //Larger Y
+		     y4 = Math.min(imgtop+img.offsetHeight,y4);
+    div.style.left = x3 + 'px';
+    div.style.top = y3 + 'px';
+    div.style.width = x4 - x3 + 'px';
+    div.style.height = y4 - y3 + 'px';
+    document.getElementById('Xmin').value = double_of_pxW(x3);
+    document.getElementById('Xmax').value = double_of_pxW(x4);
+    document.getElementById('Ymin').value = double_of_pxH(y4);
+    document.getElementById('Ymax').value = double_of_pxH(y3);
+     }
+    }
+    reCalc();
+    change=false;
+    onmousedownimg = function(e) {
+    
+    div.hidden = 0; //Unhide the div
+    x1 = e.clientX; //Set the initial X
+    y1 = e.clientY; //Set the initial Y
+    change=true;
+    reCalc();
+};
+onmousemove = function(e) {
+    x2 = e.clientX; //Update the current position X
+    y2 = e.clientY; //Update the current position Y
+    reCalc();
+};
+onmouseup = function(e) {
+//div.hidden = 1; //Hide the div
+change=false;
+    };
+
+    img.addEventListener("mousedown",onmousedownimg);
+  </script>
+  
+</body>
+</html>
+
+  
