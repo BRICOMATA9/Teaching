@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mypath=`realpath $0`
-directory=`dirname $mypath`
-filename=`basename $directory`
+mypath=`realpath "$0"`
+directory=`dirname "$mypath"`
+filename=`basename "$directory"`
 filename=Formation
 cd $directory
 
