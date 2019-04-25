@@ -6,7 +6,7 @@ filename=`basename "$directory"`
 cd "$directory"
 
 #git config --global user.email "githubfortyuds@gmail.com"
-#git remote add $filename https://BRICOMATA9@github.com/BRICOMATA9/$filename.git
+git remote set-url $filename https://BRICOMATA9@github.com/BRICOMATA9/$filename.git
 
 git add -v .
 git commit -m "commit"
