@@ -1,0 +1,25 @@
+@startuml
+ClientWeb --> ClientWeb : 
+ServeurHttp --> ComputingServer : new
+ServeurHttp --> ComputingServer : start()
+ClientWeb -> ServeurHttp : GET
+ServeurHttp --> HttpRequestManager : new Thread
+ServeurHttp --> HttpRequestManager : start()
+HttpRequestManager -> HttpRequestManager : read (url)
+HttpRequestManager -> FractalRequest : request(url)
+FractalRequest --> HttpRequestManager : fractalRequest
+HttpRequestManager -> ComputingServer : add(fractalRequest)
+ComputingServer --> HttpRequestManager : wait()
+ComputingServer -> Client : fractalRequest:serializable
+Client -> Client : getFractalPixels(fractalRequest)
+Client --> ComputingServer : Pixels:serializable
+ComputingServer -> ComputingServer : makeFractal()
+ComputingServer --> HttpRequestManager : notiftAll()
+HttpRequestManager -> ComputingServer : getImage(id)
+ComputingServer --> HttpRequestManager : bufferedImage
+HttpRequestManager -> HttpRequestManager : storeImage()
+HttpRequestManager -> HttpRequestManager : edit(index.html)
+HttpRequestManager --> ClientWeb : index.html
+ClientWeb -> HttpRequestManager : GET image
+HttpRequestManager --> ClientWeb : image
+@enduml

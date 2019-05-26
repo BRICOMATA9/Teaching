@@ -1,0 +1,21 @@
+package tp4;
+
+public class Thread1 implements Runnable {
+
+	@Override
+	public void run() {
+		while ( true ) {
+			//T1: section NC                              // j'execute des instructions 
+			Exercice2.D1 = true; 
+			turn = 2;                         // je demande le processeur                     // j'annule ma demande
+			while(!Exercice2.D2 || turn=1)                  // tanque c'est le tour de mon concurrent      
+				try{
+						Thread.sleep(10);                   // je dors
+				}catch(Exception e){}
+			}
+			System.out.println("Thread 1");               // 
+			Exercice2.turn = 2;                           // je libère le processeur
+			Exercice2.D1 = false;                         // j'annule ma demande
+		}
+	}
+}

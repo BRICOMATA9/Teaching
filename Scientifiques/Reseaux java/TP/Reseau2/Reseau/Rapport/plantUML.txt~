@@ -1,0 +1,21 @@
+ClientWeb --> ClientWeb : 
+ServeurHttp --> ComputingServer : new
+ServeurHttp --> ComputingServer : start()
+ClientWeb -> ServeurHttp : GET
+ServeurHttp --> HttpRequestManager : new Thread
+ServeurHttp --> HttpRequestManager : start()
+HttpRequestManager -> HttpRequestManager : read (url)
+HttpRequestManager -> FractalRequest : request(url)
+FractalRequest --> HttpRequestManager : fractal
+HttpRequestManager -> ComputingServer : add(fractal)
+ComputingServer --> HttpRequestManager : wait()
+ComputingServer -> Client : fractal:serializable
+Client -> Client : getFractalPixels(fractal)
+Client --> ComputingServer : Pixels:serializable
+ComputingServer --> HttpRequestManager : notiftAll()
+HttpRequestManager -> ComputingServer : getImage(id)
+ComputingServer --> HttpRequestManager : bufferedImage
+HttpRequestManager -> HttpRequestManager : storeImage()
+HttpRequestManager --> ClientWeb : index.html
+
+

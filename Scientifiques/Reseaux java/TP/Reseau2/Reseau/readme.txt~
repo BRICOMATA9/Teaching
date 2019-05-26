@@ -1,0 +1,20 @@
+# Réalisé par :
+#	DJOUDI Aghiles
+#	NAZANGA Koubadariwè
+
+
+Les jars se trouve dans le repertoire JAR/, le code source est dans le repertoire Projet/
+
+pour lancer le serveur executer la commande : 
+	java -jar Serveur.jar [port_serveur_de_web] [port_serveur_de_calcul]
+Exemple:
+	java -jar Serveur.jar 8080 9090
+
+pour lancer un client executer la commande : 
+	java -jar client.jar [adresse_serveur_de_calcul] [port_serveur_de_calcul] [nb_de_client]
+Exemple pour un client:
+	java -jar Client.jar 127.0.0.1 9090 
+Exemple pour 5 clients:
+	java -jar Client.jar 127.0.0.1 9090 5
+
+les fichiers .sh dans le dossier JAR/ permette d'executer aussi les jars
