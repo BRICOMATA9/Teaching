@@ -1,0 +1,73 @@
+/*==============================================
+    BASIC  STYLES    
+    =============================================*/
+.one_tabulation {
+    margin-left: 5em;
+}
+
+.two_tabulations {
+    margin-left: 10em;
+}
+
+.three_tabulations {
+    margin-left: 15em;
+}
+
+/*==============================================
+    SOURCE CODE STYLES    
+    =============================================*/
+.src_code {
+    background-color: whitesmoke; 
+    border: 1px solid rgb(204, 204, 204); 
+    font-size: 14px; 
+    margin: 15px; 
+    padding: 0px;
+
+}
+
+.comment {
+    color: grey; 
+    font-style: italic; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.keyword {
+    /*color: #993333; */
+    color: #66cc66;
+    margin: 0px; 
+    padding: 0px;
+}
+
+.number {
+    color: #cc66cc; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.function {
+    color: #b1b100; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.function_lib {
+    color: red; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+.string {
+    color: blue; 
+    margin: 0px; 
+    padding: 0px;
+}
+
+img.resize {
+  width:200px;
+  height:180px;
+}
+
+a:visited {
+    background-color: #FFCC66;
+}

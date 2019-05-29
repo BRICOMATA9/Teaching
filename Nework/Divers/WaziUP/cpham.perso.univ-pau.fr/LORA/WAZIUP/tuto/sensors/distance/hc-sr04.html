@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/distance/hc-sr04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:24:16 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HC-SR04 ultra sonic sensor</title>
+
+    <!-- BASIC STYLES-->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="../../assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+            <div class="header-right">
+               
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+       <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <center><img src="../../assets/img/uppalogo.jpg" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/waziuplogo.png" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/wazihublogo.png" class="img-thumbnail" width="75%" /></center>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../index-2.html"><i class="fa fa-home "></i>Home</a>
+                    </li>
+                    
+                    <li>
+                           <a class="#" href="../introduction_Arduino_IDE/intro_Arduino_IDE.html">Introduction to Arduino IDE</a>
+
+                   </li>                     
+                    
+                    <li>
+                        <a href="#">Measuring temperature <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../temperature/lm35.html">LM35 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../temperature/ds18b20.html">DS18B20 Sensor</a>
+                            </li>      
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="active-menu" href="#">Measuring distance <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a class="active-menu" href="#">HC_SR04 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="hrlv.html">HRLV-MAXSONAR-EZ</a>
+                            </li>
+                         </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring humidity <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../humidity/808h5v5.html">808H5V5 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../humidity/dht22.html">DHT22 Sensor</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/soil-humidity.html">Soil humidity Sensor</a>
+                            </li> 
+                            <li>
+                                <a  href="../humidity/SHT.html">SHT</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/water-sensor.html">Water level sensor</a>
+                            </li>     
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Detecting motion <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../motion/pir.html">PIR Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Light <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../light/photoresistor.html">Photoresistor Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Sound Level<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../sound/microphone.html">MIC Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                         <a href="../connecting_OLED/SHT_with_OLED.html">Connecting an OLED screen</a>
+                    </li>
+                    <li>
+                        <a href="#">Use Board with WiFi<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../board_with_WiFi/board_with_WiFi.html">ESP8286 and ESP32</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="../publish_using_MQTT/publish_using_MQTT.html">Publish using MQTT</a>
+                    </li>  
+                       
+                    
+                    <li>
+                        <a href="../GPS/gps.html">Using GPS</a>
+                    </li>
+                    
+                    <li>
+                         <a href="../connecting_OLED/SHT_with_OLED.html">Connecting an OLED screen</a>
+                    </li>
+                    <li>
+                        <a href="#">Use Board with WiFi<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../board_with_WiFi/board_with_WiFi.html">ESP8286 and ESP32</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="../publish_using_MQTT/publish_using_MQTT.html">Publish using MQTT</a>
+                    </li>  
+                                                         
+                    <li>
+                        <a href="#">LoRa devices <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                        <li>
+                                <a href="../lora_sensor/lora_sensor.html">Introduction to LoRa</a>
+                            </li>
+                            
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_demo.html">Arduino LoRa demo sensor</a>
+                            </li>  
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_simple_temp.html">Arduino LoRa simple temp</a>
+                            </li>     
+                        </ul>
+                    </li> 
+                                       
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">HC-SR04 ultra sonic sensor</h1>
+                        <h5 class="page-subhead-line"></h5>
+						
+                    </div>
+                </div>
+                
+               <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Overview</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-3 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/hc-sr04.jpg" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+                    
+                    <p>
+                    The HC-SR04 is a low-cost ultrasonic ranging sensor for measuring distance. The principle of ultrasonic sensor is similar to sonar or radar in which  interpretation 
+                    of echoes from radio or sound waves to evaluate the attributes of a target by generating the high-frequency-sound waves (around 40kHz). 
+                    The transducer used for converting energy into ultrasound or sound waves with ranges above human hearing range is called an ultrasonic 
+                    transducer. Each HC-SR04 module includes an ultrasonic transmitter, a receiver and a control circuit.
+                    
+					</p>
+					<p>
+                    Documentation for this sensor is available <a href="https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf">here</a>. If you want to understand the details of how an ultra-sonic sensor for measuring distance works, you can have a look at <a href="https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/">this page</a> from <tt>https://howtomechatronics.com</tt>.</p> 
+					<p>
+					There are only four pins that you need to worry about on the HC-SR04:</p>
+                    
+                    <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>HC-SR04 Sensor Pins</th>
+                                            <th>Description</th>   
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>VCC</td>
+                                            <td>Power Supply: 5V </td> 
+                                        </tr>
+                                        <tr>
+                                            <td>Trig</td>
+                                            <td>Trigger input of sensor: the Trig pin triggers sound</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Echo</td>
+                                            <td>Echo output of sensor: the echo pin returns the elapsed time during the reading of the reflected echo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GND</td>
+                                            <td>Ground: 0V</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                    
+                    </p> 
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     				
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Connecting to Arduino</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-5 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/hc-sr04-arduino.jpg" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+						
+                    </p> 
+                </section>
+                
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     			
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Code example </h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                <p>
+        
+                </p>
+                  
+<pre class="src_code">
+<span class="comment">/********************
+ *  Program:  HC-SR04 sensor tester
+ *  Description: print distance to serial
+ ********************/</span>
+
+<span class="function">#define</span> ECHO_PIN 6	
+<span class="function">#define</span> TRIG_PIN 7  
+
+<span class="keyword">void</span> <span class="function">setup</span>(){
+  <span class="function_lib">Serial.begin</span>(<span class="number">38400</span>); <span class="comment">// initialize the serial port</span>
+  <span class="function_lib">pinMode</span>(TRIG_PIN, <span class="keyword">OUTPUT</span>);
+  <span class="function_lib">digitalWrite</span>(TRIG_PIN, <span class="keyword">LOW</span>);
+  <span class="function_lib">pinMode</span>(ECHO_PIN, <span class="keyword">INTPUT</span>);
+}
+
+<span class="comment">// Define a new function that reads and converts the raw reading to distance (cm)</span>
+<span class="keyword">float</span> distance_centimetre() {
+  <span class="comment">// Send sound pulse</span>
+  <span class="function_lib">digitalWrite</span>(TRIG_PIN, <span class="keyword">HIGH</span>); // pulse started
+  <span class="function_lib">delayMicroseconds</span>(<span class="number">12</span>);
+  <span class="function_lib">digitalWrite</span>(TRIG_PIN, <span class="keyword">LOW</span>); // pulse stopped
+
+  <span class="comment">// listen for echo</span> 
+  float tUs = <span class="function_lib">pulseIn</span>(ECHO_PIN, <span class="keyword">HIGH</span>); // microseconds
+  float distance = tUs / 58; <span class="comment">// cm </span>
+  <span class="function">return</span> distance;
+}
+
+<span class="keyword">void</span> <span class="function">loop</span>(){
+  <span class="function_lib">Serial.print</span>(distance_centimetre(), <span class="keyword">DEC</span>);
+  <span class="function_lib">Serial.println</span>(<span class="string">"cm"</span>);
+  <span class="function_lib">delay</span>(<span class="number">1000</span>); <span class="comment">// ms </span>
+}
+</pre>     
+                </section>
+                			</div>
+                			<p>The raw source of the sketch example is visible <a href="../../assets/src/sketch/Arduino_hc-sr04_dist/Arduino_hc-sr04_dist.html">here</a>.</p>	  
+                		</div>
+                  </div>
+                </div>
+               <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>                
+               </div>   
+
+                 Enjoy!
+            </div>
+           
+        </div>
+        
+    </div>
+
+    <div id="footer-sec">
+        &copy; 2018 - Muhammad Ehsan, Mamour Diop & Congduc Pham
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../../assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../../assets/js/jquery.metisMenu.js"></script>
+       <!-- CUSTOM SCRIPTS -->
+    <script src="../../assets/js/custom.js"></script>
+
+
+</body>
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/distance/hc-sr04.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:24:20 GMT -->
+</html>

@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/lora_sensor/lora_sensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:27:49 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoRa sensor</title>
+
+    <!-- BASIC STYLES-->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="../../assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+            <div class="header-right">
+               
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+       <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <center><img src="../../assets/img/uppalogo.jpg" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/waziuplogo.png" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/wazihublogo.png" class="img-thumbnail" width="75%" /></center>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../index-2.html"><i class="fa fa-home"></i>Home</a>
+                    </li>
+                    
+                   <li>
+                           <a class="#" href="../introduction_Arduino_IDE/intro_Arduino_IDE.html">Introduction to Arduino IDE</a>
+
+                   </li> 
+                    
+                    
+                    <li>
+                        <a class="#" href="#">Measuring temperature <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../temperature/lm35.html">LM35 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../temperature/ds18b20.html">DS18B20 Sensor</a>
+                            </li>      
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring distance <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../distance/hc-sr04.html">HC_SR04 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../distance/hrlv.html">HRLV-MAXSONAR-EZ</a>
+                            </li>
+                         </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring humidity <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../humidity/808h5v5.html">808H5V5 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../humidity/dht22.html">DHT22 Sensor</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/soil-humidity.html">Soil humidity Sensor</a>
+                            </li> 
+                            <li>
+                                <a  href="../humidity/SHT.html">SHT</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/water-sensor.html">Water level sensor</a>
+                            </li>     
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Detecting motion <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../motion/pir.html">PIR Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Light <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../light/photoresistor.html">Photoresistor Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Sound Level<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../sound/microphone.html">MIC Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="../GPS/gps.html">Using GPS</a>
+                    </li>
+                    
+                    <li>
+                         <a href="../connecting_OLED/SHT_with_OLED.html">Connecting an OLED screen</a>
+                    </li>
+                    <li>
+                        <a href="#">Use Board with WiFi<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../board_with_WiFi/board_with_WiFi.html">ESP8286 and ESP32</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="../publish_using_MQTT/publish_using_MQTT.html">Publish using MQTT</a>
+                    </li>  
+                       
+                             
+                    <li>
+                        <a class="active-menu" href="#">LoRa devices <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                        	<li>
+                                <a class="active-menu" href="lora_sensor.html">Introduction to LoRa</a>
+                            </li>
+                            
+                            <li>
+                                <a  href="Arduino_lora_demo.html">Arduino LoRa demo sensor</a>
+                            </li>  
+                            <li>
+                                <a  href="Arduino_lora_simple_temp.html">Arduino LoRa simple temp</a>
+                            </li>     
+                        </ul>
+                    </li>                  
+                    
+                                            
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">LoRa sensor devices</h1>
+                        <h5 class="page-subhead-line"> </h5>
+						
+                    </div>
+                </div>
+                
+               <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h4>LoRa technology overview</h4>  
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>							      
+
+<p>Until recently, telco mobile communication infrastructure (e.g. GSM/GPRS, 3G/4G) were the only choice for long-range connectivity of remote devices. However, these technologies are expensive and definitely not energy efficient for autonomous devices that must run on battery for months. While short-range radio, such as IEEE 802.15.4 radio, can overcome their limited transmission range with multi-hop transmission, they can actually only be realized in the context of developed countries smart cities infrastructures, where high node density with powering facility can be achieved. They can hardly be considered in isolated or rural environments.</p>
+
+<img src="img/wireless-space.jpg" width="65%" class="img-responsive " alt="" />
+
+<p>Recent so-called Low-Power Wide Area Networks (LPWAN) such as those based on Sigfox or Semtech's LoRa technology definitely provide a better connectivity answer for IoT as several kilometers can be achieved without relay nodes to reach a central gateway or base station which is the single interface to Internet servers through cellular/ADSL/WiFi technologies depending on what is available locally. It is therefore a star topology similar to cellular networks. Most of long-range technologies can achieve 20km or higher range in LOS condition and about 2km in urban NLOS. 
+</p>
+
+<img src="img/start-topology.jpg" width="65%" class="img-responsive " alt="" />
+
+</br>                   		
+<p>
+LoRa belongs to the spread spectrum approaches where data can be "spreaded" in both frequencies and time to increase robustness and range by increasing the receiver's sensitivity, which can be as low as -137dBm in 868MHz band or -148dBm in the 433MHz band. Throughput and range depend on the 3 main LoRa parameters: BW, CR and SF. BW is the physical bandwidth for RF modulation (i.e. 125kHz, 250kHz or 500kHz). Larger signal bandwidth allows for higher effective data rate, thus reducing transmission time at the expense of reduced sensitivity. CR, the coding rate for forward error detection and correction. Finally SF, the spreading factor, which can be set from 6 to 12. The lower the SF, the higher the data rate transmission but the lower the immunity to interference thus the smaller is the range.
+</p>
+
+<p>LoRa is the physical layer. On top of LoRa, the networks can be managed in different ways. The LoRaAlliance defined the LoRaWAN specifications to manage large scale LoRa networks. More information on LoRaWAN are available on the <a href="https://lora-alliance.org/about-lorawan">LoRa Alliance pages</a>.</p>
+
+<p>In the context of the WAZIUP/WAZIHUB projects, we developed a low-cost LoRa framework to build both generic IoT devices that can be specialized for specific sensing applications and low-cost LoRa gateways. Our approach does not have all features of LoRaWAN but targets small/medium deployment scenarios and is designed to be more adapted to IoT deployment in rural and isolated areas. Efficient low-power management enables end-devices built from off-the-shelves components to run several years on regular AA batteries.
+</p>
+
+<img src="img/generic-iot.jpg" width="65%" class="img-responsive " alt="" />
+
+</br>
+<p>
+We have additional comprehensive tutorials on Internet-of-Thing (IoT) and LoRa technologies for the beginners.
+<ul>
+<li><a href="https://github.com/CongducPham/tutorials/blob/master/iot4all-intro-lr.pdf">Introduction on IoT ecosystem</a> [<a href="../../tuto-local-resources/iot4all-intro-lr.html">local link</a>]</li>
+<li><a href="https://github.com/CongducPham/tutorials/blob/master/LPWAN-review.pdf">Introduction on LPWAN and LoRa</a> [<a href="../../tuto-local-resources/LPWAN-review.html">local link</a>]</li>
+<li><a href="https://github.com/CongducPham/tutorials/blob/master/demo-slides.pdf">General overview on our low-cost LoRa framework</a> [<a href="../../tuto-local-resources/demo-slides.html">local link</a>]</li>
+</ul>
+</p>
+
+
+
+                    <p>There are also several resources and tutorials on our low-cost LoRa framework for more detailed informations</p>
+                    <ul>
+                    <li><a href="https://github.com/CongducPham/tutorials/blob/master/FAQ.pdf">FAQ on our low-cost LoRa framework</a> [<a href="../../tuto-local-resources/FAQ.html">local link</a>]</li>
+                    <li><a href="http://cpham.perso.univ-pau.fr/LORA/RPIgateway.html">Web page describing how to build our low-cost LoRa gateways</a></li>                    
+                    <li><a href="https://github.com/CongducPham/LowCostLoRaGw">GitHub repository with a complete LoRa solution developed as part of the WAZIUP/WAZIHUB project</a></li>
+                    <li><a href="https://github.com/CongducPham/LowCostLoRaGw#tutorial-materials">Links to various tutorials and videos on our low-cost LoRa framework</a></li>                                                           
+                    </ul>
+
+<p>Here are 2 embedded videos from our YouTube channel. The first one shows how to build an end-device with an Arduino ProMini and a LoRa module. The second one deals with the gateway part with a Raspberry PI. There are more videos available, they will be shown in the <a href="Arduino_lora_demo.html"><tt>Arduino LoRa demo sensor</tt></a> and <a href="Arduino_lora_simple_temp.html"><tt>Arduino LoRa simple temp</tt></a> sections.</p>
+
+<div class="ytcontainer">
+<iframe src="https://www.youtube.com/embed/YsKbJeeav_M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ytvideo"></iframe>
+</div>
+
+<div class="ytcontainer">
+<iframe src="https://www.youtube.com/embed/mj8ItKA14PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ytvideo"></iframe>
+</div>
+
+                </section>
+                			</div>
+                		</div>
+                  </div>
+                </div>              
+               </div>     				
+               <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>  
+               			   
+             Enjoy!  
+
+            </div>
+            
+        </div>
+
+    </div>
+	
+    <div id="footer-sec">
+        &copy; 2018 - Muhammad Ehsan, Mamour Diop & Congduc Pham
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../../assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../../assets/js/jquery.metisMenu.js"></script>
+       <!-- CUSTOM SCRIPTS -->
+    <script src="../../assets/js/custom.js"></script>
+    
+
+
+</body>
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/lora_sensor/lora_sensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:28:10 GMT -->
+</html>

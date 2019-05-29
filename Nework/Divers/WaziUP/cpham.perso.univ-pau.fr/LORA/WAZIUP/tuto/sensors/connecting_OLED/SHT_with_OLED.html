@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/connecting_OLED/SHT_with_OLED.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:25:40 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLED screen</title>
+
+    <!-- BASIC STYLES-->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="../../assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+            <div class="header-right">
+               
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <center><img src="../../assets/img/uppalogo.jpg" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/waziuplogo.png" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/wazihublogo.png" class="img-thumbnail" width="75%" /></center>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../index-2.html"><i class="fa fa-home "></i>Home</a>
+                    </li>
+                    
+                    <li>
+                           <a class="#" href="../introduction_Arduino_IDE/intro_Arduino_IDE.html">Introduction to Arduino IDE</a>
+
+                   </li>                     
+                    
+                    
+                    <li>
+                        <a href="#">Measuring temperature <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../temperature/lm35.html">LM35 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../temperature/ds18b20.html">DS18B20 Sensor</a>
+                            </li>      
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring distance <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../distance/hc-sr04.html">HC_SR04 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../distance/hrlv.html">HRLV-MAXSONAR-EZ</a>
+                            </li>
+                         </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring humidity <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../humidity/808h5v5.html">808H5V5 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../humidity/dht22.html">DHT22 Sensor</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/soil-humidity.html">Soil humidity Sensor</a>
+                            </li>  
+                            <li>
+                                <a href="../humidity/SHT.html">SHT</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/water-sensor.html">Water level sensor</a>
+                            </li>      
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Detecting motion <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../motion/pir.html">PIR Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Light <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../light/photoresistor.html">Photoresistor Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Sound Level<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../sound/microphone.html">MIC Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="../GPS/gps.html">Using GPS</a>
+                    </li>
+ 
+                    <li>
+                         <a class="active-menu" href="#">Connecting an OLED screen</a>
+                    </li>
+                    <li>
+                        <a href="#">Use Board with WiFi<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../board_with_WiFi/board_with_WiFi.html">ESP8286 and ESP32</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="../publish_using_MQTT/publish_using_MQTT.html">Publish using MQTT</a>
+                    </li>
+                                
+                    <li>
+                        <a href="#">LoRa devices <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                        <li>
+                                <a href="../lora_sensor/lora_sensor.html">Introduction to LoRa</a>
+                            </li>
+                            
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_demo.html">Arduino LoRa demo sensor</a>
+                            </li>  
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_simple_temp.html">Arduino LoRa simple temp</a>
+                            </li>     
+                        </ul>
+                    </li>
+                                      
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Connecting an OLED screen</h1>
+                        <h5 class="page-subhead-line"> </h5>
+						
+                    </div>
+                </div>
+                
+               <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Overview</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-3 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/OLED_screen.png" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+                    
+<p>For connecting a small OLED screen to an Arduino, we will take the example of SHT (Sensirion) sensor and adapt the program
+for connecting and displaying the result on the screen.
+
+                    </p> 
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     				
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Connecting to Arduino </h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+           
+                    	<div class="col-md-3 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/OLED_on_Arduino.png" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+                   		
+						<div class="col-md-4 ">
+						<div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>SHT Sensor Pins</th>
+                                            <th>Arduino Pins</th>   
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>VCC</td>
+                                            <td>5V or 3.3V</td> 
+                                        </tr>
+                                        <tr>
+                                            <td>GND</td>
+                                            <td>GND</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SDA</td>
+                                            <td>A4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SCL</td>
+                                            <td>A5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+						
+				    </p> 
+                </section>
+                
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     			
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Code example </h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+ 
+<pre class="src_code">
+<span class="function">#include</span> <span class="keyword">"Sensirion.h"</span>
+
+<span class="function">#define</span> SHTD_PIN 2
+<span class="function">#define</span> SHTC_PIN 3
+<span class="function">#define</span> SHT2x
+
+<span class="comment">//we can also power the SHT with a digital pin, here pin 6</span>
+<span class="function">#define</span> PIN_POWER 6
+
+<span class="function">#ifdef</span> SHT2x
+Sensirion sht = Sensirion(SHTD_PIN, SHTC_PIN, 0x40);
+<span class="function">#else</span>
+Sensirion sht = Sensirion(SHTD_PIN, SHTC_PIN);
+<span class="function">#endif</span>
+
+<span class="function">#define OLED</span>
+<span class="function">#ifdef</span> OLED
+<span class="comment">//you can also power the OLED screen with a digital pin, here pin 8</span>
+<span class="function">#define OLED_PWR_PIN 8</span>
+<span class="function">#include</span> &lt;U8x8lib.h&gt;
+<span class="comment">// connection may depend on the board. Use A5/A4 for most Arduino boards. 
+//On ESP8266-based board we use GPI05 and GPI04. Heltec ESP32 has embedded OLED.</span>
+<span class="function">#if</span> defined ARDUINO_Heltec_WIFI_LoRa_32 || defined ARDUINO_WIFI_LoRa_32 || defined HELTEC_LORA
+U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(<span class="comment">/* clock=*/</span> 15, <span class="comment">/* data=*/</span> 4, <span class="comment">/* reset=*/</span> 16);
+<span class="function">#elif</span> defined ESP8266 || defined ARDUINO_ESP8266_ESP01
+U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(<span class="comment">/* clock=*/</span> 12, <span class="comment">/* data=*/</span> 14, <span class="comment">/* reset=*/</span> U8X8_PIN_NONE);
+<span class="function">#else</span>
+U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(<span class="comment">/* clock=*/</span> A5, <span class="comment">/* data=*/</span> A4, <span class="comment">/* reset=*/</span> U8X8_PIN_NONE);
+<span class="function">#endif</span>
+<span class="keyword">char</span> oled_msg[20];
+<span class="function">#endif</span>
+
+<span class="keyword">float</span> h;
+<span class="keyword">float</span> t;
+<span class="keyword">int</span> ret;
+<span class="keyword">int</span> retry=0;
+    
+<span class="keyword">void</span> <span class="function">setup</span>() {
+
+  <span class="function_lib">delay</span>(3000);
+  <span class="function_lib">Serial.begin</span>(38400);
+  <span class="comment">//and to power the temperature sensor</span>
+  <span class="function_lib">pinMode</span>(PIN_POWER,<span class="keyword">OUTPUT</span>);
+    
+<span class="function">#ifdef</span> OLED_PWR_PIN
+  <span class="function_lib">pinMode</span>(OLED_PWR_PIN, <span class="keyword">OUTPUT</span>);
+  <span class="function_lib">digitalWrite</span>(OLED_PWR_PIN, <span class="keyword">HIGH</span>);
+<span class="function">#endif</span>
+
+<span class="function">#ifdef</span> OLED
+  u8x8.<span class="function_lib">begin</span>();
+  u8x8.setFont(u8x8_font_chroma48medium8_r);
+  u8x8.drawString(0, 1, <span class="keyword">"Arduino SHT"</span>); 
+<span class="function">#endif</span>   
+}
+
+<span class="keyword">void</span> <span class="function">loop</span>() {
+
+    <span class="function_lib">digitalWrite</span>(PIN_POWER,<span class="keyword">HIGH</span>);
+    <span class="function_lib">delay</span>(1000);
+    
+    <span class="function">while</span> ( (ret != S_Meas_Rdy) ) {
+      ret=sht.measure(&t, &h);
+      retry++;
+      <span class="function_lib">Serial.print</span>(<span class="keyword">"["</span>);
+      <span class="function_lib">Serial.print</span>(ret);
+      <span class="function_lib">Serial.print</span>(<span class="keyword">":"</span>);
+      <span class="function_lib">Serial.print</span>(retry);
+      <span class="function_lib">Serial.print</span>(<span class="keyword">"] "</span>);      
+    }
+
+    <span class="function">if</span> (ret != S_Meas_Rdy) {
+    <span class="function_lib">Serial.println</span>(<span class="keyword">"Failed to read from SHT sensor!"</span>); 
+    
+<span class="function">#ifdef</span> OLED
+        u8x8.clearLine(4);
+        u8x8.clearLine(5);
+        u8x8.drawString(0, 4, <span class="keyword">"error SHT..."</span>);  
+<span class="function">#endif</span> 
+    }
+    <span class="function">else</span> {         
+        <span class="function_lib">Serial.print</span>(<span class="keyword">"Temperature: "</span>);
+        <span class="function_lib">Serial.print</span>(t);
+        <span class="function_lib">Serial.print</span>(<span class="keyword">" degrees Celcius Humidity: "</span>);
+        <span class="function_lib">Serial.print</span>(h);
+        <span class="function_lib">Serial.println</span>(<span class="keyword">"%"</span>); 
+
+<span class="function">#ifdef</span> OLED
+        <span class="keyword">String</span> tString=<span class="keyword">String</span>(t);
+        <span class="keyword">String</span> hString=<span class="keyword">String</span>(h);
+        u8x8.clearLine(4);
+        <span class="function_lib">sprintf</span>(oled_msg, <span class="keyword">"t=%s h=%s"</span>, tString.c_str(), hString.c_str()); 
+        u8x8.drawString(0, 4, oled_msg); 
+<span class="function">#endif</span>      
+    }
+    
+    <span class="function_lib">digitalWrite</span>(PIN_POWER,<span class="keyword">LOW</span>);
+    ret=0;
+    retry=0;
+    <span class="function_lib">delay</span>(5000);
+}    
+
+</pre>
+                </section>
+                			</div>
+                	     <p>The raw source of the sketch example is visible <a href="../../assets/src/sketch/Arduino_SHT/Arduino_SHT.html">here</a>.</p>
+                	     
+<p>It is possible to use other pins on the Arduino board for the SCL and SDA pins. For instance, as most of the small OLED screen from Chinese manufacturers have GND, VCC, SCL and SDA pins (from left to right) then it is convenient to use on the Arduino board (for instance the Arduino Nano or the Arduino ProMini) 4 consecutive pins such as GND, D2, D3 and D4 as illustrated in the figure below.</p>
+
+<p><img src="img/OLED_Nano.png" width="50%" /></p>
+
+<p>Here for instance, VCC is connected to digital pin 2 of the Arduino therefore OLED_PWR_PIN should be defined as:</p>
+
+<pre class="src_code">
+<span class="function">#define OLED_PWR_PIN 2</span>
+</pre>
+
+<p>Then change the definition of the screen object as follows:</p>
+
+<pre class="src_code">
+U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(<span class="comment">/* clock=*/</span> 3, <span class="comment">/* data=*/</span> 4, <span class="comment">/* reset=*/</span> U8X8_PIN_NONE);                 	     
+</pre>                	     	                  			
+                		</div>
+                  </div>
+                </div>
+               <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>                
+               </div>   
+     
+            Enjoy!
+        </div>
+        
+    </div>
+
+    <div id="footer-sec">
+        &copy; 2018 - Muhammad Ehsan, Mamour Diop & Congduc Pham
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../../assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../../assets/js/jquery.metisMenu.js"></script>
+       <!-- CUSTOM SCRIPTS -->
+    <script src="../../assets/js/custom.js"></script>
+
+</body>
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/connecting_OLED/SHT_with_OLED.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:26:28 GMT -->
+</html>

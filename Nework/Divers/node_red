@@ -1,0 +1,5 @@
+#!/bin/sh
+
+firefox http://localhost:1880
+node-red
+

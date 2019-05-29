@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/distance/hrlv.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:24:20 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HRLV-MaxSonar-EZ sensor</title>
+
+    <!-- BASIC STYLES-->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="../../assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+            <div class="header-right">
+               
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+       <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <div class="user-img-div">
+                            <center><img src="../../assets/img/uppalogo.jpg" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/waziuplogo.png" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/wazihublogo.png" class="img-thumbnail" width="75%" /></center>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../index-2.html"><i class="fa fa-home "></i>Home</a>
+                    </li>
+                    
+                    <li>
+                           <a class="#" href="../introduction_Arduino_IDE/intro_Arduino_IDE.html">Introduction to Arduino IDE</a>
+
+                   </li>                     
+                    
+                    
+                    <li>
+                        <a href="#">Measuring temperature <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../temperature/lm35.html">LM35 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../temperature/ds18b20.html">DS18B20 Sensor</a>
+                            </li>      
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="active-menu" href="#">Measuring distance <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="hc-sr04.html">HC_SR04 Sensor</a>
+                            </li>
+                            <li>
+                                <a class="active-menu" href="#">HRLV-MAXSONAR-EZ</a>
+                            </li>
+                         </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring humidity <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../humidity/808h5v5.html">808H5V5 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../humidity/dht22.html">DHT22 Sensor</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/soil-humidity.html">Soil humidity Sensor</a>
+                            </li>  
+                            <li>
+                                <a  href="../humidity/SHT.html">SHT</a>
+                            </li> 
+                            <li>
+                                <a href="../humidity/water-sensor.html">Water level sensor</a>
+                            </li>    
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Detecting motion <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../motion/pir.html">PIR Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Light <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../light/photoresistor.html">Photoresistor Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Sound Level<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../sound/microphone.html">MIC Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="../GPS/gps.html">Using GPS</a>
+                    </li>
+                    
+                    
+                    <li>
+                         <a href="../connecting_OLED/SHT_with_OLED.html">Connecting an OLED screen</a>
+                    </li>
+                    <li>
+                        <a href="#">Use Board with WiFi<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../board_with_WiFi/board_with_WiFi.html">ESP8286 and ESP32</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="../publish_using_MQTT/publish_using_MQTT.html">Publish using MQTT</a>
+                    </li>  
+                                  
+                    <li>
+                        <a href="#">LoRa devices <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                        <li>
+                                <a href="../lora_sensor/lora_sensor.html">Introduction to LoRa</a>
+                            </li>
+                            
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_demo.html">Arduino LoRa demo sensor</a>
+                            </li>  
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_simple_temp.html">Arduino LoRa simple temp</a>
+                            </li>     
+                        </ul>
+                    </li>                   
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">HRLV-MaxSonar-EZ sensor</h1>
+                        <h5 class="page-subhead-line"></h5>
+						
+                    </div>
+                </div>
+                
+               <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Overview</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-4 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/hrlv.jpg" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+                    
+                    <p>
+                    The high resolution HRLV‑MaxSonar‑EZ senors are high performance ultrasonic sensors with noise rejection, 
+                    improved automatic calibration, and factory calibrated beam patterns. The HRLV‑MaxSonar‑EZ sensors have 
+                    three outputs: Analog Voltage, Pulse Width, RS232 or TTL serial data.
+ 					</br></br>
+                    Documentation for this sensor is available <a href="http://www.maxbotix.com/documents/HRLV-MaxSonar-EZ_Datasheet.pdf">here</a>.
+
+                    </p> 
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     				
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Connecting to Arduino</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-5 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/hrlv-arduino.jpg" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+                   		<div class="col-md-4 ">
+						<div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>HRLV Sensor Pins</th>
+                                            <th>Arduino Pins</th>   
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>GND</td>
+                                            <td>GND</td> 
+                                        </tr>
+                                        <tr>
+                                            <td>AN</td>
+                                            <td>A0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>+5V</td>
+                                            <td>5V</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+						
+                    </p> 
+                </section>
+                
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     			
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Code example </h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                <p>
+                
+                </p>
+                  
+<pre class="src_code">
+<span class="comment">/********************
+* HRLV EZ Max sonar 
+* Reading analog voltage
+* http://www.maxbotix.com
+****************/</span>
+
+<span class="keyword">int</span> sonarPin = A0;
+<span class="keyword">float</span> mm = 0.0;
+
+<span class="keyword">void</span> <span class="function">setup</span>() {
+  <span class="function_lib">Serial.begin</span>(<span class="number">38400</span>);
+}
+
+<span class="keyword">void</span> <span class="function">loop</span>() {
+  mm = <span class="function_lib">analogRead</span>(sonarPin) * 5;
+  <span class="function_lib">Serial.print</span>(mm);
+  <span class="function_lib">Serial.println</span>(<span class="string">"mm"</span>);
+  <span class="function_lib">delay</span>(<span class="number">100</span>);
+}
+</pre>     
+                </section>
+                			</div>
+                	     <p>The raw source of the sketch example is visible <a href="../../assets/src/sketch/Arduino_hlvr_dist/Arduino_hlvr_dist.html">here</a>.</p>	                  			
+                		</div>
+                  </div>
+                </div>
+               <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>                
+               </div>   
+
+            Enjoy!
+        </div>
+        
+    </div>
+
+    <div id="footer-sec">
+        &copy; 2018 - Muhammad Ehsan, Mamour Diop & Congduc Pham
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../../assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../../assets/js/jquery.metisMenu.js"></script>
+       <!-- CUSTOM SCRIPTS -->
+    <script src="../../assets/js/custom.js"></script>
+
+
+</body>
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/distance/hrlv.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:24:29 GMT -->
+</html>

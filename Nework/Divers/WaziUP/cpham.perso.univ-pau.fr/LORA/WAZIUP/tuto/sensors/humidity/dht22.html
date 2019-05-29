@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/humidity/dht22.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:24:30 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DHT22 Sensor</title>
+
+    <!-- BASIC STYLES-->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES-->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="../../assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="../../assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="../../assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+
+            <div class="header-right">
+               
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+       <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                	<li>
+                        <div class="user-img-div">
+                            <center><img src="../../assets/img/uppalogo.jpg" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/waziuplogo.png" class="img-thumbnail" width="75%" /></center>
+                            <center><img src="../../assets/img/wazihublogo.png" class="img-thumbnail" width="75%" /></center>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="../../index-2.html"><i class="fa fa-home "></i>Home</a>
+                    </li>
+                    
+                    
+                    <li>
+                           <a class="#" href="../introduction_Arduino_IDE/intro_Arduino_IDE.html">Introduction to Arduino IDE</a>
+
+                   </li>                     
+                    
+                    <li>
+                        <a href="#">Measuring temperature <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../temperature/lm35.html">LM35 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../temperature/ds18b20.html">DS18B20 Sensor</a>
+                            </li>      
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring distance <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../distance/hc-sr04.html">HC_SR04 Sensor</a>
+                            </li>
+                            <li>
+                                <a href="../distance/hrlv.html">HRLV-MAXSONAR-EZ</a>
+                            </li>
+                         </ul>
+                    </li>
+                    
+                    <li>
+                        <a class="active-menu" href="#">Measuring humidity <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="808h5v5.html">808H5V5 Sensor</a>
+                            </li>
+                            <li>
+                                <a class="active-menu" href="#">DHT22 Sensor</a>
+                            </li> 
+                            <li>
+                                <a href="soil-humidity.html">Soil humidity Sensor</a>
+                            </li> 
+                            <li>
+                                <a  href="SHT.html">SHT</a>
+                            </li> 
+                            <li>
+                                <a href="water-sensor.html">Water level sensor</a>
+                            </li>                                
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Detecting motion <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../motion/pir.html">PIR Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Light <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../light/photoresistor.html">Photoresistor Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Measuring Sound Level<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../sound/microphone.html">MIC Sensor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="../GPS/gps.html">Using GPS</a>
+                    </li>
+                    
+                    <li>
+                         <a href="../connecting_OLED/SHT_with_OLED.html">Connecting an OLED screen</a>
+                    </li>
+                    <li>
+                        <a href="#">Use Board with WiFi<span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="../board_with_WiFi/board_with_WiFi.html">ESP8286 and ESP32</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li>
+                        <a href="../publish_using_MQTT/publish_using_MQTT.html">Publish using MQTT</a>
+                    </li>  
+                             
+                                               
+                    <li>
+                        <a href="#">LoRa devices <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                        <li>
+                                <a href="../lora_sensor/lora_sensor.html">Introduction to LoRa</a>
+                            </li>
+                            
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_demo.html">Arduino LoRa demo sensor</a>
+                            </li>  
+                            <li>
+                                <a  href="../lora_sensor/Arduino_lora_simple_temp.html">Arduino LoRa simple temp</a>
+                            </li>     
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+            </div>
+
+        </nav>
+        
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">DHT22 Temperature & Humidity Sensor</h1>
+                        <h5 class="page-subhead-line"> </h5>
+						
+                    </div>
+                </div>
+                
+               <!-- /. ROW  -->
+                <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Overview</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-3 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/DHT22-PinOut.png" class="img-responsive " alt="" />
+                   			</div>
+
+                   		</div>                                     			
+                    <h4>Arduino AM2302 (DHT22)</h4> 
+                    The DHT-22 is a low cost device for measuring humidity and temperature. The DHT sensors are made of two 
+                    parts, a capacitive humidity sensor and a thermistor. The device requires a 3 to 5V power supply. It 
+                    uses a single data wire to communicate back to the Arduino. It has a fairly slow update rate and should 
+                    only be sampled every 2 seconds.   </p> 
+                      <p> 
+                    In the second figure, you can see an AM2305 sensor. These sensors are compatible with DHT22 and have exactly the same code.
+                    </br> </br>
+                    Documentation for DHT22 (AM2302) humidity sensor is available <a href="http://static.cactus.io/docs/sensors/temp-humidity/dht22/dht22-datasheet.pdf">here</a>.
+
+                    </p> 
+
+                    	<div class="col-md-3 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/am2305.jpg" class="img-responsive" alt=""/>
+								<figcaption align="center">AM2305</figcaption>
+                   			</div>
+
+                   		</div>
+                  
+                 </section>                   
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div> 
+
+
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Connecting to Arduino</h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                    <p>
+                    	<div class="col-md-6 ">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/dht22-arduino2.jpg" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+                   		
+                   		<div class="col-md-5 ">
+						<div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>DHT22 Sensor Pins</th>
+                                            <th>Arduino Pins</th>   
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Pin 1</td>
+                                            <td>5V</td> 
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">Pin 2</td>
+                                            <td>10K resistor Arduino 5V</td>  
+                                        </tr>
+                                        <tr>
+                                            <td>Digital Pin 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pin 3</td>
+                                            <td>Not used</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pin 4</td>
+                                            <td>GND</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        </div>
+						
+					</br></br>
+                    <p style="clear: both;"> You can find the DHT22 (like the one shown in the figure below) on a small PCB which already has the resistor, in which case you don't need to connect the resistor.
+                    </p> 
+						
+						<div class="col-md-3">
+                   			<div class="portfolio-item awesome mix_all" data-cat="awesome" >
+                        		<img src="img/dht22-res.jpg" class="img-responsive " alt="" />
+                   			</div>
+                   		</div>
+		
+                </section>
+                
+                			</div>
+                		</div>
+                  </div>
+                </div>
+               </div>     			
+			   
+			   <!-- /. ROW  -->
+               <div class="row">
+                  <div class="col-md-12">                     
+         			<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4> Code example </h4>
+                        </div>
+                        <div class="panel-body">
+                             <div id="wizard">
+                <section>
+                <p>
+                To use a DHT sensor model, you need to include the <a href="https://github.com/adafruit/DHT-sensor-library">DHT</a> 
+                library. If you have the DHT11 sensor instead of the DHT22, comment <tt>DHTTYPE DHT22</tt> and uncomment <tt>DHTTYPE DHT11</tt> lines.
+                </p>
+                  
+<pre class="src_code">
+/********************
+ * Program:  DHT22 sensor tester
+ * Description: print humidity and temperature to serial
+ ********************/</span>
+ 
+<span class="function">#include</span> <<span class="function_lib">DHT</span>.h>
+
+<span class="comment">//Constants</span>
+<span class="keyword">#define</span> DHTPIN 2     <span class="comment">// what pin on the arduino is the DHT22 data line connected to</span>
+<span class="keyword">#define</span> DHTTYPE DHT22   <span class="comment">// DHT 22  (AM2302)</span>
+<span class="comment">//#define DHTTYPE DHT11</span>   <span class="comment">// DHT 11</span>
+<span class="function_lib">DHT</span> dht(DHTPIN, DHTTYPE); <span class="comment">// Initialize DHT sensor for normal 16mhz Arduino</span>
+
+<span class="keyword">void</span> <span class="function">setup</span>() { <span class="comment">// to run once</span>
+  <span class="function_lib">Serial.begin</span>(<span class="number">38400</span>); <span class="comment">// Initialize the serial port</span>
+  <span class="function_lib">Serial.println</span>(<span class="string">"DHT22 Humidity - Temperature Sensor"</span>);
+  <span class="function_lib">Serial.println</span>(<span class="string">"RH\t Temp (C)"</span>);
+  dht.begin();
+}
+
+<span class="keyword">void</span> <span class="function">loop</span>() {
+  <span class="comment">// Reading temperature or humidity takes about 250 milliseconds!</span>
+  <span class="comment">// Sensor readings may also be up to 2 seconds 'old' (its a very slow sensor)</span>
+  <span class="keyword">float</span> h = dht.readHumidity();
+  <span class="keyword">float</span> t = dht.readTemperature();
+  <span class="comment">// Check if any reads failed and exit early (to try again).</span>
+  <span class="function">if</span> (isnan(h) || isnan(t)) {
+    <span class="function_lib">Serial.println</span>(<span class="string">"Failed to read from DHT22 sensor!"</span>);
+    <span class="keyword">return</span>;
+  }
+
+  <span class="function_lib">Serial.print</span>(h); 
+  <span class="function_lib">Serial.print</span>(<span class="string">" %\t\t"</span>);
+  <span class="function_lib">Serial.print</span>(t); 
+  <span class="function_lib">Serial.print</span>(<span class="string">" °C"</span>);
+  <span class="comment">// Wait a few seconds between measurements. The DHT22 should not be read at a higher frequency of</span>
+  <span class="comment">// about once every 2 seconds. So we add a 3 second delay to cover this.</span>
+  <span class="function_lib">delay</span>(<span class="number">3000</span>);
+}  
+</pre>     
+                </section>
+                			</div>
+                	     <p>The raw source of the sketch example is visible <a href="../../assets/src/sketch/Arduino_dht22_hum/Arduino_dht22_hum.html">here</a>.</p>	                  			
+                		</div>
+                  </div>
+                </div>
+               <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>                
+               </div>   
+   
+            Enjoy!
+        </div>
+        
+    </div>
+
+    <div id="footer-sec">
+        &copy; 2018 - Muhammad Ehsan, Mamour Diop & Congduc Pham
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="../../assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="../../assets/js/jquery.metisMenu.js"></script>
+       <!-- CUSTOM SCRIPTS -->
+    <script src="../../assets/js/custom.js"></script>
+
+
+</body>
+
+<!-- Mirrored from cpham.perso.univ-pau.fr/LORA/WAZIUP/tuto/sensors/humidity/dht22.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Apr 2019 08:24:41 GMT -->
+</html>
