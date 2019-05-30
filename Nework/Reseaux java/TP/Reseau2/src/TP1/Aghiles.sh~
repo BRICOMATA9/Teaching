@@ -1,9 +1,0 @@
-cd ~/s8/Reseau/TP1
-
-javac -d bin -sourcepath src src/Server
-
-javac -d bin -sourcepath src src/Client
-
-java -cp bin Server
-
-java -cp bin Server
