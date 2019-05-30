@@ -1,3 +1,0 @@
-#!/bin/sh
-
-mosquitto_pub -h localhost -t house -m "{\"value1\":20,\"value2\":40}"

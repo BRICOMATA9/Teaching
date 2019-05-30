@@ -1,8 +1,0 @@
-pdfgrep -cri  heteroge | grep ':[1-9].$'
-pdfgrep --null -cri
-
---match-prefix-separator SEP
--p number of match per page
--n number of match
--A NUM
--B NUM
