@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -i  '1s/^/#!\/usr\/bin\/python\n/' *.py
+chmod -R u+x *
