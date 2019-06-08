@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+main()
+{
+      
+      char s1[]="adtrtaddadjhdad"; 
+      char *p="s";
+      p="k";
+      
+      
+      puts (s1);
+      printf("%s\n",s1);
+      puts (p);
+      printf("%c\n",*(*p));
+ scanf ("%c",p) 	;     
+}

@@ -1,0 +1,50 @@
+
+
+
+
+body{
+	margin:0;
+	padding: 0; 
+	position: relative;
+	background-image: url("categorie.jpg");
+}
+
+div#colonne1{
+	float: left;
+	width: 100px;
+	margin-left: 150px;
+	margin-right: 150px;
+	
+	
+	
+}
+
+#image{
+	border: thick double black;
+	height: 220;
+	width:220;
+}
+
+div#colonne2{
+	float: left;
+	width: 100px;
+	margin-right: 40px;
+	
+	
+}
+
+div#ligne1{
+	margin-top: 50px;
+	float: top;
+	width: 600px;
+	
+}
+
+div#ligne2{
+	margin-top: 50px;
+	float: bottom;
+	width: 600px;
+	margin-bottom: 50px;
+	
+}
+

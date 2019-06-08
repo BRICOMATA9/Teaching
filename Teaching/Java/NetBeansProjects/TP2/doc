@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javadoc -docletpath /home/aghiles/Aghiles/Teaching/Java/lib/umlgraph-5.6.jar -doclet org.umlgraph.doclet.UmlGraph -package -attributes -operations -types src/geometrie2/*.java
+dot -Tpng -ograph.png graph.dot

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build -sourcepath src src/employe/Employe.java
+java -cp build employe.Employe

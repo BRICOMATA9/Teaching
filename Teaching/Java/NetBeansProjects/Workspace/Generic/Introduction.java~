@@ -1,0 +1,34 @@
+import java.util.List; 
+import java.util.Arrays; 
+import java.util.Iterator;
+public class Introduction {
+
+public static void main(String[] args) {
+/*	List<Integer> ints = Arrays.asList(1,2,3);
+	int s = 0;
+	for (int n : ints) { 
+		s += n; 
+		System.out.println(s);
+	}
+	assert s == 6;
+	System.out.println(s);*/
+
+/*	List ints = Arrays.asList( new Integer[] {
+		new Integer(1), new Integer(2), new Integer(3)
+	});
+
+	int s = 0;
+	for (Iterator it = ints.iterator(); it.hasNext(); ) {
+		int n = ((Integer)it.next()).intValue();
+		s += n;
+		System.out.println(s);
+	}
+	assert s == 6;
+	System.out.println(s);*/
+
+	int[] ints = new int[] { 1,2,3 };
+	int s = 0;
+	for (int i = 0; i < ints.length; i++) { s += ints[i]; }
+	assert s == 6;
+}
+}

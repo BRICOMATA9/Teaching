@@ -1,0 +1,113 @@
+body {
+    background-color: #A9EAFE;
+    margin :0px;
+    padding: 0px;
+    width: 100%;
+    
+}
+
+.logo { 
+
+    background-color: #A9EAFE;    
+	color: #A9EAFE;
+     
+} 
+
+#header {
+	background-color: #A9EAFE;
+	color: #9683EC;
+	text-align: center;
+	padding: 5px;
+}
+
+#searchbar{
+	background-color: #A9EAFE;
+    position:relative;
+    width:1000px;
+    height:auto;
+    display:inline-block; 
+}
+
+#searchbar .text{
+    width:200px;
+    float:left;  
+    padding: 10px 0;
+    text-align: center;
+}
+
+#searchbar .champ{
+    width:600px;
+    height:35px;
+    float: left; 
+    margin-bottom: 15px; 
+}
+
+#searchbar .bouton{
+    padding: 12px 12px;
+    border:none;
+    float:left;
+    text-align: center;
+    background-color: #9683EC;
+    color: white;
+}
+
+.menu a { 
+	margin-left: 150px;
+}
+
+#section{
+	margin-top: 50px;
+	background-color: #9683EC;
+    color : white;
+	width:auto;
+	height: auto;
+	padding: 12px 12px;
+}
+
+.pub{
+	color:#000000;
+	float:left;
+}
+
+.ajoutimage{
+
+    color:white;
+    float:left;
+}
+
+.images
+{
+	display: inline;
+	margin: 10px;
+	padding: 40px;
+}
+
+.center{
+    display: center;
+    width : 200px;
+    height: 200px;
+}
+
+
+.informations{
+
+    text-align: right;
+
+}
+
+#toto{
+    color: #060606;
+}
+
+
+#section .ajoutphoto{
+
+    float :left;
+    width : 100px;
+    height: 75px;
+}
+
+#footer { 
+    font-size: 1em;           
+    font-style: italic; 
+} 

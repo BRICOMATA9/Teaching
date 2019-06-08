@@ -1,0 +1,27 @@
+public class Exo1 {
+	public class A {
+		void f (A a) { System.out.println("AA"); }
+		void f (C c) { System.out.println("AC"); }
+	}
+
+	public static class B extends A {
+		void f (B b) { System.out.println("BB"); }
+	}
+
+	public static class C extends B {
+		void f (A a) { System.out.println("CA"); }
+		void f (C c) { System.out.println("CC"); }
+	}
+
+	public static void main(String[] args) {
+		Exo1 exo = new Exo1();
+		exo.A aa = new exo.A();
+		B bb = new B();
+		A ac = new C();
+		A ab = new B();
+
+		aa.f(ac);
+		bb.f(ac);
+		ab.f(bb);
+	}
+}

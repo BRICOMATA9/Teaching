@@ -1,0 +1,33 @@
+header {
+ padding: 0px;
+ margin: 0px;
+ background: #f2f6e9;
+ padding-top: 3.5rem;
+ padding-bottom: 1rem;
+}
+/*--- navigation bar ---*/
+.navbar {
+ background:#db3a39;
+}
+.nav-link{
+ color: #fff;
+ cursor: pointer;
+}
+.navbar-brand {
+	color: #fff;
+	cursor: pointer;
+}
+.nav-link {
+	margin-right: 1em !important;
+}
+.nav-link:hover {
+ color: #000;
+}
+.navbar-collapse {
+ justify-content: flex-end;
+}
+
+footer
+{
+	text-align: center;
+}

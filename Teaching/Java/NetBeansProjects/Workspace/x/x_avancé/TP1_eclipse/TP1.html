@@ -1,0 +1,252 @@
+<html><head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+	margin:1em 0;
+        font-family: monospace;
+	background-color:#eee;
+	border:1px solid #ddd;
+	padding:5px;
+	line-height:1.5em;
+	color:#444;
+	overflow:auto;
+	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;border-radius:3px;
+}
+pre code {
+	padding:0;
+	background-color:#eee;
+	border:none;
+}
+code {
+        font-family: monospace;
+	background-color:#f8f8ff;
+	color:#444;
+	padding:0 .2em;
+	border:1px solid #dedede;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+html body {
+  background-color: #fdf6e3;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  color: #586e75;
+  background-color: #eee8d5;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}
+
+</style>
+ </head>
+ <body>
+<h1 id="tp-de-java-avanc-n1">TP de Java Avancé n°1</h1>
+
+<h2 id="exercice-1">Exercice 1</h2>
+
+<p>Écrire des méthodes paramétrées avec une signature la plus générale 
+possible qui effectue les actions suivantes. Aucune structure de donnée 
+n’est créée par les méthodes demandées ; tout est passé en paramètre.</p>
+
+<ul>
+  <li>Une méthode générique qui supprime toutes les elements en position paire dans une <code>List</code>.</li>
+  <li>Une méthode qui prend une <code>Collection</code> de <code>Collection</code>s et qui lui enlève toutes les <code>Collection</code>s vides.</li>
+  <li>Une méthode qui insère tous les éléments d’une <code>Collection</code> dans une <code>Map</code> avec la valeur égale à la clef</li>
+  <li>Une méthode qui ajoute dans une <code>Collection</code> tous les éléments des <code>Collection</code>s présentes dans une <code>Collection</code> de <code>Collection</code>s.</li>
+  <li>Une méthode qui prend une <code>Collection</code> d’éléments comparables entre eux (au sens de <code>Comparable</code>) et un élément <code>max</code> et en supprime de la <code>Collection</code> tous les éléments plus grand que <code>max</code>.</li>
+</ul>
+
+<h2 id="exercice-2">Exercice 2</h2>
+<ol>
+  <li>
+    <p>Écrire une méthode qui prend une <code>Map</code> <code>m</code> et qui renvoie son inverse : une <code>Map</code> où les clefs sont les valeurs de <code>m</code> et où un élément <code>x</code> sera associé à une <code>Collection</code> (<code>Set</code> ou <code>List</code>, il fait choisir la bonne) des clefs auxquelles la valeur <code>x</code> est associée.</p>
+
+    <p>Par exemple, si <code>m</code> contient les associations :</p>
+
+    <blockquote>
+      <p><code>1=&gt;A</code>, <code>2=&gt;B</code>, <code>10=&gt;A</code> et <code>22=&gt;Z</code></p>
+    </blockquote>
+
+    <p>La <code>Map</code> retournée contiendra alors :</p>
+
+    <blockquote>
+      <p><code>A=&gt;[1,10]</code>, <code>B=&gt;[2]</code>, <code>Z=&gt;[22]</code></p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Modifier votre code pour que la <code>Map</code> retournée soit une vue de <code>m</code> : toute modification sur la vue doit être rétroactive vers <code>m</code>. Par exemple, avec l’exemple de <code>m</code> ci-dessus, si <code>v</code>en est la vue inversée :</p>
+
+    <ul>
+      <li>Appeler <code>v.remove('A')</code> doit supprimer les associations <code>1=&gt;A</code> et <code>10=&gt;A</code> de <code>m</code></li>
+      <li>Appeler <code>v.get('A').remove(1)</code> doit supprimer l’association <code>1=&gt;A</code> de <code>m</code></li>
+    </ul>
+  </li>
+</ol>
+
+
+
+
+</body></html>

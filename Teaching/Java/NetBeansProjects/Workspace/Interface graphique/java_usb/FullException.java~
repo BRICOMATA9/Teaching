@@ -1,0 +1,9 @@
+@SuppressWarnings ("serial")
+public final class FullException extends RuntimeException
+{
+	public FullException (String msg)
+	{ 
+		JOptionPane.showMessageDialog (frame, "Stick is Full", "Error", JOptionPane.ERROR_MESSAGE);
+		super (msg);
+	}
+}

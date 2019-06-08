@@ -1,0 +1,22 @@
+
+
+//Pour encadré les articles
+
+<div class="col col-xs-12 col-sm-12 col-md-6 col-lg-6 categoryMosaic-thumb">
+
+    
+    <a class="categoryMosaic-link" href="https://www.fnac.com/Les-French-Days-Apple/Les-French-Days-Informatique/nsh485313/w-4#int=S:Les French Days |Home Géné|485313|NonApplicable|BL1|NonApplicable">
+        
+
+        <div class="categoryMosaic-imageWrap">
+            <img src="https://static.fnac-static.com/fr-FR/fch/01/img/6ba04980-ea20-4cd1-9bce-e38fdb6f7593.jpeg" class=" categoryMosaic-image js-image-loaded" alt="Apple MacBook Air 13,3' 128-Go">
+        </div>
+
+        <div class="categoryMosaic-title">
+            Apple MacBook Air 13,3' 128-Go
+        </div>
+
+        
+    </a>
+    
+</div>

@@ -1,0 +1,9 @@
+class ImplementsRunnable implements Runnable {
+
+  private int counter = 0;
+
+  public void run() {
+    counter++;
+    while(true) System.out.println("ImplementsRunnable : Counter : " + counter);
+  }
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE projects SYSTEM "projects.dtd">
+
+<projects>
+
+<!-- ===== IDA ===== ====================================================== -->
+
+<project dept="IDA" title="Sensornoder med minimotes (1)"
+  group="IT1-bg1" tutorname="Massimiliano Raciti" tutormail="Massimiliano.Raciti@liu.se">
+
+Trådlösa sensornät (en. wireless sensor networks) är numera ett stort
+fält inom forskning och utveckling med många kommande
+tillämpningsområden, tex övervakning av vulkanutbrott, smarta hem och
+andra större byggnader, och övervakning av olika naturfenomen. I detta
+projekt får ni utföra experiment med små sensorenheter som kan
+kommunicera mätningar till en datainsamlare (en mini laptop).
+
+Ni experimenterar med data om temperatur, luftfuktighet och ljus över
+en tidsperiod. Ni kommer även att studera hur den trådlösa
+radiokommunikationen påverkas av olika faktorer som avstånd, fysiska
+hinder, eller rörelser.
+ </project>
+
+<project dept="IDA" title="Sensornoder med minimotes (2)"
+  group="IT1-bg2" tutorname="Ekhiotz Jon Vergara Alonso" tutormail="ekhiotz.vergara@liu.se">
+
+Trådlösa sensornät (en. wireless sensor networks) är numera ett stort
+fält inom forskning och utveckling med många kommande
+tillämpningsområden, tex övervakning av vulkanutbrott, smarta hem och
+andra större byggnader, och övervakning av olika naturfenomen. I detta
+projekt får ni utföra experiment med små sensorenheter som kan
+kommunicera mätningar till en datainsamlare (en mini laptop).
+
+Ni experimenterar med data om temperatur, luftfuktighet och ljus över
+en tidsperiod. Ni kommer även att studera hur den trådlösa
+radiokommunikationen påverkas av olika faktorer som avstånd, fysiska
+hinder, eller rörelser. </project>
+
+<!-- ===== IMT ===== ====================================================== -->
+
+<project dept="IMT" title="Hur fungerar hjärna-dator-gränssnitt?"
+  group="IT1-bg3" tutorname="Håkan Örman" tutormail="hakan.orman@liu.se">
+Att med hjälp av datorer överföra tankar till handling genom att till
+exempel styra proteser skulle vara till stor hjälp för personer som av
+olika anledningar inte kan kontrollera sin muskelaktivitet. Forskning
+och utveckling har tagit oss en god bit på väg mot det som för inte så
+länge sedan var ren science fiction. Hur fungerar den här tekniken?
+Vad är förutsättningarna för att den ska fungera och vilka
+användningsområden finns? Projektet omfattar en teoretisk studie och
+praktiska tester med en enkel utrustning som tolkar tre typer av
+biopotentialer.
+</project>
+
+
+<!-- ===== ISY ========= ================================================ -->
+
+<project dept="ISY" title="Modellering av ett embryos utveckling"
+  group="IT1-bg4" tutorname="Robert Forchheimer" tutormail="robert.forchheimer@liu.se">
+De första celldelningarna när ett däggdjur bildas skapar en geometrisk
+konstellation av celler som alltid är densamma för varje exemplar i
+arten. En teori är att det är rätt enkla mekaniska egenskaper (tryck,
+vidhäftning) som styr detta. I vår forskargrupp har vi visat med 3D
+datorgrafik-modeller att teorin förefaller stämma åtminstone upp till
+6-8 celler. Projektet går ut på att se om man kan lägga till
+ytterligare enkla villkor för att få överensstämmelse när cellklumpen
+fortsätter att dela sig.
+</project>
+
+<project dept="ISY" title="Hur fungerar djupskattning från stereobilder?"
+  group="IT1-bg5" tutorname="Kristoffer Öfjäll" tutormail="kristoffer.ofjall@liu.se">
+Ett viktigt steg i det mänskliga synsinnet består i att skatta
+avståndet till det vi ser. Detta görs bland annat genom att analysera
+skillnader mellan informationen från de båda ögonen.  På samma sätt
+kan skillnader mellan bilder fotograferade från olika positioner
+användas för att automatiskt skapa en 3D-modell med hjälp av
+datorseendealgoritmer.  <br/><br/> I det här projektet studeras en
+enkel men kraftfull metod för att skatta djup från två
+fotografier. Deltagarna får stifta bekanskap med de matematiska
+verktyg som behövs för att lösa problemet, samt beräkningsmiljön
+MATLAB, som används i många kurser vid LiTH, och som är ett mycket
+användbart verktyg för att lösa beräkningsproblem inom de flesta
+ingenjörsområdena.
+</project>
+
+<!-- ===== TEMA ===== ===================================================== -->
+
+<project dept="TEMA" 
+  title="Vad är en medicinsk simulator?"
+  group="IT1-bg6" tutorname="Eva Törnqvist" tutormail="eva.tornqvist@liu.se">
+Medicinska simulatorer används idag ibland annat i undervisning för
+att rekonstruera en fysisk kropp, en patient, i en föreställd
+situation. Detta ger möjlighet för exempelvis läkarstudenter att öva
+på olika ingrepp och situationer som kan uppstå.  Syftet med projektet
+är att beskriva vad en medicinsk simulator är och förklara hur den
+används i den medicinska utvecklingen. Frågor som bör diskuteras och
+analyseras är: Vad är en medicinsk simulator? Hur fungerar en
+medicinsk simulator? Hur används en medicinsk simulator i den
+medicinska utvecklingen?
+</project>
+
+<project dept="TEMA" 
+  title="Hur fungerar IT och funktionshinder?" 
+  group="IT1-bg7" tutorname="Eva Törnqvist" tutormail="eva.tornqvist@liu.se">
+Tillgång till dator och Internet har ökat kraftigt i Sverige under de
+senaste åren och allt fler tjänster finnas att tillgå på Internet.
+Informationstekniken har blivit en allt viktigare resurs för individer och
+hushåll för att hantera olika vardagliga situationer men hur fungerar det
+för personer med funktionshinder? Man räknar med att 10-20 % av befolkningen
+i Europa har ett funktionshinder och i Sverige uppskattas antalet personer
+med funktionshinder till ca 1,3 miljoner. Bland målgrupperna är exempelvis
+personer med synskador, hörselskador och dövhet, tal- och
+kommunikationssvårigheter, rörelsehinder och kognitiva funktionshinder. Det
+här projektets syfte är undersöka i vilken utsträckning funktionshindrade
+har blivit delaktiga i IT-utvecklingen. Har IT till exempel skapat nya
+hinder eller suddat ut tidigare gränser?
+</project>
+
+</projects>

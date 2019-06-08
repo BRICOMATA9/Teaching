@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+	<html>
+
+		<head>
+			<title>ECEZONE</title>
+			<meta charset="utf-8"/>
+		    <link href="Accueil_bis.css" rel="stylesheet" type="text/css" />
+		</head>
+
+		<body>    
+
+			<h1 id="logo">
+
+				 <img src="logo.png" alt="ECEZONE" width="200" height="50"/> 
+
+			</h1> 
+
+			<div id="header">
+
+				<div id="searchbar">
+
+					<h3><span class="text">Un produit en tête ?</span></h3>
+
+					<form action="">
+						<input class="champ" type="text" placeholder="Recherche..."/>
+						<input class="bouton" type="button" value="Go" />
+					</form>
+
+				</div>
+
+				<!--https://openclassrooms.com/forum/sujet/barre-de-recherche-html-css
+					https://jsfiddle.net/stefde3/SVHyN/ -->
+
+				<div class="menu">
+
+					<select size="Categorie" onChange="location = this.options[this.selectedIndex].value;"> 
+
+						<option value="Accueil_bis.html">Categorie</option>
+						<option value="Livre.php" >Livres</option>
+						<option value="Musique.php" >Musique</option>
+						<option value="Vetement.php" >Vetement</option>
+						<option value="Sport.php" >Sports et Loisirs</option>
+
+					</select>
+
+					<br><br><br>
+
+					<a href="Accueil_Acheteur.html"><img src="accueil.png" alt="Accueil" width="100" height="25"/></a>
+					<a href="Panier.php"><img src="panier.png" alt="Panier" width="100" height="25"/></a>
+					<a href="Accueil_bis.html"><img src="deconnexion.png" alt="Deconnexion" width="150" height="25"/></a>
+					<a href="#"><img src="admin.png" alt="Admin" width="100" height="25"/></a>
+
+				</div>
+
+				<div id="section">
+
+					<h3 class="pub"> Bons plans </h3>
+
+					<img src="vente_flash.jpg" alt ="vente flash" class= "images" />
+					<br>
+					<img src="codepromo.png" alt ="Promotions" class= "images" />
+					<img src="Casquette.jpg" alt="Casquette" class= "images" />
+					<img src="Solidays.jpg" alt="Solidays" class= "images" />
+					<img src="promovelo.jpg" alt="Promo Velo" class= "images" />
+
+
+				</div>
+
+				<div id="footer">        
+					Copyright &copy; 2019 ECEZONE<br>       
+					<a href="mailto:ECEZONE@gmail.com">ECEZONE@gmail.com</a>      
+				</div> 
+
+				
+			</div>
+
+		</body>
+
+	</html>

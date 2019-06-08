@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/controleur/TestLaby.java
+java -cp build/classes controleur.TestLaby

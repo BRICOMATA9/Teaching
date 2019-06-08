@@ -1,0 +1,31 @@
+package IceCreamShopV1;
+
+/**
+ * Demonstration of the Factory pattern
+ */
+
+public class LetsEat {
+
+ private IceCreamFactory factory;
+ 
+ public LetsEat(IceCreamFactory factory) {
+  this.factory = factory;
+ }
+ 
+ public IceCream orderCone(String type) {
+  IceCream cone;
+  
+  cone = factory.getIceCream(type);
+  
+  cone.scoop();
+  
+  return cone;
+ }
+ 
+ public static void main(String[] args) {
+  IceCreamFactory factory = new IceCreamFactory();
+  IceCreamShopV1 shop = new LetsEat(factory);
+  
+  shop.orderCone("Chocolate");
+ }
+}

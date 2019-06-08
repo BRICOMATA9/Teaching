@@ -1,0 +1,30 @@
+en
+conf t
+
+int g0/0
+ip add 10.2.0.1 255.255.255.0
+no shut
+
+int s0/0/0
+enc fram
+no sh
+
+int s0/0/0.1
+int s0/0/0.1 point
+ip add 192.168.0.6 255.255.255.252
+no sh
+frame int 321
+
+int s0/0/0.2
+int s0/0/0.2 point
+ip add 192.168.0.14 255.255.255.252
+no sh
+frame int 322
+exit
+
+router ospf 1
+net 10.3.0.0 0.0.0.255 area 0
+net 192.168.0.4 0.0.0.3 area 0
+net 192.168.0.12 0.0.0.3 area 0
+passive g0/0
+

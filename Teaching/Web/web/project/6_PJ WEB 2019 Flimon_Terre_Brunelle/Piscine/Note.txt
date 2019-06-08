@@ -1,0 +1,5 @@
+Pour afficher ECE Amazone il faut lancer index.php
+
+Les identifiants git sont :
+zachary.flimon@edu.ece.fr
+azertyuiop^$1

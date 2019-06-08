@@ -1,0 +1,49 @@
+public class test2 extends test1{
+	public void m(){
+		System.out.println("test2 m");
+	}
+	
+	public void b(){
+		System.out.println("test2 k");
+	}
+	
+	public void nom(test2 k){
+	}
+	
+	public test2 (){
+		System.out.println("test2 est creer");
+	}
+	
+	public static void main(String[] args){
+	
+		test1 x=new test1(32);
+		test2 y=new test2();
+		test2 z=new test2();
+		y.nom(x);
+	
+		test2 S=new test2();
+		S.m();
+		S.k();
+		((test1)S).m();
+		((test1)S).k();
+		
+		test1 j=new test2();
+		j.m();
+		j.k();
+		((test2)j).m();
+		((test2)j).k();
+		
+		test1 l=new test2();
+		l.m();
+		l.k();
+		((test1)l).m();
+		((test1)l).k();
+		
+		//test2 b=new test1();
+		
+		//test1 h=new test1();
+		//((test2)h).m();
+		
+		
+	}	
+}

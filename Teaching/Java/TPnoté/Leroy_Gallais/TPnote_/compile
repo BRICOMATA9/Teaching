@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/tpnote_/TPnote_.java
+java -cp build/classes tpnote_.TPnote_

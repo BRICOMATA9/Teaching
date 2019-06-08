@@ -1,0 +1,28 @@
+#header
+{
+	height: 50px;
+	width: auto;
+}
+
+#contenu
+{
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+}
+
+h1{
+	text-align: center;
+}
+
+form{
+	margin-left: 20px;
+}
+body{
+	background-image: url("https://fotomelia.com/wp-content/uploads/edd/2015/11/banque-d-images-gratuites-libres-de-droits382-1560x1103.jpg");
+	background-size: cover;
+}
+
+#boutonadmin
+{
+	margin-left: 20px;
+}

@@ -1,0 +1,66 @@
+--- udp-talker.c    2014-04-12 10:37:00.000000000 +0200
++++ tcp-talker.c        2013-04-07 17:08:08.000000000 +0200
+@@ -19,8 +19,6 @@
+   int socketDescriptor, status;
+   unsigned int msgLength;
+   struct addrinfo hints, *servinfo;
+-  struct timeval timeVal;
+-  fd_set readSet;
+   char msg[MSG_ARRAY_SIZE], serverPort[PORT_ARRAY_SIZE];
+ 
+   puts("Entrez le nom du serveur ou son adresse IP : ");
+@@ -33,7 +31,7 @@
+ 
+   memset(&hints, 0, sizeof hints);
+   hints.ai_family = AF_INET;
+-  hints.ai_socktype = SOCK_DGRAM;
++  hints.ai_socktype = SOCK_STREAM;
+ 
+   if ((status = getaddrinfo(msg, serverPort, &hints, &servinfo)) != 0) {
+     fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(status));
+@@ -46,6 +44,15 @@
+     exit(EXIT_FAILURE);
+   }
+ 
++  if (connect(socketDescriptor, servinfo->ai_addr, servinfo->ai_addrlen) == -1) {
++    close(socketDescriptor);
++    perror("connect");
++    exit(EXIT_FAILURE);
++  }
++
++  // Libération de la mémoire occupée par les enregistrements
++  freeaddrinfo(servinfo);
++
+   puts("\nEntrez quelques caractères au clavier.");
+   puts("Le serveur les modifiera et les renverra.");
+   puts("Pour sortir, entrez une ligne avec le caractère '.' uniquement.");
+@@ -69,13 +76,6 @@
+         exit(EXIT_FAILURE);
+       }
+ 
+-      // Attente de la réponse pendant une seconde.
+-      FD_ZERO(&readSet);
+-      FD_SET(socketDescriptor, &readSet);
+-      timeVal.tv_sec = 1;
+-      timeVal.tv_usec = 0;
+-
+-      if (select(socketDescriptor+1, &readSet, NULL, NULL, &timeVal)) {
+         // Lecture de la ligne modifiée par le serveur.
+         memset(msg, 0, sizeof msg);  // Mise à zéro du tampon
+         if (recv(socketDescriptor, msg, sizeof msg, 0) == -1) {
+@@ -83,13 +83,10 @@
+           close(socketDescriptor);
+           exit(EXIT_FAILURE);
+         }
++    }
+ 
+         printf("Message traité : %s\n", msg);
+-      }
+-      else {
+-        puts("Pas de réponse dans la seconde.");
+-      }
+-    }
++
+     // Invite de commande pour l'utilisateur et lecture des caractères jusqu'à la
+     // limite MAX_MSG. Puis suppression du saut de ligne en mémoire tampon.
+     // Comme ci-dessus.

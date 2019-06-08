@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/tp_note_java_paiement/Tp_note_java_paiement.java
+java -cp build/classes tp_note_java_paiement.Tp_note_java_paiement

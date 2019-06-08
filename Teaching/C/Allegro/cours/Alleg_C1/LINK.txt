@@ -1,0 +1,19 @@
+/*********************************************/
+	LINK VERSION DYNAMIQUE :
+/*********************************************/
+
+dans menu : Project -> Build options... du projet
+sélectionner le volet "Linker settings" 
+puis ajouter (Add) dans "Link libraries:"
+
+alleg44.dll
+
+cliquer "OK"
+
+
+/*********************************************/
+	LINK VERSION STATIC
+/*********************************************/
+
+nécessite une mise à jour de ce tuto ...
+le link dynamique convient parfaitement à nos besoin

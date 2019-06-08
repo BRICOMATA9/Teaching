@@ -1,0 +1,3 @@
+#!/bin/sh
+
+jar cfe USB.jar SimulateurUSB *.class

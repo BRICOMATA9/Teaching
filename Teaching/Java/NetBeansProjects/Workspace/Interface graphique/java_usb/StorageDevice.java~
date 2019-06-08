@@ -1,0 +1,14 @@
+public interface StorageDevice
+{
+	public int getCapacity();
+
+	public int getUsed();
+	
+	public boolean isFull();
+	
+	public File remove (String name)  throws FileNotFoundException;
+		
+	public void addFile (File f) throws FullException;
+	
+	public File getFile (String name) throws FileNotFoundException;	
+}

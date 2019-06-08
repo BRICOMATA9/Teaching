@@ -1,0 +1,69 @@
+en
+conf t
+hostname East
+no ip domain-lookup
+enable secret class
+banner motd #Warning#
+service pass
+
+line vty 0 4
+pass class
+login
+exit
+
+line console 0
+exec-timeout 0 0
+pass cisco
+login
+loggin synchronous
+exit
+
+int s 0/0/0
+clock rate 128000
+ip add 192.168.100.21 255.255.255.252
+no sh
+
+int s 0/0/1
+ip add 192.168.100.30 255.255.255.252
+no sh
+
+int g0/0
+ip add 192.168.8.1 255.255.255.0
+no sh
+
+int g0/1
+ip add 192.168.9.1 255.255.255.0
+no sh
+exit
+
+router ospf 1
+net 192.168.8.0 0.0.0.255 area 1
+net 192.168.9.0 0.0.0.255 area 1
+net 192.168.100.20 0.0.0.3 area 0
+net 192.168.100.28 0.0.0.3 area 0
+passive-int g 0/0
+passive-int g 0/1
+router-id 1.1.1.1
+exit
+
+int s0/0/0
+band 128
+end
+
+clear ip ospf process#########################"
+
+conf t
+
+int s0/0/0
+ip ospf cost 7500
+ip ospf mess 1 md5 xyz_OSPF
+ip ospf authentication message-digest
+end
+
+copy run start###########################"
+reload###########################"
+
+
+
+
+

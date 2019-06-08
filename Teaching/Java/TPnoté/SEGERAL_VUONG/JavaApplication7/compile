@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/javaapplication7/JavaApplication7.java
+java -cp build/classes javaapplication7.JavaApplication7

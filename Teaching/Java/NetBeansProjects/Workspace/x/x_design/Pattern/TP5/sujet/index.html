@@ -1,0 +1,418 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>The Adapter &amp; Facade Patterns</title>
+</head>
+<body>
+<h3>CMPT 300 Design Patterns<br>
+May 2012</h3>
+<span style="font-weight: bold;">Lab 5 - The Adapter &amp; Facade
+Patterns
+</span><br>
+<br>
+<hr style="width: 100%; height: 2px;" size="2" width="40%">
+<div style="text-align: left;">
+<div style="text-align: left; margin-left: 40px;"><span
+ style="font-weight: bold;">&lt;&lt;</span> <a href="lab5.zip">lab5.zip</a><span
+ style="font-weight: bold;"> &gt;&gt;</span><br>
+</div>
+<span style="font-weight: bold;"></span></div>
+<span style="font-weight: bold;"><br>
+Adapter Pattern</span><br>
+<br>
+The <b>Adapter</b> pattern <i>"coverts the interface of a class into
+another
+interface that clients expect. The Adapter pattern allows classes work
+together that otherwise could not because of incompatible interfaces</i>."<br>
+<br>
+In UML, it appears as<br>
+<br>
+<img alt="Adapter Pattern" src="Adapter1.jpg"
+ style="width: 730px; height: 260px;"><br>
+<br>
+An Example<br>
+<br>
+- <a target="_blank" href="adapter/Target.java">Target.java</a><br>
+<br>
+- <a target="_blank" href="adapter/Adapter.java">Adapter.java</a><br>
+<br>
+- <a target="_blank" href="adapter/Adaptee.java">Adaptee.java</a><br>
+<br>
+- <a target="_blank" href="adapter/TestAdapter.java">TestAdapter.java</a><br>
+<br>
+<br>
+A More Interesting Example<br>
+<br>
+At first, a simple swing program:<br>
+<br>
+- <a href="adapter/PlanetClientNoAdapter.java" target="_blank">PlanetClientNoAdapter.java</a><br>
+<br>
+This program uses a <big><span style="font-family: monospace;">JFrame</span></big>
+which expects <big><span style="font-family: monospace;">JComponents</span></big>.<br>
+<br>
+Now, suppose you have the following <big><span
+ style="font-family: monospace;">Icon</span><br
+ style="font-family: monospace;">
+</big> <br>
+- <a target="_blank" href="adapter/PlanetIcon.java">PlanetIcon.java</a><br>
+<br>
+It draws planets.<br>
+<br>
+The client is a <big><span style="font-family: monospace;">JFrame</span></big>
+which expects
+<big><span style="font-family: monospace;">JComponents</span></big>,
+not <big><span style="font-family: monospace;">Icon</span></big>
+objects. <br>
+<br>
+We can adapt the <big><span style="font-family: monospace;">PlanetIcon</span></big>
+using
+the following adapter:<br>
+<br>
+- <a target="_blank" href="adapter/IconAdapter.java">IconAdapter.java</a><br>
+<br>
+It is important to note that an <big><span
+ style="font-family: monospace;">IconAdapter</span></big> IS-A <big><span
+ style="font-family: monospace;">JComponent</span></big>!<br>
+<br>
+The client using this adapter:<br>
+<br>
+- <a target="_blank" href="adapter/PlanetClient.java">PlanetClient.java</a><br>
+<br>
+In UML<br>
+<br>
+<img alt="Adapter Pattern" src="adapter2.jpg"
+ style="width: 730px; height: 260px;"><br>
+<hr style="width: 100%; height: 2px;" noshade="noshade" size="2"
+ width="40%"><br>
+<span style="font-weight: bold;">The Adapter Lab</span><br>
+<br>
+Way back in the days of Java 1.0, there was an <a target="_blank"
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html">Enumeration</a>
+interface.<br>
+<br>
+An example:<br>
+<br>
+- <a target="_blank" href="adapter/EnumerateTest.java">EnumerateTest.java</a><br>
+<br>
+Beginning with Java 1.2, using an <a target="_blank"
+ href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html">Iterator</a>
+was recommended over <a target="_blank"
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/Enumeration.html">Enumeration</a>.
+<br>
+<br>
+An iteration works as follows:<br>
+<br>
+- <a target="_blank" href="adapter/IterateTest.java">IterateTest.java</a><br>
+<br>
+However, old legacy code may still use an <big><span
+ style="font-family: monospace;">Enumeration</span></big> instead of an
+<big><span style="font-family: monospace;">Iterator</span></big>. <br>
+<br>
+Consider the the API for <big><span style="font-family: monospace;">OldStyleList</span></big>:<br>
+<br>
+<br>
+<table style="text-align: left; width: 952px; height: 116px;" border="1"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; background-color: rgb(153, 153, 255); font-weight: bold;">Method
+Signature<br>
+      </td>
+      <td
+ style="vertical-align: top; text-align: center; background-color: rgb(153, 153, 255); font-weight: bold;">What
+It Does<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: monospace;">public
+OldStyleList();</td>
+      <td style="vertical-align: top;">Creates an OldStyleList<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: monospace;">public
+boolean
+add(T e)</td>
+      <td style="vertical-align: top;">Adds Object e (parameterized
+type) to the list<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-family: monospace;">public
+Enumeration
+elements()</td>
+      <td style="vertical-align: top;">Returns an Enumeration of the
+elements
+in the list<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Now consider if client code wishes to use an <big><span
+ style="font-family: monospace;">Iterator</span></big> - not an <big><span
+ style="font-family: monospace;">Enumeration</span></big> - with <big><span
+ style="font-family: monospace;">OldStyleList</span></big>. It cannot
+as <big><span style="font-family: monospace;">OldStyleList</span></big>
+only provides an <big><span style="font-family: monospace;">Enumeration</span></big>.
+<br>
+<br>
+The solution -&gt; an <span style="font-weight: bold;">Adapter</span>!<br>
+<br>
+In UML, we wish to accomplish the following:<br>
+<br>
+<img alt="Adapter Pattern" src="adapter3.jpg"
+ style="width: 800px; height: 380px;"><br>
+<br>
+<big><b>Part I</b></big><br>
+<br>
+Write the <big><span style="font-family: monospace;">EnumerationAdapter</span></big>
+class
+so that a client can get an Iterator for an <big><span
+ style="font-family: monospace;">OldStyleList</span></big>. That is,
+adapt the <big><span style="font-family: monospace;">Enumerator</span></big>
+so that it acts as an <big><span style="font-family: monospace;">Iterator</span></big>.<br>
+<br>
+To test your adapter, modify <a target="_blank"
+ href="adapter/IterateTest.java">IterateTest.java</a> so that it
+works
+with an <big><span style="font-family: monospace;">OldStyleList</span></big>
+(instead of
+a <big><span style="font-family: monospace;">Vector</span></big>.) <br>
+<br>
+<br>
+<big><b>Part II</b></big><br>
+<br>
+OK, the <big><span style="font-family: monospace;">OldStyleList</span></big>
+class doesn't
+really exist in the API; we made it up for this exercise. However, the <a
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/ArrayList.html"
+ target="_blank"><span style="font-weight: bold;">ArrayList</span></a>
+class does exist and only provides an <span style="font-weight: bold;">Iterator</span>
+(via the<span style="font-weight: bold;"> </span><big><span
+ style="font-family: monospace;">iterator()</span></big> method it
+inherits
+from the <big><span style="font-family: monospace;">AbstractList</span></big>
+class.) Write an <big><span style="font-family: monospace;">IterationAdapter</span></big>
+that does
+just the opposite of what you completed in Part I. That is, it adapts
+an
+iterator to an enumeration. Write some test code that allows you to
+insert
+several items into an <big><span style="font-family: monospace;">ArrayList</span></big>
+and then perform an enumeration of these
+items.<br>
+<br>
+<hr style="width: 100%; height: 2px;"><br>
+<span style="font-weight: bold;"> The Facade Pattern</span><br>
+<br>
+The <span style="font-weight: bold;">Facade</span> pattern addresses
+the need where we need to simplify the interface to an existing system.<br>
+<br>
+Consider if we have the situation whereby a client must interface with
+a <span style="font-weight: bold;">database</span>, a <span
+ style="font-weight: bold;">model</span>, and some <span
+ style="font-weight: bold;">elements</span>.<br>
+<br>
+The client must (1) open the database to get a model It must then (2)
+query the model to get an element. Lastly, it must (3) use the element
+to get information from&nbsp; the database. In UML, this appears as:<br>
+<br>
+<img src="before-facade.jpg" alt="" height="240" width="580">
+<br>
+<br>
+If we introduce the Facade, this now appears as:<br>
+<br>
+<img src="after-facade.jpg" alt="" height="270" width="580">
+<br>
+<br>
+Consider a system where we wanted to make some tea. This system may
+have the following objects:<br>
+<br>
+<img src="tea-classes.jpg" alt="" height="315" width="893">
+<br>
+<br>
+The code:<br>
+<br>
+<div style="margin-left: 40px;">- <a target="_blank"
+ href="facade/TeaCup.java">TeaCup.java</a><br>
+<br>
+- <a target="_blank" href="facade/Tea.java">Tea.java</a><br>
+<br>
+- <a target="_blank" href="facade/TeaInfuser.java">TeaInfuser.java</a><br>
+<br>
+- <a target="_blank" href="facade/Water.java">Water.java</a><br>
+</div>
+<br>
+To make tea requires the following code:<br>
+<br>
+<div style="margin-left: 40px;"><span style="font-family: monospace;"><big>TeaCup
+
+blueCup = new TeaCup();</big></span><big><span
+ style="font-family: monospace;"></span></big><br>
+<big><span style="font-family: monospace;">Water water = new Water();</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">TeaInfuser infuser = new
+TeaInfuser();</span></big><br style="font-family: monospace;">
+<big><span style="font-family: monospace;">Tea tea = new Tea("Earl
+Grey");<br>
+<br>
+</span></big><big><span style="font-family: monospace;">infuser.addTea(tea);</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; </span></big><br style="font-family: monospace;">
+<big><span style="font-family: monospace;">water.boilWater();</span></big><big><span
+ style="font-family: monospace;"></span></big><big><span
+ style="font-family: monospace;"></span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; </span></big><br style="font-family: monospace;">
+<big><span style="font-family: monospace;">blueCup.addWater(water);</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; </span></big><br style="font-family: monospace;">
+<big><span style="font-family: monospace;">blueCup.setSteepTime(15);</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; </span></big><br style="font-family: monospace;">
+<big><span style="font-family: monospace;">blueCup.steep();</span></big><br
+ style="font-family: monospace;">
+</div>
+<br>
+<br>
+More complete code:<br>
+<br>
+<div style="margin-left: 40px;">- <a target="_blank"
+ href="facade/MakeTea.java">MakeTea.java</a><br>
+</div>
+<br>
+<br>
+This is where the facade pattern can come in useful<br>
+<br>
+<big><span style="font-weight: bold;">Part III</span></big><br>
+<br>
+Write a class called <big><span style="font-family: monospace;">TeaFacade.java
+
+</span></big><br>
+<br>
+This class will have a constructor with the following signature:<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">public TeaFacade(TeaCup cup, Water
+water, TeaInfuser infuser)</span></big><br>
+</div>
+<br>
+It will also provide the following method that makes tea:<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">public void makeTea(String teaType)</span></big><br>
+</div>
+<br>
+This method is passed a string with the name of the tea to make.<br>
+<br>
+<br>
+Now, rather than the client use the code shown above to make tea, it
+now just has&nbsp; to do the following:<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">TeaFacade teaMaker = new
+TeaFacade(blueCup,water,infuser);</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">teaMaker.makeTea("Earl
+Grey");</span></big><br style="font-family: monospace;">
+</div>
+<br>
+<br>
+Modify <a href="facade/MakeTea.java"></a><b><span
+ style="font-weight: bold;"></span></b> so that it now makes tea using
+the
+<big><span style="font-family: monospace;">TeaFacade</span></big>.<br>
+<br>
+<blockquote> &gt;&gt; It is important to note that the facade pattern
+is
+not a demo program, rather, the facade that is created to simplify the
+interface
+to a system becomes part of the API of the system. &lt;&lt;.<br>
+</blockquote>
+<br>
+<span style="font-weight: bold;">Executors</span><br>
+<br>
+Notice how the system has to wait for the water to boil before is adds
+tea to the infuser? We could have these activities performed in
+parallel
+using an <big><span style="font-family: monospace;">executor</span></big>.
+An executor allows
+multiple tasks to be run in parallel. Executors can be created with the
+following code:<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">import java.util.concurrent.*;</span></big><br
+ style="font-family: monospace;">
+<br style="font-family: monospace;">
+<big><span style="font-family: monospace;">ExecutorService service =
+Executors.newSingleThreadExecutor();</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">service.execute(/** a
+Runnable task **/);</span></big><br>
+</div>
+<br>
+We must pass the service a task&nbsp; that implements the <a
+ target="_blank"
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/lang/Runnable.html">Runnable</a>
+interface.<br>
+<br>
+This can be done with an <span style="font-weight: bold;">anonymous
+inner class</span>, such as the following<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">service.execute(<span
+ style="color: rgb(51, 102, 255);">new Runnable()</span> <span
+ style="color: rgb(51, 102, 255);">{</span> <span
+ style="color: rgb(255, 0, 0);">public void run() {
+infuser.addTea(tea); }</span>&nbsp; <span
+ style="color: rgb(51, 102, 255);">}</span>);</span></big><br>
+</div>
+<br>
+This allows the statement <big><span style="font-family: monospace;">infuser.addTea(tea);</span></big>
+to be performed in parallel with other statements in the program.<br>
+<br>
+<big><b>Part IV</b></big><br>
+<br>
+First modify <a target="_blank"
+ href="file:///WEBPAGES/Faculty/ggagne/may--2006/lab4/src/MakeTeaInParallel.java">MakeTeaInParallel.java</a>
+so that it uses the executor to run <big><span
+ style="font-family: monospace;">addTea() </span></big>in an executor.
+Once you get this working, modify <span style="font-weight: bold;">your
+version</span> of <big><span style="font-family: monospace;">MakeTea.java</span></big>
+that uses <big><span style="font-family: monospace;">TeaFacade</span></big>
+so that you invoke <big><span style="font-family: monospace;">addTea()</span></big>
+using the executor.<br>
+<br>
+<table
+ style="width: 33%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="text-align: center; vertical-align: top;"><span
+ style="font-weight: bold;">Threads?</span><br>
+      <br>
+For those of you familiar with threads, executors sound awfully
+familiar. They are indeed, but with a much richer concurrency library.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+Before we conclude with executors (for now), it is interesting to note
+the <a target="_blank"
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/concurrent/Executors.html">Executors</a>
+practices a pattern we have recently seen. What pattern?<br>
+<br>
+<br>
+<br>
+</body>
+</html>

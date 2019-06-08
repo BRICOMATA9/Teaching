@@ -1,0 +1,2 @@
+javadoc -d doc src/tp1/*.java
+

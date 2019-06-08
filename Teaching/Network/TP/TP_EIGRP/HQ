@@ -1,0 +1,60 @@
+en
+conf t
+hostname HQ
+
+int s0/0/0
+desc Connection to Site-1
+ip add 192.168.100.22 255.255.255.252 
+no sh
+
+int s0/0/1
+desc Connection to Site-2
+ip add 192.168.100.37 255.255.255.252
+clock rate 128000
+no sh
+
+int s0/1/0
+desc Connection to ISP
+ip add 203.0.113.18 255.255.255.248
+clock rate 128000
+no sh
+exit
+
+ip route 0.0.0.0 0.0.0.0 s0/1/0
+
+router eigrp 100
+net 192.168.100.20 0.0.0.3
+net 192.168.100.36 0.0.0.3
+no auto-summary
+passive-int s0/1/0
+redistribute static
+exit
+
+int s0/0/0
+band 128
+exit
+
+ip access-list stand telnetBlock
+permit host 198.51.100.5
+exit
+
+line vty 0 15
+pass cisco
+login
+access-class telnetBlock in
+exit
+
+enable secret class
+
+access-list 101 permit icmp host 198.5.100.5 any echo
+access-list 101 deny icmp any any echo 
+access-list 101 permit ip any any
+
+int s0/1/0
+ip access-group 101 in
+end
+
+copy run start###################################
+
+
+

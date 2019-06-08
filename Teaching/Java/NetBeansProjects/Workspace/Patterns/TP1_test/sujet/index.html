@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Lab #1 Introduction to the UML and Patterns</title>
+</head>
+<body>
+<h3>CMPT 300 Design Patterns<br>
+May 2012</h3>
+<span style="font-weight: bold;">Lab 1 Introduction to the UML and
+Patterns</span><br>
+<br>
+<blockquote><font color="#ff9900"><b>Code Download --&gt;</b></font> <a
+ href="lab1.zip">lab1.zip</a><br>
+</blockquote>
+<hr style="width: 100%; height: 2px;" size="1"><br>
+<span style="font-weight: bold;">A Handful of Fundamental
+Object-Oriented Principles</span><br>
+<br>
+1.&nbsp; A class should support one fundamental responsibiliity - don't
+create classes that do too much as they are difficult to use and
+maintain.
+<br>
+<br>
+Suppose you wanted to design a system to play baseball. Instead of
+creating
+a class called <big><span
+ style="font-weight: bold; font-family: monospace;">BatBall</span><span
+ style="font-family: monospace;">,</span></big> create separate <big><span
+ style="font-weight: bold; font-family: monospace;">Bat</span><span
+ style="font-family: monospace;"> </span></big>and <big><span
+ style="font-weight: bold; font-family: monospace;">Ball</span><span
+ style="font-family: monospace;"> </span></big>classes. (In baseball,
+a bat and a ball have different responsibilities.)<br>
+<br>
+2. Program to Interfaces Whenever Possible.<br>
+<br>
+3. Prefer Composition Over Inheritance.<br>
+<br>
+<hr style="width: 100%; height: 2px;" size="2" width="15%"><span
+ style="font-weight: bold;"><br>
+Program to Interfaces</span><br>
+<br>
+Consider the <a target="_blank"
+ href="http://docs.oracle.com/javase/6/docs/api/java/util/List.html">java.util.List</a>
+interface.<br>
+<br>
+By programming to interfaces, we are saying&nbsp; that we want to
+encapsulate the operations of a particular data type (in this instance,
+a List) into an
+interface. Different implementations of this interface may design it
+however they wish. By programming to an interface, we are separating
+the implementation of an interface to its behavior. A further benefit
+of this is that the interface can decouple the relationship between two
+different objects. By decoupling the relationship between objects, one
+object can change its implementation and the other is not affected.<br>
+<br>
+- <a target="_blank" href="UseList.java">UseList.java</a><br>
+<br>
+<br>
+<br>
+<table width="50%" align="center" bgcolor="#9999ff" border="0"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td valign="top">
+      <div align="center"><b>In-Class Exercise</b><br>
+      </div>
+      <br>
+Modify <a target="_blank" href="UseList.java">UseList.java</a> so
+that
+it now uses a different implementation of the <big><span
+ style="font-family: monospace;">java.util.List</span></big>
+interface instead of <a target="_blank"
+ href="http://docs.oracle.com/javase/6/docs/api/java/util/ArrayList.html">java.util.ArrayList</a>.
+
+Did
+you have to change anything else in the program? <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<table width="50%" align="center" bgcolor="#9999ff" border="0"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td valign="top">
+      <div align="center"><b>In-Class Exercise</b><br>
+      </div>
+      <br>
+Working with a partner, describe the benefits of using the <a
+ target="_blank"
+ href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html">java.util.Iterator</a>
+interface. It is probably easiest to explain using the <a
+ href="UseList.java">UseList.java</a> program - consider using a data
+structure
+different to the List but that provides an iteration. Using an
+iteration,
+illustrate how the iterator decouples the relationship between the list
+implementation
+(or any other data structure) and the method for traversing through the
+list.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<hr style="width: 100%; height: 2px;"><span style="font-weight: bold;"><br>
+IV. Prefer Composition Over Inheritance</span><br>
+<br>
+Object-oriented technology favors re-use whenever possible. Assume we
+wanted to create a stack, the <a target="_blank"
+ href="http://docs.oracle.com/javase/6/docs/api/java/util/Vector.html">java.util.Vector
+</a>class provides much of this functionality. In fact, the Java API
+uses inheritance to implement the <a target="_blank"
+ href="http://docs.oracle.com/javase/6/docs/api/java/util/Stack.html">java.util.Stack</a>.<br>
+<br>
+In object-oriented terminology, inheritance is known as the <b>IS-A</b>
+principle.<br>
+<br>
+The problem with this is we can break the contract of a traditional
+stack by allowing operations not associated with a stack - notably the
+ability to
+modify the stack from a position other than the stack top:<br>
+<br>
+- <a target="_blank" href="TestJavaUtilStack.java">TestJavaUtilStack.java</a><br>
+<br>
+An alternative approach is to implement a stack <span
+ style="font-weight: bold;">using</span> a <big><span
+ style="font-weight: bold; font-family: monospace;">java.util.Vector</span></big>,
+
+not
+extending it. That is, we are saying the stack will be <i><b>composed</b></i>
+of a <big><span style="font-weight: bold; font-family: monospace;">java.util.Vector</span></big>.
+By
+using
+composition in this manner, we are <i><b>delegating</b></i> the
+responsibility of the stack operations to another class.<br>
+<br>
+- <a target="_blank" href="CompositionStack.java">CompositionStack.java</a><br>
+<br>
+Code that tests it:<br>
+<br>
+- <a target="_blank" href="TestCompositionStack.java">TestCompositionStack.java</a><br>
+<br>
+In object-oriented terminology, composition is known as the <b>HAS-A</b>
+principle. This leads to the following observation: HAS-A can be better
+than
+IS-A.<br>
+<br>
+As we shall see, many design patterns use composition.<br>
+<br>
+<hr style="width: 100%; height: 2px;"><br>
+<br>
+<big><span style="font-weight: bold;">UML</span></big><br>
+<br>
+Once we have covered the section on <a target="_blank"
+ href="http://www.people.westminstercollege.edu/faculty/ggagne/uml">UML</a>,
+
+draw
+the UML class diagrams for the program you have chosen. Include
+any details you feel are necessary including generalizations, abstract
+classes, interfaces, dependencies, associations, composition, and
+aggregation. You do not have necessarily have to worry about including
+attributes and operations; focus mostly on the relationship between the
+different classes.<br>
+<br>
+Draw the UML diagrams on a piece of paper - it is not necessary to
+design them using software. Once you have finished, give your diagrams
+as well as source code to your partner and have them check it for
+accuracy, missing information,
+etc. If your source code is only available online, switch seats with
+your
+partner so they may view the code.<br>
+<br>
+<table
+ style="background-color: rgb(153, 153, 255); width: 50%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="text-align: center; vertical-align: top;"><span
+ style="font-weight: bold;">Quick In-Class Exercise</span><br>
+      <br>
+Draw the UML diagram first showing the relationship between<span
+ style="font-family: monospace;"> <big>java.util.Stack</big></span><big
+ style="font-weight: bold;"> </big>and <big><span
+ style="font-family: monospace;">java.util.Vector</span></big>.&nbsp;
+Next,
+draw the relationship between <big><span
+ style="font-family: monospace;">CompositionStack</span></big>
+and <big><span style="font-family: monospace;">java.util.Vector</span></big>.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<table width="50%" align="center" bgcolor="#9999ff" border="0"
+ cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td valign="top">
+      <div align="center"><b>Slightly-Longer In-Class Exercise</b><br>
+      </div>
+      <br>
+      <div align="center">Complete the UML exercise of page 25 of your
+text.<br>
+      </div>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr noshade="noshade" size="2" width="100%"><br>
+<b>What to Turn In:</b><br>
+<br>
+To receive credit for this lab, turn in your three UML hand drawings:
+(1)
+the UML class diagram for your program, (2) the quick in-class
+exercise,
+and (3) the slightly longer in-class exercise.<br>
+<br>
+</body>
+</html>

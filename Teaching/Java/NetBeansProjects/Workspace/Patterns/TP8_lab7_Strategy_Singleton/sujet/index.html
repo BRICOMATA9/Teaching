@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>The Strategy &amp; Singleton Patterns</title>
+</head>
+<body>
+<span style="font-weight: bold;">CMPT 300 Design Patterns</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;">Mayterm 2012</span><br
+ style="font-weight: bold;">
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">The Strategy &amp; Singleton
+&nbsp;Patterns</span><br>
+<hr style="width: 100%; height: 2px;"><br>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">&lt;&lt;</span>
+<a href="lab7.zip">lab7.zip</a> <span style="font-weight: bold;">&gt;&gt;</span><br>
+</div>
+<br>
+<b>The Strategy Pattern</b><br>
+<br>
+Whereas the <a target="_blank"
+ href="../lab6/index.html">template
+method
+pattern</a> uses inheritance to vary part of an algorithm,
+the strategy pattern uses delegation to vary the entire algorithm. In
+UML,
+the strategy appears as:<br>
+<br>
+<img alt="strategy" src="strategy.jpg"
+ style="width: 520px; height: 250px;"><br>
+<br>
+<br>
+<span style="font-weight: bold;">A Simple Example<br>
+<br>
+</span>You are designing software for checkout registers at a large
+national
+supermarket chain. Each state has different sales tax rules when it
+comes
+to purchasing food, and of course tax laws can easily change.<br>
+<br>
+At checkout the following appears as:<br>
+<br>
+<br>
+<div style="margin-left: 40px;"><big style="color: rgb(255, 0, 0);"><span
+ style="font-family: monospace;">&lt; list of items purchased &gt;</span></big><br
+ style="font-family: monospace; color: rgb(255, 0, 0);">
+<big style="color: rgb(255, 0, 0);"><span
+ style="font-family: monospace;">&lt;
+. . . &gt;</span></big><br
+ style="font-family: monospace; color: rgb(255, 0, 0);">
+<br style="font-family: monospace; color: rgb(255, 0, 0);">
+<big style="color: rgb(255, 0, 0);"><span
+ style="font-family: monospace;">Subtotal
+S</span></big><br style="font-family: monospace; color: rgb(255, 0, 0);">
+<br style="font-family: monospace; color: rgb(255, 0, 0);">
+<big style="color: rgb(255, 0, 0);"><span
+ style="font-family: monospace;">Sales
+Tax T</span></big><br
+ style="font-family: monospace; color: rgb(255, 0, 0);">
+<big style="color: rgb(255, 0, 0);"><span
+ style="font-family: monospace;">-----------------</span></big><br
+ style="font-family: monospace; color: rgb(255, 0, 0);">
+<big style="color: rgb(255, 0, 0);"><span
+ style="font-family: monospace;">Total M = (S + T)</span></big><br
+ style="font-family: monospace;">
+</div>
+<br>
+<br>
+The strategy pattern could be used to help determine the sales tax:<br>
+<br>
+<div style="margin-left: 40px;"><img alt="Sales Tax"
+ src="salestax.jpg" style="width: 620px; height: 250px;">&nbsp;<br>
+</div>
+<br>
+<span style="font-weight: bold;">Another Example</span><br>
+<br>
+A simple example that uses the Strategy pattern are the classes <a
+ target="_blank"
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/zip/CheckedInputStream.html">java.util.zip.CheckedInputStream</a>
+and <a target="_blank"
+ href="http://java.sun.com/j2se/1.5.0/docs/api/java/util/zip/CheckedOutputStream.html">java.util.zip.CheckedOutputStream</a>
+which are used to calculate checksums. A <span
+ style="font-weight: bold;">checksum</span> is a computation that can
+be
+used to ensure a file has reliably transferred. Typically, before a
+file
+is transferred, you calculate the checksum for the file. Once it has
+been
+received, you calculate the checksum again. If the two values match,
+the
+file has been transferred correctly. If not, an error occurred during
+the
+transmission. <br>
+<br>
+The following illustrates how the <big><span
+ style="font-family: monospace;">CheckedInputStream</span></big> and <big><span
+ style="font-family: monospace;">CheckedOutputStream</span></big>
+classes
+implement the Strategy pattern. Two possible algorithms (among
+others)&nbsp;&nbsp;
+for calculating checksums:<br>
+<br>
+<div style="margin-left: 40px;">(1) Adler-32 <br>
+<br>
+(2) CRC32<br>
+</div>
+<br>
+CRC32 is very reliable, but the algorithm is computationally expensive.
+Adler-32
+is almost as reliable as CRC32, but the calculation of the checksum can
+be
+done more quickly than using CRC32.<br>
+<br>
+In UML<br>
+<br>
+<div style="margin-left: 40px;"><img alt="Checksum" src="checksum.jpg"
+ style="width: 460px; height: 210px;"><br>
+</div>
+<br>
+The following program calculates the checksum of a file:<br>
+<br>
+- <a href="CheckSum.java">CheckSum.java</a><br>
+<br>
+To calculate the checksum of <big><span style="font-family: monospace;">file1</span></big>,
+enter
+the command <big><span style="font-family: monospace;">java
+CheckSum
+file1</span></big><br>
+<br>
+To see how checksums work, first calculate the checksum of <big><span
+ style="font-family: monospace;">file1</span></big>. Now edit file2
+slightly
+and recalculate the checksum. It is now different. Checksums are used
+to
+determine if a file has been altered. <br>
+<br>
+The Strategy pattern is used in the constructor for CheckInputStream -
+where
+a CheckSum is passed (either Adler32 or CRC32) - and the checksum is
+calculated
+using the specified algorithm.<br>
+<br>
+<div style="margin-left: 80px; text-align: center;"><big><span
+ style="font-style: italic;">Do you also see another pattern at work
+here??<br>
+</span></big><br>
+<br>
+</div>
+<hr style="width: 100%; height: 2px;"><b><br>
+<span style="font-weight: bold;"><br>
+The Lab</span> Part I</b> <br>
+1. First think about the following question?<br>
+<br>
+<div style="margin-left: 40px;"><span style="font-style: italic;">What
+are
+the primary differences between the strategy and template method
+patterns?
+When is one more applicable than the other?</span><br>
+</div>
+<br>
+2. You are in charge of assigning seats on a randomized basis. Seats
+will
+be assigned using the following technique: There is a list of <span
+ style="font-style: italic;">N </span>people and <span
+ style="font-style: italic;">M</span> seats (where <span
+ style="font-style: italic;">N &lt;= M</span>), you will go through the
+list
+in the following manner:<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">for (i = 1; i &lt;= N; i++)</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">{</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span></big><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <big><span
+ style="font-family: monospace;">while (person[i] is not assigned a
+seat) {</span></big><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <big><span style="font-family: monospace;">Generate
+random
+number r which corresponds to seat r</span></big><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <big><span
+ style="font-family: monospace;">&nbsp;&nbsp; if seat r is unnassigned {</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Assign person[i]
+seat r</span></big><br style="font-family: monospace;">
+<big><span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Remove seat
+r from list of unassigned seats</span></big><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <big>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; <span style="font-family: monospace;">}</span></big><br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <big><span
+ style="font-family: monospace;">}</span></big><br
+ style="font-family: monospace;">
+<big><span style="font-family: monospace;">}</span></big><br
+ style="font-family: monospace;">
+</div>
+<br>
+This requires generating random numbers. There are several strategies;
+two
+possible strategies include: (1)<span style="font-weight: bold;"> </span><span
+ style="font-weight: bold;">additive</span><span
+ style="font-weight: bold;"> </span>and (2) <span
+ style="font-weight: bold;">linear
+congruential.</span><br>
+<br>
+The strategy pattern you have to implement appears as follows:<br>
+<br>
+<div style="text-align: left;"><img alt="The Problem."
+ src="problem.jpg" style="width: 540px; height: 400px;"><br>
+</div>
+<br>
+The linear congruential method generates random numbers as follows:<br>
+<br>
+<big>X<sub>n+1</sub> = A * X<sub>n</sub> mod M</big><br>
+<br>
+where A and M are large and prime.<br>
+<br>
+This series starts with an initial <span style="font-weight: bold;">seed</span>
+value.<br>
+<br>
+Suggested values for A and M are<br>
+<br>
+<div style="margin-left: 40px;">A = 48,271<br>
+<br>
+M = 2<sup>31</sup> - 1<br>
+</div>
+<br>
+The linear congruential class you will implement uses this algorithm
+(you of course are free to experiment with different values of A and M.)<br>
+<br>
+You do not have to worry about&nbsp; implementing the additive
+congruential method for calculating random numbers. Instead, just use
+delegation
+and have your <big><span style="font-family: monospace;">getNext()</span></big>
+method for additive congruential delegate generating the random numbers
+to the <big><span style="font-family: monospace;">java.util.Random</span></big>
+class.
+(In other words,
+you will be faking it.)<br>
+<br>
+(However, we will go over the algorithm for additive congruential. If
+you have the time and are comfortable with bit shifting, I encourage
+you to implement the algorithm.)<br>
+<br>
+<a target="_blank" href="RandomNumbers.java">RandomNumbers.java</a>
+is
+a simple example demonstrating how you can generate random numbers
+within
+a specific range using the Java API.<br>
+<br>
+Now write the client code that assigns seating. This code will be
+roughly
+organized&nbsp; as follows:<br>
+<br>
+1. Generate a list of <span style="font-style: italic;">N</span> names
+(regular
+<span style="font-weight: bold;">String</span> objects will work fine.)<br>
+<br>
+2. Determine which random number algorithm you will use (linear
+congruential
+or additive congruential.)<br>
+<br>
+3. Proceed through the list using the algorithm listed above above.
+(Make
+sure that&nbsp; seat <span style="font-style: italic;">r</span> (which
+corresponds
+to random number <span style="font-style: italic;">r</span>)&nbsp;
+does not
+get assigned more than once!)<br>
+<br>
+The strategy pattern allows your algorithm to work which whatever
+random
+number generator you choose.<br>
+<br>
+4. Output the list of assigned seats. It can look something simple such
+as:<br>
+<br>
+<div style="margin-left: 40px;"><big><span
+ style="font-family: monospace;">Joe is seat 4</span></big><br
+ style="font-family: monospace;">
+<br style="font-family: monospace;">
+<big><span style="font-family: monospace;">Mary is seat 12,</span></big><br
+ style="font-family: monospace;">
+<br style="font-family: monospace;">
+<big><span style="font-family: monospace;">. . .</span></big><br
+ style="font-family: monospace;">
+</div>
+<br>
+<hr size="2" width="100%"><b>The Singleton Pattern</b><br>
+<br>
+There are several examples where there should only be one instance of a
+particular
+class.&nbsp; Quite often this is the case where this class is
+responsible
+for the management of a central resource. For example, if you designed
+a
+class that is responsible for managing <small>USB</small> ports on a
+device, you will probably
+only want one instance of this class.<br>
+<br>
+How to write the Singleton:<br>
+<br>
+- <a href="Singleton.java">Singleton.java</a><br>
+<br>
+Creating and using a Singleton is as simple as:<br>
+<br>
+<blockquote><big><tt>Singleton soleOne = Singleton.getInstance();</tt></big><br>
+  <big><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </tt></big><br>
+  <big><tt>soleOne.methodOne();</tt></big><br>
+  <big><tt>soleOne.methodTwo();</tt></big><br>
+</blockquote>
+<br>
+What happens if we try to make another Singleton? For example:<br>
+<br>
+<blockquote><big><tt>Singleton soleOne = Singleton.getInstance();</tt></big><br>
+  <big><tt>Singleton soleTwo = Singleton.getInstance();</tt></big><br>
+</blockquote>
+<br>
+<br>
+The problem with this is it is <span style="font-weight: bold;">not</span>
+thread-safe. Two (or more) threads
+could
+be active in the <big><tt>getInstance()</tt></big> method at the same
+time.
+<br>
+<br>
+One solution is to declare <big><tt>getInstance()</tt></big> as <big><tt>synchronized</tt></big>.<br>
+<br>
+&nbsp;&nbsp;&nbsp;<big><tt> public synchronized static Singleton
+getInstance()
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (instance == null)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+instance
+= new Singleton();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return instance;<br>
+&nbsp;&nbsp;&nbsp; }</tt></big><br>
+<br>
+<br>
+<b>The Lab Part II</b><br>
+<br>
+This is easy -&gt; Singletons are used where it only makes sense to
+have
+one copy of an object. Turn the following code into a Singleton<br>
+<br>
+- <a href="MathLibrary.java">MathLibrary.java</a><br>
+<br>
+</body>
+</html>

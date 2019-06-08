@@ -1,0 +1,3 @@
+#!/bin/bash
+echo c c
+exit 6

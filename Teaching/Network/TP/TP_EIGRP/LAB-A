@@ -1,0 +1,58 @@
+en
+conf t
+hostname Site-1
+no ip domain-lookup
+enable secret class
+banner motd #Warning#
+service pass
+
+line vty 0 15
+pass cisco
+login
+exit
+
+line console 0
+exec-timeout 0 0
+pass cisco
+login
+loggin synchronous
+exit
+
+int s 0/0/0
+clock rate 128000
+ip add 192.168.100.21 255.255.255.252
+no sh
+
+int s 0/0/1
+ip add 192.168.100.30 255.255.255.252
+no sh
+
+int g0/0
+ip add 192.168.8.1 255.255.255.0
+no sh
+
+int g0/1
+ip add 192.168.9.1 255.255.255.0
+no sh
+exit
+
+router eigrp 100
+net 192.168.8.0 0.0.0.255
+net 192.168.9.0 0.0.0.255
+net 192.168.100.20 0.0.0.3
+net 192.168.100.28 0.0.0.3
+no auto-summary
+passive-int g 0/0
+passive-int g 0/1
+exit
+
+int s0/0/0
+band 128
+end
+
+copy run start##################################
+
+
+
+
+

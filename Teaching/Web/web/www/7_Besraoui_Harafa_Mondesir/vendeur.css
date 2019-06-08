@@ -1,0 +1,61 @@
+.logo
+{
+	float: left;
+	width: 300px;
+}
+
+#colonne2{
+	float: left;
+	width: 300px;
+	
+}
+
+body 
+{ 
+	margin:0;
+	padding: 0;
+background-color:white;     
+color: white;       
+font-family: Arial, Helvetica, sans-serif;       
+} 
+
+#nav
+
+{
+color:white;
+font-weight:bold;       
+font-size:2em;  
+text-align: center; 
+}
+
+#container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+    text-align: center;
+}
+    
+
+h1
+{
+	color:#49868F;
+font-style:italic;
+font-size:1.5em;
+}
+form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+   input[type=text] 
+{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }

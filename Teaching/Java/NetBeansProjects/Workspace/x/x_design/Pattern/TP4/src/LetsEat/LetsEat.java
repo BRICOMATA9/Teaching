@@ -1,0 +1,35 @@
+package LetsEat;
+
+/**
+ * Demonstration of the shop pattern
+ */
+
+public class LetsEat {
+
+ private IceCreamShop shop;
+ 
+ public LetsEat(IceCreamShop shop) {
+  this.shop = shop;
+ }
+ 
+ public IceCream orderCone(String type) {
+  IceCream cone;
+  
+  cone = shop.getIceCream(type);
+  
+  cone.scoop();
+  
+  return cone;
+ }
+ 
+ public static void main(String[] args) {
+  IceCreamShop shop1 = new DairyQueen();
+  LetsEat letsEat1 = new LetsEat(shop1);
+
+  IceCreamShop shop2 = new BenAndJerry();
+  LetsEat letsEat2 = new LetsEat(shop2);
+  
+  letsEat1.orderCone("Chocolate");
+  letsEat2.orderCone("Cherry Garcia");
+ }
+}

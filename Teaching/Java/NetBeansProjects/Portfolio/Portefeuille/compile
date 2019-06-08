@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/Application_Main.java
+java -cp build/classes Application_Main
