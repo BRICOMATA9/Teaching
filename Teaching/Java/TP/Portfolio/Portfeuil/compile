@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -cp build/classes/* -sourcepath src src/com/wajid/portfolio/PortfolioCreatorApplication.java
-java -cp build/classes com/wajid/portfolio/PortfolioCreatorApplication

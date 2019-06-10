@@ -1,6 +1,0 @@
-#!/bin/sh
-
-javadoc -docletpath /home/aghiles/Aghiles/Teaching/Java/lib/umlgraph-5.6.jar -doclet org.umlgraph.doclet.UmlGraph -all -private src/com/wajid/portfolio/PortfolioCreatorApplication.java  src/com/wajid/portfolio/*/*.java
-dot -Tpng -ograph.png graph.dot
-
-#-package -attributes -operations -constructors -enumerations -views -visibility -types
