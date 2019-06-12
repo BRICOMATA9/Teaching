@@ -399,6 +399,7 @@ OUTPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.bcf
 INPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.bbl
 INPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.bbl
 INPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.bbl
+INPUT /home/aghiles/.texlive2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.luc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
@@ -433,7 +434,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
-INPUT /home/aghiles/.texlive2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
+INPUT /home/aghiles/.texlive2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-italic.luc
 INPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.aux
 INPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.out
 INPUT /home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.run.xml

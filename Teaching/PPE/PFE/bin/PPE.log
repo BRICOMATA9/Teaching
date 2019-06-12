@@ -1,4 +1,4 @@
-This is LuaTeX, Version 0.95.0 (TeX Live 2016/Debian)  (format=lualatex 2019.4.2)  10 JUN 2019 22:58
+This is LuaTeX, Version 0.95.0 (TeX Live 2016/Debian)  (format=lualatex 2019.4.2)  12 JUN 2019 14:07
  restricted system commands enabled.
 **PPE.tex
 (./PPE.tex
@@ -34,7 +34,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.087 seconds
+luaotfload | main : initialization completed in 0.088 seconds
 Babel <3.9r> and hyphenation patterns for 1 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1605,7 +1605,10 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'PPE.bbl' found.
 
-(/home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.bbl)
+(/home/aghiles/Aghiles/Formation/Teaching/PPE/PFE/bin/PPE.bbl(compiling luc: /va
+r/lib/texmf/luatex-cache/generic/fonts/otl/lmroman9-regular.luc)(load luc: /home
+/aghiles/.texlive2016/texmf-var/luatex-cache/generic/fonts/otl/lmroman9-regular.
+luc))
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 
@@ -1666,24 +1669,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
-
-LaTeX Warning: Citation 'lopes_traffic_2010' on page 1 undefined on input line 2
-2.
-
-(compiling luc: /var/lib/texmf/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
-)(load luc: /home/aghiles/.texlive2016/texmf-var/luatex-cache/generic/fonts/otl/
-lmroman10-bold.luc)
-
-LaTeX Warning: Citation 'wang_predictability_2015' on page 1 undefined on input 
-line 28.
-
-
-LaTeX Warning: Citation 'behrisch_sumo_2011' on page 1 undefined on input line 3
-0.
-
-
-LaTeX Warning: Empty bibliography on input line 33.
-
+(compiling luc: /var/lib/texmf/luatex-cache/generic/fonts/otl/lmroman9-italic.lu
+c)(load luc: /home/aghiles/.texlive2016/texmf-var/luatex-cache/generic/fonts/otl
+/lmroman9-italic.luc)
 
 Package caption Warning: Unused \captionsetup[sub] on input line 225.
 See the caption package documentation for explanation.
@@ -1699,38 +1687,30 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
 Package rerunfilecheck Info: File `PPE.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                PPE
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'PPE.run.xml'.
 
 \openout1 = PPE.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 50500 strings out of 494577
+ 50538 strings out of 494577
  125171,1977958 words of node,token memory allocated
- 688 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 23 glue, 14 attribute, 72 glue_spec, 14 attribute_l
+ 905 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 47 glue, 25 attribute, 73 glue_spec, 25 attribute_l
 ist, 1 write nodes
-   avail lists: 1:13,2:134,3:19,4:23,5:75,6:1288,7:300,8:6,9:39,10:13,11:144
- 53168 multiletter control sequences out of 65536+600000
- 53 fonts using 3451551 bytes
- 71i,7n,120p,852b,1175s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/
-fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/
-public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmrom
-an17-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf>
-Output written on PPE.pdf (1 page, 20790 bytes).
+   avail lists: 1:13,2:428,3:71,4:35,5:101,6:1898,7:416,8:19,9:53,10:11,11:192
+ 53199 multiletter control sequences out of 65536+600000
+ 56 fonts using 3846655 bytes
+ 71i,7n,120p,1499b,1212s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman9-italic.otf></usr/share/texmf
+/fonts/opentype/public/lm/lmroman9-regular.otf></usr/share/texmf/fonts/opentype/
+public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmrom
+an12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.ot
+f></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf>
+Output written on PPE.pdf (1 page, 31280 bytes).
 
-PDF statistics: 51 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 131072)
+PDF statistics: 72 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="TP4">
+  <ClassDiagramComponents>
+    <Class name="Comp" package="controleur" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="equals" returnType="boolean" visibility="public" isAbstract="true">
+          <Argument type="Fonds" name="f"/>
+        </Method>
+        <Method name="compareTo" returnType="int" visibility="public" isAbstract="true">
+          <Argument type="Fonds" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Programme" package="controleur" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ajouter_mapFond" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="remplir_hashmap" returnType="void" visibility="public" isStatic="true">
+          <Argument type="HashMap&lt;String, Fonds&gt;" name="mfond"/>
+          <Argument type="HashMap&lt;String, Instrument&gt;" name="minstru"/>
+          <Argument type="ArrayList&lt;Fonds&gt;" name="liste"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Fonds" package="modele" visibility="public" xPosition="385.0" yPosition="249.0">
+      <Fields>
+        <Field name="amount" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="m_amount"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAmount" returnType="double" visibility="public"/>
+        <Method name="afficher" returnType="void" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Fonds" name="f"/>
+        </Method>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Fonds" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FondsExistant" package="modele" visibility="public" xPosition="816.0" yPosition="562.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="FondsInexistant" package="modele" visibility="public" xPosition="1021.0" yPosition="645.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Instrument" package="modele" visibility="public" xPosition="339.0" yPosition="725.0">
+      <Fields>
+        <Field name="collection" type="ArrayList&lt;Fonds&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Fonds&gt;" name="m_collection"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ajoutFond" returnType="void" visibility="public">
+          <Argument type="Fonds" name="objet"/>
+        </Method>
+        <Method name="getCollec" returnType="ArrayList&lt;Fonds&gt;" visibility="public"/>
+        <Method name="afficher" returnType="void" visibility="public"/>
+        <Method name="tri" returnType="void" visibility="public"/>
+        <Method name="calcul_fond" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="InstrumentInexistant" package="modele" visibility="public" xPosition="744.0" yPosition="384.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Portefeuille" package="modele" visibility="public" xPosition="1179.0" yPosition="41.0">
+      <Fields>
+        <Field name="mapFond" type="HashMap&lt;String, Fonds&gt;" visibility="package"/>
+        <Field name="mapInstrument" type="HashMap&lt;String, Instrument&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="HashMap&lt;String, Fonds&gt;" name="mFond"/>
+          <Argument type="HashMap&lt;String, Instrument&gt;" name="mInstru"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="recherche_fond" returnType="double" visibility="public">
+          <Argument type="String" name="cle"/>
+        </Method>
+        <Method name="recherche_instru" returnType="ArrayList&lt;Fonds&gt;" visibility="public">
+          <Argument type="String" name="cle"/>
+        </Method>
+        <Method name="ajouter_fond" returnType="void" visibility="public">
+          <Argument type="String" name="cle"/>
+          <Argument type="double" name="montant"/>
+        </Method>
+        <Method name="ajouter_fond_instru" returnType="void" visibility="public">
+          <Argument type="String" name="cle"/>
+          <Argument type="Fonds" name="f"/>
+        </Method>
+        <Method name="afficher" returnType="void" visibility="public"/>
+        <Method name="suppr_fond" returnType="void" visibility="public">
+          <Argument type="String" name="cle"/>
+        </Method>
+        <Method name="suppr_instru" returnType="void" visibility="public">
+          <Argument type="String" name="cle"/>
+        </Method>
+        <Method name="getMapInstru" returnType="HashMap&lt;String, Instrument&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Affichage" package="vue" visibility="public" isAbstract="true" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="afficher_tri" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Instrument" name="i"/>
+        </Method>
+        <Method name="afficher_tout" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Portefeuille" name="p"/>
+        </Method>
+        <Method name="afficher_fond" returnType="void" visibility="public" isStatic="true">
+          <Argument type="Portefeuille" name="p"/>
+          <Argument type="String" name="cle"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="modele.Fonds" target="modele.Fonds" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="controleur.Programme" target="modele.Instrument" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vue.Affichage" target="modele.Portefeuille" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="modele.Portefeuille" target="modele.Fonds" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mapFond" source="modele.Portefeuille" target="modele.Fonds" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, Fonds&gt;"/>
+    <HasRelation name="mapInstrument" source="modele.Portefeuille" target="modele.Instrument" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;String, Instrument&gt;"/>
+    <UseRelation source="modele.Portefeuille" target="modele.Instrument" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vue.Affichage" target="modele.Instrument" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="collection" source="modele.Instrument" target="modele.Fonds" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Fonds&gt;"/>
+    <UseRelation source="controleur.Comp" target="modele.Fonds" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="modele.Instrument" target="modele.Fonds" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
