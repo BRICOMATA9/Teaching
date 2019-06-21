@@ -1,0 +1,44 @@
+en
+conf t
+
+int s0/0/0
+encap frame
+no sh
+
+int s0/0/0.2
+int s0/0/0.2 point
+ip add 192.168.0.1 255.255.255.252
+no sh
+frame int 122
+
+int s0/0/0.3
+int s0/0/0.3 point
+ip add 192.168.0.5 255.255.255.252
+no sh
+frame int 123
+
+int s0/0/0.1
+ip add 192.51.100.1 255.255.255.252
+no sh
+
+int tunnel 0
+no sh
+ip add 192.168.0.9 255.255.255.252
+exit
+
+ip route 0.0.0.0 0.0.0.0 198.51.100.2
+
+int tunnel 0
+tunnel source s0/0/1
+tunnel destination 203.0.113.1
+tunnel mode gre ip
+no sh
+exit
+
+router ospf 1
+net 192.168.0.0 0.0.0.3 area 0
+net 192.168.0.4 0.0.0.3 area 0
+passive s0/0/1
+default originate
+exit
+

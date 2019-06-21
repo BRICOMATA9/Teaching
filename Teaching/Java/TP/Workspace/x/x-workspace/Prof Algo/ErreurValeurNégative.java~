@@ -1,0 +1,6 @@
+public class ErreurValeurNégative extends Exception {
+	public ErreurValeurNégative(){
+		super();
+	}
+
+}

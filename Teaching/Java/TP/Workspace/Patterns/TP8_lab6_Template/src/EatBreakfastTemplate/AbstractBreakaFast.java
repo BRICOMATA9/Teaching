@@ -1,0 +1,34 @@
+package EatBreakfastTemplate;
+/**
+ * AbstractTemplate.java
+ *
+ * This abstract class identifies the template method
+ * pattern whereby the steps of an algorithm are defined
+ * and it allows subclasses to to provide an implementation
+ * for one or more steps.
+ */
+
+public abstract class AbstractBreakaFast {
+	/**
+	 * The steps of the algorithm
+	 * We declare this is final as we
+	 * do not want the subclasses to change
+	 * the algorithm.
+	 */
+	final void templateMethod(int n) {
+		crackEggs(n);
+		prepare();
+		cook();
+		serve();
+	}
+	
+	abstract void crackEggs(int n);
+	
+	abstract void prepare();
+	
+	abstract void cook();
+
+	final void serve() {
+		System.out.println("Placing the eggs on a plate.");
+	}
+}

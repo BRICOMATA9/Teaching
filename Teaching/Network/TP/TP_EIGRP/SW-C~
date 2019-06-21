@@ -1,0 +1,79 @@
+en
+conf t
+hostname SW-C
+
+vlan 2
+name sales
+
+vlan 4
+name prod
+
+vlan 8
+name acct
+
+vlan 15
+name admin
+
+vlan 25
+name SVI-NET
+
+vlan 99
+name null
+exit
+
+int fa 0/7
+sw mode access
+sw access vlan 2
+
+int fa 0/10
+sw mode access
+sw access vlan 4
+
+int fa 0/15
+sw mode access
+sw access vlan 8
+
+int fa 0/24
+sw mode access
+sw access vlan 15
+exit
+
+int vlan 25
+ip add 10.10.25.252 255.255.255.0
+no sh
+exit
+
+ip default-gat 10.10.25.1
+
+int range fa0/1-2
+sw mode trunk
+channel-group 1 mode active
+no sh
+exit
+
+int port-channel 1
+sw mode trunk
+
+int range fa0/5-6
+sw mode trunk
+channel-group 3 mode passive
+no sh
+exit
+
+int port-channel 3
+sw mode trunk
+exit
+
+spanning-tree mode rapid
+spanning-tree vlan 8,15 root primary
+spanning-tree vlan 2,4 root secondary
+
+int range fa0/7, fa0/10, fa0/15, fa0/24
+spanning-tree portfast
+spanning-tree bpdu enable
+no sh
+end
+
+copy run start
+
+

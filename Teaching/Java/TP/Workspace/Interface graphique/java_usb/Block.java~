@@ -1,0 +1,7 @@
+public interface Block
+{
+	public int getSize();
+	public String getName();
+	public String toString();
+	public void setName(String name);
+}

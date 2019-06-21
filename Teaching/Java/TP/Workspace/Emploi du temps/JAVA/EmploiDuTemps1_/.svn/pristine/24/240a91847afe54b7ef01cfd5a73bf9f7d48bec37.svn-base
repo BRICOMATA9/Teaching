@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT bdedt (inspecteurs, enseignants, étudiants, groupes, matières, salles, edt)>
+
+<!ELEMENT nom (#PCDATA)> 
+<!ELEMENT prénom (#PCDATA)>
+<!ELEMENT mél (#PCDATA)>
+<!ELEMENT login (#PCDATA)> 
+<!ELEMENT pass (#PCDATA)>
+
+<!ELEMENT inspecteurs (inspecteur*)>
+
+<!ELEMENT inspecteur (nom, prénom, mél, login, pass)>
+<!ATTLIST inspecteur promotion CDATA #REQUIRED>
+<!ATTLIST inspecteur id CDATA #REQUIRED>
+
+<!ELEMENT enseignants (enseignant*)>
+
+<!ELEMENT enseignant (nom, prénom, mél, login, pass)>
+<!ATTLIST enseignant id CDATA #REQUIRED>
+
+<!ELEMENT étudiants (promotion*)>
+
+<!ELEMENT promotion (étudiant*)>
+<!ATTLIST promotion id CDATA #REQUIRED>
+
+<!ELEMENT étudiant (nom, prénom, login, pass)>
+<!ATTLIST étudiant id CDATA #REQUIRED>
+
+<!ELEMENT groupes (groupe*)>
+<!ELEMENT groupe EMPTY>
+<!ATTLIST groupe id CDATA #REQUIRED>
+<!ATTLIST groupe étudiants CDATA #REQUIRED><!-- liste des id d'étudiants, séparés par un espace -->
+
+<!ELEMENT matières (matière*)>
+
+<!ELEMENT matière (intitulé, enseignements)>
+<!ATTLIST matière id CDATA #REQUIRED>
+<!ATTLIST matière type (facultatif|obligatoire) "obligatoire">
+<!ELEMENT intitulé (#PCDATA)>
+
+<!ELEMENT enseignements (CM?, TD?, TP?, BE?)>
+
+<!ELEMENT CM EMPTY>
+<!ATTLIST CM volume CDATA #REQUIRED><!-- format  hh:mm (hh=heures, mm=minutes) -->
+<!ATTLIST CM enseignants CDATA #REQUIRED><!-- liste des id d'enseignant, séparés par un espace -->
+<!ATTLIST CM groupes CDATA #REQUIRED><!-- liste des id de groupe, séparés par un espace -->
+<!-- un enseignant aura le groupe correspondant à sa position dans la liste -->
+
+<!ELEMENT TD EMPTY>
+<!ATTLIST TD volume CDATA #REQUIRED><!-- format  hh:mm (hh=heures, mm=minutes) -->
+<!ATTLIST TD enseignants CDATA #REQUIRED><!-- liste des id d'enseignant, séparés par un espace -->
+<!ATTLIST TD groupes CDATA #REQUIRED><!-- liste des id de groupe, séparés par un espace -->
+<!-- un enseignant aura le groupe correspondant à sa position dans la liste -->
+
+<!ELEMENT TP EMPTY>
+<!ATTLIST TP volume CDATA #REQUIRED><!-- format  hh:mm (hh=heures, mm=minutes) -->
+<!ATTLIST TP enseignants CDATA #REQUIRED><!-- liste des id d'enseignant, séparés par un espace -->
+<!ATTLIST TP groupes CDATA #REQUIRED><!-- liste des id de groupe, séparés par un espace -->
+<!-- un enseignant aura le groupe correspondant à sa position dans la liste -->
+
+<!ELEMENT BE EMPTY> 
+<!ATTLIST BE volume CDATA #REQUIRED><!-- format  hh:mm (hh=heures, mm=minutes) -->
+<!ATTLIST BE enseignants CDATA #REQUIRED><!-- liste des id d'enseignant, séparés par un espace -->
+<!ATTLIST BE groupes CDATA #REQUIRED><!-- liste des id de groupe, séparés par un espace -->
+<!-- un enseignant aura le groupe correspondant à sa position dans la liste -->
+
+<!ELEMENT salles (salle*)>
+<!ELEMENT salle EMPTY>
+<!ATTLIST salle type (amphi|cours|tp) "cours">
+<!ATTLIST salle taille CDATA #REQUIRED>
+<!ATTLIST salle id CDATA #REQUIRED>
+
+<!ELEMENT edt (réservation*)>
+<!ELEMENT réservation EMPTY>
+<!ATTLIST réservation date CDATA #REQUIRED><!-- format  jj/mm/aaaa (jj=jour, mm=mois, aaaa=année) -->
+<!ATTLIST réservation heure CDATA #REQUIRED><!-- format  hh:mm (hh=heures, mm=minutes) -->
+<!ATTLIST réservation durée CDATA #REQUIRED><!-- format  hh:mm (hh=heures, mm=minutes) -->
+<!ATTLIST réservation salle CDATA #REQUIRED>
+<!ATTLIST réservation groupe CDATA #REQUIRED>
+<!ATTLIST réservation matière CDATA #REQUIRED>

@@ -1,0 +1,3 @@
+public interface Class0{
+	public int f(Class0 x);
+}

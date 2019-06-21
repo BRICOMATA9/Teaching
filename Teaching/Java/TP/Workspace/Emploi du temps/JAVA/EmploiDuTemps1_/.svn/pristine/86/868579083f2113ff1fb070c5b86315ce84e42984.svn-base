@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="classes" path="sources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="javamail-1.4/mail.jar"/>
+	<classpathentry kind="lib" path="javamail-1.4/lib/mailapi.jar"/>
+	<classpathentry kind="lib" path="javamail-1.4/lib/pop3.jar"/>
+	<classpathentry kind="lib" path="javamail-1.4/lib/smtp.jar"/>
+	<classpathentry kind="lib" path="jaf-1.1/activation.jar"/>
+	<classpathentry kind="lib" path="jdom-1.0/build/jdom.jar"/>
+	<classpathentry kind="lib" path="FinalTest.jar"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

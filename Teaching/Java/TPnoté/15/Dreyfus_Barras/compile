@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/dreyfus_barras/Dreyfus_Barras.java
+java -cp build/classes dreyfus_barras.Dreyfus_Barras

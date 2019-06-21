@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -encoding iso-8859-1 -d bin -sourcepath src src/Personnel.java
+java -cp bin Personnel

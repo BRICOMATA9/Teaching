@@ -1,0 +1,19 @@
+<!ELEMENT projects (project)*>
+
+<!ELEMENT project (#PCDATA | br | b | i)*>
+<!ATTLIST project 
+    title CDATA ""
+    dept CDATA ""
+    tutorname CDATA ""
+    tutormail CDATA ""
+    group CDATA "">
+
+<!ELEMENT br EMPTY>
+
+<!ELEMENT b (#PCDATA)>
+
+<!ELEMENT i (#PCDATA)>
+
+<!ELEMENT a (#PCDATA)>
+<!ATTLIST a
+    href CDATA "">

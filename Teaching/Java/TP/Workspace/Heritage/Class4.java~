@@ -1,0 +1,9 @@
+public class Class4 extends Class2 {
+	protected void m(){
+		super.m();
+	}
+	
+	protected void r(){
+		System.out.println("Cgfgfgfh");
+	}
+}

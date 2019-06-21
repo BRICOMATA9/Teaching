@@ -1,0 +1,23 @@
+package Exercice_1;
+
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.stream.Stream;
+
+public class Exo3 {
+
+	public static void créer_flux() {
+
+		Collection<String> items = new ArrayList<String>(Arrays.asList("aghiles","djoudi"));
+
+		Stream<String> stream = items.stream();
+
+		//System.out.println(Arrays.toString(stream.toArray()));
+    stream.forEach(System.out::println);
+  }
+
+  public static void main(String[] args) {
+		créer_flux();
+  }
+}

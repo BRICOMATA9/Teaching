@@ -1,0 +1,39 @@
+#ligne1{
+	margin-top: 10px;
+}
+
+#ligne2{
+	margin-top: 10%;
+}
+
+#ligne3{
+	margin-top: 10%;
+}
+
+#ligne4{
+	margin-top: 10%;
+}
+
+#colonne11{
+	float: left;
+	margin-right: 20%;
+	padding-left: 1.5em;	
+}
+
+#colonne22{
+	float: center;
+	margin-right: 20%;
+	padding-left: 1.5em;
+}
+
+#colonne33{
+	float: right;	
+	margin-right: 20%;
+	padding-left: 1.5em;
+}
+
+#colonne44{
+	float: right;	
+	margin-right: 20%;
+	padding-left: 1.5em;
+}

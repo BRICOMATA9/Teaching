@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>MVC - Mode View &amp; Controller</title>
+</head>
+<body>
+<span style="font-weight: bold;">CMPT 300 Design Patterns </span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;">Mayterm 2012</span><br
+ style="font-weight: bold;">
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">MVC - Mode, View &amp; Controller</span><br>
+<hr style="width: 100%; height: 2px;"><br>
+<div style="margin-left: 80px;"><span style="font-weight: bold;">&lt;&lt;</span>
+<a href="lab10.zip">lab10.zip</a>
+<span style="font-weight: bold;">&gt;&gt;</span><br>
+</div>
+<br>
+The MVC pattern is an example of a compound pattern - it consists of
+multiple
+patterns. The idea behind it is that you seperate the business logic of
+the
+application the from actual data and display methods of that data. It
+is a classic pattern that achieves loose coupling and is often used
+when designing graphical interfaces that respond to input events.<br>
+<br>
+The <font color="#ff0000"><b>model</b></font> is <font color="#ff0000"><b>the
+data</b></font>. It also maintains <span
+ style="font-weight: bold; color: rgb(255, 0, 0);">state</span> as well
+as any <span style="font-weight: bold; color: rgb(255, 0, 0);">application
+logic</span>.<br>
+<br>
+The <font color="#33cc00"><b>view</b></font> is the <font
+ color="#33cc00"><b>user-interface</b></font> for the user (it can be a
+GUI,
+command line, or other type of interface.) It obtains the state and
+data from the model.<br>
+<br>
+The <font color="#6600cc"><b>controller</b></font>
+is what <font color="#6600cc"><b>manages all the interactions</b></font>
+between the model and the view. <br>
+<br>
+&lt;&lt; We will illustrate this in class. &gt;&gt;<br>
+<br>
+<br>
+There are widespread examples of MVC -<br>
+<br>
+<div style="margin-left: 40px;">- <a target="_blank"
+ href="http://java.sun.com/products/jfc/tsc/articles/architecture/#roots">Java
+Swing</a><br>
+<br>
+- <a target="_blank"
+ href="http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhone101/Articles/01_CreatingProject.html#//apple_ref/doc/uid/TP40007514-CH3-SW3">iOS
+programming
+using xcode</a>.<br>
+<br>
+- <a target="_blank"
+ href="http://msdn.microsoft.com/en-us/library/dd394709.aspx">Microsoft
+.NET </a><br>
+</div>
+<br>
+<br>
+In UML: <br>
+<br>
+<img style="width: 710px; height: 511px;" alt="" src="UML-general.jpg"><br>
+<blockquote>&nbsp;<br>
+</blockquote>
+There are indeed a few patterns going on here as well:<br>
+<br>
+- We see the <span style="font-weight: bold;">Observer</span> pattern
+as the View implements the Observer interface and the Model serves as
+the subject<br>
+<br>
+- We see the <span style="font-weight: bold;">Strategy</span> pattern
+used with the Model<br>
+<br>
+Hence, the MVC pattern is often considered a <span
+ style="font-weight: bold;">compound design pattern</span>.<br>
+<br>
+<br>
+An Example: (Covered in detail in your text beginning from page 529.)<br>
+<br>
+<br>
+<br>
+<div style="margin-left: 40px;">- <a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/BeatModelInterface.java">BeatModelInterface.java<br>
+<br>
+</a></div>
+<div style="margin-left: 40px;">- <a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/BeatModel.java">BeatModel.java</a><br>
+<br>
+- <a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/DJView.java">DJView.java</a><br>
+<a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/BeatModel.java"><br>
+</a></div>
+<div style="margin-left: 40px;">- <a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/ControllerInterface.java">ControllerInterface.java<br>
+<br>
+</a></div>
+<div style="margin-left: 40px;">- <a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/BeatController.java">BeatController.java<br>
+</a></div>
+<br>
+<div style="margin-left: 40px;">- <a href="http://www.people.westminstercollege.edu/faculty/ggagne/may2012/lab10/DJTestDrive.java">DJTestDrive.java</a><br>
+</div>
+<br>
+Step through this code and follow along the steps that are involved
+when a button on the controller is pressed. This should give you a good
+overview of how the MVC pattern operates.<br>
+&nbsp; <br>
+<br>
+<b> The Lab: </b><br>
+<br>
+In the <big><span style="font-family: monospace;">exercise</span></big>
+folder of the source code download are several source files related to
+the MVC.<br>
+<br>
+You will modify this program so that when you enter a word in the text
+field, the word turns to Pig Latin if you click the Pig Latin button,
+and turns to a flame (all letters in uppercase) if you click the Flame
+button.<br>
+<br>
+<div style="margin-left: 80px;"><img
+ style="width: 282px; height: 177px;" alt="" src="screen.png"><br>
+</div>
+<br>
+<br>
+<span style="font-weight: bold;">Testing Program</span><br>
+<br>
+- <big><span style="font-family: monospace;">TestRun.java</span></big><br>
+<br>
+This indicates that you need to implement the <big><span
+ style="font-family: monospace;">Controller</span></big> interface, as
+well as provide two models (<big><span style="font-family: monospace;">PigLatinModel</span></big>
+and <big><span style="font-family: monospace;">FlameModel</span></big>)
+that
+implement the <big><span style="font-family: monospace;">Model</span></big>
+interface. This is the strategy pattern in action. The Model interface
+specifies the action the <big><span style="font-family: monospace;">process()</span></big>
+method is to apply. <br>
+<br>
+Implementing the <big><span style="font-family: monospace;">Controller</span></big>
+interface is simple - just take the model it is passed, and invoke its <big><span
+ style="font-family: monospace;">process()</span></big> method, passing
+it the <big><span style="font-family: monospace;">String input</span></big>
+value.<br>
+<br>
+Implementing each model is a bit more work. The <big><span
+ style="font-family: monospace;">process() </span></big>method
+receives the input from the <big><span style="font-family: monospace;">Controller</span></big>
+and applies the appropriate operation (converts the input to Pig Latin
+or to a flame.) The other three methods that need to be implemented are
+related to setting up the observer. The <big><span
+ style="font-family: monospace;">BeatModel</span></big> class can serve
+as a useful reference for this.<br>
+<br>
+The <big><span style="font-family: monospace;">View</span></big> is
+mostly done for you. Notice that ViewFrame inplements the <big><span
+ style="font-family: monospace;">ViewObserver</span></big>. This means
+that the <big><span style="font-family: monospace;">updateView()</span></big>
+method in <big><span style="font-family: monospace;">ViewFrame</span></big>
+needs to be completed. This is a simple, one-line addition at the end
+of the source file.<br>
+Otherwise the <big><span style="font-family: monospace;">View</span></big>
+component should work fine.<br>
+</body>
+</html>

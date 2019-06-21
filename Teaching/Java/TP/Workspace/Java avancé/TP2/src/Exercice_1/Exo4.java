@@ -1,0 +1,47 @@
+package Exercice_1;
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class Exo4 {
+	
+	private int _entier1 = 12;
+	private int _entier2 = 12;
+	private static int _entier3 = 12;
+
+
+	public void setEntier1 (int entier){
+		_entier1=entier;
+		System.out.println(_entier1);
+	}
+
+	public void setEntier2(int entier){
+		_entier2=entier;
+	}
+	
+	public static void setEntier3 (int entier){
+		_entier3=entier;
+		System.out.println(entier);
+	}
+
+	public static void nonStatic(Object o) {
+		Class <?> c = o.getClass();
+		Method[] ms = c.getMethods();
+		
+		for (Method m:ms) {
+			if (m.getName().startsWith("set") && 
+				m.getParameterCount()==1 &&
+				m.getParameterTypes()[0] == int.class &&
+			    !Modifier.isStatic(m.getModifiers())) {
+					System.out.println(m.getName());
+			}
+		}
+	}
+
+
+	public static void main (String [] args) throws IllegalAccessException{
+		Exo4 o = new Exo4();
+		nonStatic(o);	
+
+	}
+}

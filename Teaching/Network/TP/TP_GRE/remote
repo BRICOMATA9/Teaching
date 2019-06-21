@@ -1,0 +1,29 @@
+en
+conf t
+
+int g0/0
+no sh
+ip add 10.4.0.1 255.255.255.0
+
+int s0/0/1
+no sh
+encap hdlc
+
+int s0/0/1
+no sh
+ip add 203.0.113.1 255.255.255.252
+no sh
+
+int tunnel 0
+no sh
+ip add 192.168.0.10 255.255.255.252
+exit
+
+ip route 0.0.0.0 0.0.0.0 s0/0/1
+
+int tunnel 0
+tunnel source s0/0/1
+tunnel destination 198.51.100.1
+tunnel mode gre ip
+no sh
+

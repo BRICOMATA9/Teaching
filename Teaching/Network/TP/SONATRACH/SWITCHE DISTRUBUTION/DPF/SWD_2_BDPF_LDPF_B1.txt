@@ -1,0 +1,469 @@
+SWD_2_BDPF_LDPF_B1#
+Building configuration...
+
+Current configuration : 13058 bytes
+!
+! Last configuration change at 07:33:03 UTC Tue Jun 16 2015 by admin
+! NVRAM config last updated at 07:33:06 UTC Tue Jun 16 2015 by admin
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname SWD_2_BDPF_LDPF_B1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered warnings
+enable secret 5 $1$R2zQ$/vUZ0WiCHA1pL5G2LKTi7/
+!
+username cisco password 7 106D000A061843595F
+username admin privilege 15 secret 5 $1$R2zQ$/vUZ0WiCHA1pL5G2LKTi7/
+no aaa new-model
+system mtu routing 1500
+ip routing
+!
+no ip dhcp use vrf connected
+ip dhcp excluded-address 172.22.84.10 172.22.84.30
+ip dhcp excluded-address 172.22.164.100 172.22.164.110
+ip dhcp excluded-address 172.22.165.100 172.22.165.110
+!
+ip dhcp pool Gp_Gios
+   network 172.22.4.0 255.255.254.0
+   default-router 172.22.4.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_Utilisateur
+   network 172.22.20.0 255.255.254.0
+   default-router 172.22.20.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_VIP
+   network 172.22.36.0 255.255.254.0
+   default-router 172.22.36.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Adm_RS
+   network 172.22.52.0 255.255.254.0
+   default-router 172.22.52.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Fn_Compt
+   network 172.22.84.0 255.255.254.0
+   default-router 172.22.84.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_GRHM
+   network 172.22.100.0 255.255.254.0
+   default-router 172.22.100.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_RTOM
+   network 172.22.116.0 255.255.254.0
+   default-router 172.22.116.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_Visio_conf
+   network 172.22.132.0 255.255.254.0
+   default-router 172.22.132.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Mrt
+   network 172.22.148.0 255.255.254.0
+   default-router 172.22.148.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Carto
+   network 172.22.164.0 255.255.254.0
+   default-router 172.22.164.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Voix
+   network 172.22.180.0 255.255.254.0
+   next-server 172.22.178.13
+   default-router 172.22.180.1
+   option 43 hex 3a02.0025.ff
+   option 66 ip 172.22.178.13
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_Gios2
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+!
+!
+no ip domain-lookup
+!
+!
+crypto pki trustpoint TP-self-signed-3243267968
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3243267968
+ revocation-check none
+ rsakeypair TP-self-signed-3243267968
+!
+!
+crypto pki certificate chain TP-self-signed-3243267968
+ certificate self-signed 01
+  3082024A 308201B3 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33323433 32363739 3638301E 170D3933 30333031 30303033
+  30335A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 32343332
+  36373936 3830819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100C38A 1323675A 224923A4 3611E072 C888D60A BB9CAED6 BB9DE70C CA5CA5FD
+  B0E1871C 742C2562 64DA4F44 FAC7736F 0D9E08D6 236CA4A9 B2DC057E 5A020077
+  C58F60E4 468EB8B8 FB830CAA CC601D65 9917C562 1B1707E5 72A62F82 D8AA0CBD
+  2471A881 4A5CA072 8EC73483 FE4DDFE0 DB8905BA A4EF8F0A 057316C2 DAF4660B
+  E2010203 010001A3 72307030 0F060355 1D130101 FF040530 030101FF 301D0603
+  551D1104 16301482 12535744 5F325F42 4450465F 4C445046 5F423130 1F060355
+  1D230418 30168014 02C76210 BA63A4F2 2383D014 91C070EB 159BF4E9 301D0603
+  551D0E04 16041402 C76210BA 63A4F223 83D01491 C070EB15 9BF4E930 0D06092A
+  864886F7 0D010104 05000381 810065D1 E6491E32 D9F36E3F 0476D7F0 72FD1DB0
+  30C17071 932E5CDC A8F61C2C 7C6A2303 2E991185 1C71AD84 605494E4 A1666665
+  8250A1DA E59D3D6A 32F43BF3 FC0B3FE2 12956D54 65573717 1F73DFFE 9AF7C475
+  D27AACA7 0D5D4CC8 11000C48 208F3EE0 31E0C007 11025DF6 D9426D21 AB1147CD
+  7F2702DE DD8B4501 8BE500D7 DD87
+        quit
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+spanning-tree vlan 8-12,37 priority 16384
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel10
+ description Fo_vers_VSS_6509_SHEXP_Core
+ no switchport
+ ip address 10.249.0.150 255.255.255.252
+!
+interface FastEthernet0
+ no ip address
+ no ip route-cache
+ no ip mroute-cache
+ shutdown
+!
+interface GigabitEthernet0/1
+ description Fo_Vers_SWA1_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description Fo_Vers_SWA2_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/3
+ description Fo_Vers_SWA3_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/4
+ description Fo_Vers_SWA4_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/5
+ description Fo_Vers_SWA5_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/6
+ description Fo_Vers_SWA6_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/7
+ description Fo_Vers_SWA7_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/8
+ description Fo_Vers_SWA8_G0/50
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/9
+!
+interface GigabitEthernet0/10
+!
+interface GigabitEthernet0/11
+!
+interface GigabitEthernet0/12
+!
+interface GigabitEthernet0/13
+!
+interface GigabitEthernet0/14
+!
+interface GigabitEthernet0/15
+!
+interface GigabitEthernet0/16
+!
+interface GigabitEthernet0/17
+!
+interface GigabitEthernet0/18
+!
+interface GigabitEthernet0/19
+!
+interface GigabitEthernet0/20
+!
+interface GigabitEthernet0/21
+!
+interface GigabitEthernet0/22
+!
+interface GigabitEthernet0/23
+!
+interface GigabitEthernet0/24
+!
+interface TenGigabitEthernet0/1
+!
+interface TenGigabitEthernet0/2
+!
+interface TenGigabitEthernet0/3
+!
+interface TenGigabitEthernet0/4
+!
+interface TenGigabitEthernet0/5
+!
+interface TenGigabitEthernet0/6
+!
+interface TenGigabitEthernet0/7
+!
+interface TenGigabitEthernet0/8
+!
+interface TenGigabitEthernet0/9
+!
+interface TenGigabitEthernet0/10
+!
+interface TenGigabitEthernet0/11
+ description Po_channel_10_link_1
+ no switchport
+ no ip address
+ channel-group 10 mode on
+!
+interface TenGigabitEthernet0/12
+ description Po_channel_10_link_2
+ no switchport
+ no ip address
+ channel-group 10 mode on
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ description Gp_Gios
+ ip address 172.22.4.3 255.255.254.0
+ standby 0 ip 172.22.4.1
+!
+interface Vlan3
+ description Gp_Utilisateur
+ ip address 172.22.20.3 255.255.254.0
+ standby 0 ip 172.22.20.1
+!
+interface Vlan4
+ description GP_VIP
+ ip address 172.22.36.3 255.255.254.0
+ standby 0 ip 172.22.36.1
+!
+interface Vlan5
+ description GP_Adm_RS
+ ip address 172.22.52.3 255.255.254.0
+ standby 0 ip 172.22.52.1
+!
+interface Vlan6
+ description GP_Wifi
+ ip address 172.22.64.131 255.255.255.192
+ ip helper-address 10.249.255.254
+ standby 0 ip 172.22.64.129
+!
+interface Vlan7
+ description GP_Fn_Compt
+ ip address 172.22.84.3 255.255.254.0
+ standby 0 ip 172.22.84.1
+!
+interface Vlan8
+ description GP_GRHM
+ ip address 172.22.100.3 255.255.254.0
+ standby 0 ip 172.22.100.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan9
+ description GP_RTOM
+ ip address 172.22.116.3 255.255.254.0
+ standby 0 ip 172.22.116.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan10
+ description GP_Visio_conf
+ ip address 172.22.132.3 255.255.254.0
+ standby 0 ip 172.22.132.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan11
+ description GP_Mrt
+ ip address 172.22.148.3 255.255.254.0
+ standby 0 ip 172.22.148.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan12
+ description GP_Fn_Carto
+ ip address 172.22.164.3 255.255.254.0
+ standby 0 ip 172.22.164.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan37
+ description GP_voix
+ ip address 172.22.180.3 255.255.254.0
+ standby 0 ip 172.22.180.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan999
+ description management
+ ip address 10.249.255.51 255.255.255.240
+ standby 0 ip 10.249.255.49
+!
+!
+router eigrp 100
+ network 10.0.0.0
+ network 172.22.0.0
+!
+!
+ip http server
+ip http secure-server
+!
+!
+logging esm config
+logging alarm minor
+logging 10.249.254.64
+logging 10.249.254.62
+!
+snmp-server community SH-Explo-Ro RO
+snmp-server community $H_EXpl0-rW RW
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps transceiver all
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface-old
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps license
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps bgp
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-c
+hange inconsistency
+snmp-server enable traps cluster
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps dot1x auth-fail-vlan guest-vlan no-auth-fail-vlan no-gu
+est-vlan
+snmp-server enable traps energywise
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps event-manager
+snmp-server enable traps hsrp
+snmp-server enable traps ipmulticast
+snmp-server enable traps isis
+snmp-server enable traps msdp
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-messa
+ge
+snmp-server enable traps cpu threshold
+snmp-server enable traps rep
+snmp-server enable traps ipsla
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistenc
+y
+snmp-server enable traps syslog
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps flash insertion removal
+snmp-server enable traps port-security
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps alarms informational
+snmp-server enable traps mac-notification change move threshold
+snmp-server enable traps errdisable
+snmp-server enable traps vlan-membership
+snmp-server host 10.249.254.62 version 2c SH-Explo-Ro
+!
+banner login ^CC
+********************************************************************************
+*     PROPRIETE SONATRACH EXPLORATION-UNAUTHORISED ACCESS PROHIBITED           *
+* This system is for the use of authorised users only. Individuals using this  *
+* computer system without authority, or in excess of their authority, are      *
+* subject to having all of their activities on this system monitored and       *
+* recorded by system personnel.                                                *
+*                                                                              *
+* In the course of monitoring individuals improperly using this system, or in  *
+* the course of system maintenance, the activities of authorised users may     *
+* also be monitored.                                                           *
+*                                                                              *
+* Anyone using this system expressly consents to such monitoring and is        *
+* advised that if such monitoring reveals possible evidence of criminal        *
+* activity, system personnel may provide evidence of such monitoring to        *
+* security officials.                                                          *
+*                                                                              *
+* The above notice also applies when using this system, or parts of it, to     *
+* gain access to other systems.                                                *
+********************************************************************************
+!
+'^C
+!
+line con 0
+ logging synchronous
+ login local
+line vty 0 4
+ password 7 104D000A0618
+ login local
+line vty 5 15
+ login
+!
+ntp server 10.249.0.1
+end

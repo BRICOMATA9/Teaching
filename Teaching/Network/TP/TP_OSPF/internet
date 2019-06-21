@@ -1,0 +1,20 @@
+en
+conf t
+
+int s 0/0/0
+ip add 203.0.113.17 255.255.255.248
+clock rate 128000
+no sh
+exit
+
+int g0/0
+ip add 192.0.2.1 255.255.255.0
+no sh
+
+int g0/1
+ip add 198.51.100.1 255.255.255.0
+no sh
+exit
+
+ip route 192.168.0.0 255.255.0.0 s0/0/0
+ip route 10.10.0.0 255.255.0.0 s0/0/0

@@ -1,0 +1,27 @@
+package adapter.IterateTestAdapter;
+
+import java.util.*;
+
+public class IterateTest {
+
+	public static void main(String[] args) {
+		OldStyleList<String> osl = new OldStyleList<String>();
+		osl.add("one");		
+		osl.add("two");		
+		osl.add("three");		
+		osl.add("four");
+
+		// the recommended technique ....
+		Enumeration<String> e = osl.elements();
+		Iterator<String> i = 	osl.iterator();	
+
+		Iterator<String> ia = new EnumerationAdapter<String>(e);
+		Enumeration<String> ea = new IteratorAdapter<String>(i);
+
+		while (ia.hasNext())
+			System.out.println(i.next());
+
+		while (ea.hasMoreElements())
+			System.out.println(i.nextElement());
+	}
+}

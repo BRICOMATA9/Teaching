@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><bdedt>
+    <inspecteurs>
+     <inspecteur id="insp1" promotion="promo1">
+      <nom>Inspecteur1</nom><prénom>Préinsp1</prénom><mél>inspecteur1@insa-tlse.fr</mél><login>insp1</login><pass>insp1go</pass></inspecteur>
+     <inspecteur id="insp2" promotion="promo2">
+      <nom>Inspecteur2</nom><prénom>Préinsp2</prénom><mél>inspecteur2@insa-tlse.fr</mél><login>insp2</login><pass>insp2go</pass></inspecteur>
+    </inspecteurs>
+    <enseignants>
+     <enseignant id="ens1">
+      <nom>Enseignant1</nom><prénom>Préens1</prénom><mél>enseignant1@insa-tlse.fr</mél>
+      <login>ens1</login><pass>ens1go</pass>
+     </enseignant>
+     <enseignant id="ens2">
+      <nom>Enseignant2</nom><prénom>Préens2</prénom><mél>enseignant2@insa-tlse.fr</mél>
+      <login>ens2</login><pass>ens2go</pass>
+     </enseignant>
+     <enseignant id="ens3">
+      <nom>Enseignant3</nom><prénom>Préens3</prénom><mél>enseignant3@insa-tlse.fr</mél>
+      <login>ens3</login><pass>ens3go</pass>
+     </enseignant>
+     <enseignant id="ens4">
+      <nom>Enseignant4</nom><prénom>Préens4</prénom><mél>enseignant4@insa-tlse.fr</mél>
+      <login>ens4</login><pass>ens4go</pass>
+     </enseignant>
+     <enseignant id="ens4">
+      <nom>Enseignant4</nom><prénom>Préens4</prénom><mél>enseignant4@insa-tlse.fr</mél>
+      <login>ens4</login><pass>ens4go</pass>
+     </enseignant>
+     <enseignant id="ens5">
+      <nom>Enseignant5</nom><prénom>Préens5</prénom><mél>enseignant5@insa-tlse.fr</mél>
+      <login>ens5</login><pass>ens5go</pass>
+     </enseignant>
+     <enseignant id="ens6">
+      <nom>Enseignant6</nom><prénom>Préens6</prénom><mél>enseignant6@insa-tlse.fr</mél>
+      <login>ens6</login><pass>ens6go</pass>
+     </enseignant>
+     <enseignant id="ens7">
+      <nom>Enseignant7</nom><prénom>Préens7</prénom><mél>enseignant7@insa-tlse.fr</mél>
+      <login>ens7</login><pass>ens7go</pass>
+     </enseignant>
+     <enseignant id="ens8">
+      <nom>Enseignant8</nom><prénom>Préens8</prénom><mél>enseignant8@insa-tlse.fr</mél>
+      <login>ens8</login><pass>ens8go</pass>
+     </enseignant>
+    </enseignants>
+    <étudiants>
+     <promotion id="promo1">
+      <étudiant id="et1_1"><nom>EtNom 1_1</nom><prénom>préEt1_1</prénom><login>et1_1</login><pass>et1_1go</pass></étudiant>
+      <étudiant id="et1_2"><nom>EtNom 1_2</nom><prénom>préEt1_2</prénom><login>et1_2</login><pass>et1_2go</pass></étudiant>
+      <étudiant id="et1_3"><nom>EtNom 1_3</nom><prénom>préEt1_3</prénom><login>et1_3</login><pass>et1_3go</pass></étudiant>
+      <étudiant id="et1_4"><nom>EtNom 1_4</nom><prénom>préEt1_4</prénom><login>et1_4</login><pass>et1_4go</pass></étudiant>
+      <étudiant id="et1_5"><nom>EtNom 1_5</nom><prénom>préEt1_5</prénom><login>et1_5</login><pass>et1_5go</pass></étudiant>
+      <étudiant id="et1_6"><nom>EtNom 1_6</nom><prénom>préEt1_6</prénom><login>et1_6</login><pass>et1_6go</pass></étudiant>
+      <étudiant id="et1_7"><nom>EtNom 1_7</nom><prénom>préEt1_7</prénom><login>et1_7</login><pass>et1_7go</pass></étudiant>
+      <étudiant id="et1_8"><nom>EtNom 1_8</nom><prénom>préEt1_8</prénom><login>et1_8</login><pass>et1_8go</pass></étudiant>
+     </promotion>
+     <promotion id="promo2">
+      <étudiant id="et2_1"><nom>EtNom 2_1</nom><prénom>préEt2_1</prénom><login>et2_1</login><pass>et2_1go</pass></étudiant>
+      <étudiant id="et2_2"><nom>EtNom 2_2</nom><prénom>préEt2_2</prénom><login>et2_2</login><pass>et2_2go</pass></étudiant>
+      <étudiant id="et2_3"><nom>EtNom 2_3</nom><prénom>préEt2_3</prénom><login>et2_3</login><pass>et2_3go</pass></étudiant>
+      <étudiant id="et2_4"><nom>EtNom 2_4</nom><prénom>préEt2_4</prénom><login>et2_4</login><pass>et2_4go</pass></étudiant>
+      <étudiant id="et2_5"><nom>EtNom 2_5</nom><prénom>préEt2_5</prénom><login>et2_5</login><pass>et2_5go</pass></étudiant>
+      <étudiant id="et2_6"><nom>EtNom 2_6</nom><prénom>préEt2_6</prénom><login>et2_6</login><pass>et2_6go</pass></étudiant>
+      <étudiant id="et2_7"><nom>EtNom 2_7</nom><prénom>préEt2_7</prénom><login>et2_7</login><pass>et2_7go</pass></étudiant>
+      <étudiant id="et2_8"><nom>EtNom 2_8</nom><prénom>préEt2_8</prénom><login>et2_8</login><pass>et2_8go</pass></étudiant>
+     </promotion>
+    </étudiants>
+    <groupes>
+     <groupe id="p1c1" étudiants="et1_1 et1_2 et1_3 et1_4 et1_5 et1_6 et1_7 et1_8"/>
+     <groupe id="p1td1" étudiants="et1_1 et1_2 et1_3 et1_4"/>
+     <groupe id="p1td2" étudiants="et1_5 et1_6 et1_7 et1_8"/>
+     <groupe id="p1tp1" étudiants="et1_1 et1_2"/>
+     <groupe id="p1tp2" étudiants="et1_3 et1_4"/>
+     <groupe id="p1tp3" étudiants="et1_5 et1_6"/>
+     <groupe id="p1tp4" étudiants="et1_7 et1_8"/>
+
+     <groupe id="p2c1" étudiants="et2_1 et2_2 et2_3 et2_4 et2_5 et2_6 et2_7 et2_8"/>
+     <groupe id="p2td1" étudiants="et2_1 et2_2 et2_3 et2_4"/>
+     <groupe id="p2td2" étudiants="et2_5 et2_6 et2_7 et2_8"/>
+     <groupe id="p2tp2" étudiants="et2_1 et2_2"/>
+     <groupe id="p2tp2" étudiants="et2_3 et2_4"/>
+     <groupe id="p2tp3" étudiants="et2_5 et2_6"/>
+     <groupe id="p2tp4" étudiants="et2_7 et2_8"/>
+    </groupes>
+    <matières>
+     <matière id="m1p1" type="obligatoire">
+      <intitulé>Math Promo1</intitulé>
+      <enseignements>
+       <CM enseignants="ens1" groupes="p1c1" volume="8:00"/>
+       <TD enseignants="ens2 ens3" groupes="p1td1 p1td2" volume="4:00"/>
+       <TP enseignants="ens4 ens5 ens6 ens7" groupes="p1tp1 p1tp2 p1tp3 p1tp4" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m2p1">
+      <intitulé>Info Promo1</intitulé>
+      <enseignements>
+       <CM enseignants="ens8" groupes="p1c1" volume="8:00"/>
+       <TD enseignants="ens2 ens3" groupes="p1td1 p1td2" volume="4:00"/>
+       <TP enseignants="ens4 ens5 ens6 ens7" groupes="p1tp1 p1tp2 p1tp3 p1tp4" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m1p2" type="obligatoire">
+      <intitulé>Math Promo2</intitulé>
+      <enseignements>
+       <CM enseignants="ens1" groupes="p2c1" volume="8:00"/>
+       <TD enseignants="ens2 ens3" groupes="p2td1 p2td2" volume="4:00"/>
+       <TP enseignants="ens4 ens5 ens6 ens7" groupes="p2tp2 p2tp2 p2tp3 p2tp4" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m2p2">
+      <intitulé>Info Promo2</intitulé>
+      <enseignements>
+       <CM enseignants="ens8" groupes="p2c1" volume="8:00"/>
+       <TD enseignants="ens2 ens3" groupes="p2td1 p2td2" volume="4:00"/>
+       <TP enseignants="ens4 ens5 ens6 ens7" groupes="p2tp2 p2tp2 p2tp3 p2tp4" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m3p2" type="obligatoire">
+      <intitulé>Electronique Promo2</intitulé>
+      <enseignements>
+       <CM enseignants="ens1" groupes="p2c1" volume="8:00"/>
+       <TD enseignants="ens2 ens3" groupes="p2td1 p2td2" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m4p2">
+      <intitulé>Anglais Promo2</intitulé>
+      <enseignements>
+       <CM enseignants="ens8" groupes="p2c1" volume="8:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m5p2" type="obligatoire">
+      <intitulé>Automatique Promo2</intitulé>
+      <enseignements>
+       <TP enseignants="ens4 ens5 ens6 ens7" groupes="p2tp2 p2tp2 p2tp3 p2tp4" volume="2:00"/>
+      </enseignements>
+     </matière>
+     <matière id="m6p2">
+      <intitulé>Gestion Promo2</intitulé>
+      <enseignements>
+       <CM enseignants="ens8" groupes="p2c1" volume="4:00"/>
+      </enseignements>
+     </matière>
+    </matières>
+    <salles>
+     <salle id="SalleAmphi" taille="48" type="amphi"/>
+     <salle id="SalleCours1" taille="24" type="cours"/>
+     <salle id="SalleCours2" taille="24" type="cours"/>
+     <salle id="SalleTP1" taille="12" type="tp"/>
+     <salle id="SalleTP2" taille="12" type="tp"/>
+     <salle id="SalleTP3" taille="12" type="tp"/>
+     <salle id="SalleTP4" taille="12" type="tp"/>
+    </salles>
+    <edt>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1c1" heure="8:00" matière="m1p1" salle="SalleAmphi"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1td1" heure="9:30" matière="m1p1" salle="SalleCours1"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1td2" heure="9:30" matière="m1p1" salle="SalleCours2"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1tp1" heure="11:00" matière="m1p1" salle="SalleTP1"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1tp2" heure="11:00" matière="m1p1" salle="SalleTP2"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1tp3" heure="11:00" matière="m1p1" salle="SalleTP3"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p1tp4" heure="11:00" matière="m1p1" salle="SalleTP4"/>
+     <réservation date="15/01/2007" durée="1:15" groupe="p2c1" heure="11:00" matière="m2p2" salle="SalleAmphi"/>
+    </edt>
+   </bdedt>

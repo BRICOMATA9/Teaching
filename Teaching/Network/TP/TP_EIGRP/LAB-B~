@@ -1,0 +1,99 @@
+en
+conf t
+hostname Site-2
+
+int s0/0/0
+clock rate 128000
+ip add 192.168.100.29 255.255.255.252
+no sh
+
+int s0/0/1
+ip add 192.168.100.38 255.255.255.252
+no sh
+
+int g0/1.2
+enc dot1q 2
+ip add 10.10.2.1 255.255.255.0
+
+int g0/1.4
+enc dot1q 4
+ip add 10.10.4.1 255.255.255.0
+
+int g0/1.8
+enc dot1q 8
+ip add 10.10.8.1 255.255.255.0
+
+int g0/1.15
+enc dot1q 15
+ip add 10.10.15.1 255.255.255.0
+
+int g0/1.25
+enc dot1q 25
+ip add 10.10.25.1 255.255.255.0
+
+int g0/1
+no sh
+exit
+
+router eigrp 100
+net 192.168.100.28 0.0.0.3
+net 192.168.100.36 0.0.0.3
+net 10.10.2.0 0.0.0.255
+net 10.10.4.0 0.0.0.255
+net 10.10.8.0 0.0.0.255
+net 10.10.15.0 0.0.0.255
+no auto-summary
+passive-int g0/1.2
+passive-int g0/1.4
+passive-int g0/1.8
+passive-int g0/1.15
+exit
+
+int s0/0/0
+ip summary-add eigrp 100 10.10.0.0 255.255.240.0
+int s0/0/1
+ip summary-add eigrp 100 10.10.0.0 255.255.240.0
+exit
+
+access-list 1 permit 10.10.15.0 0.0.0.255
+
+int g0/1.25
+ip access-group 1 out
+exit
+
+ip dhcp excluded-add 10.10.2.1 10.10.2.5
+ip dhcp excluded-add 10.10.4.1 10.10.4.5
+ip dhcp excluded-add 10.10.8.1 10.10.8.5
+
+ip dhcp pool vlan2pool
+net 10.10.2.0 255.255.255.0
+dns-server 192.168.200.225
+default-router 10.10.2.1
+
+ip dhcp pool vlan4pool
+net 10.10.4.0 255.255.255.0
+dns-server 192.168.200.225
+default-router 10.10.4.1
+
+ip dhcp pool vlan8pool
+net 10.10.8.0 255.255.255.0
+dns-server 192.168.200.225
+default-router 10.10.8.1
+end
+
+copy run start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

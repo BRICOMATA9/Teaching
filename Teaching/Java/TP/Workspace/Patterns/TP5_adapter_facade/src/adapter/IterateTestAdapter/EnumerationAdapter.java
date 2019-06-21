@@ -1,0 +1,23 @@
+package adapter.IterateTestAdapter;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Iterator;
+import java.util.Enumeration;
+
+public class EnumerationAdapter<T> implements Iterator<T> {
+	private Enumeration<T> enumeration;
+	
+	public EnumerationAdapter(Enumeration<T> enumeration) {
+		this.enumeration = enumeration;
+	}
+
+	public boolean hasNext() {
+		return enumeration.hasMoreElements();
+	}
+
+	public T next() {
+		return enumeration.nextElement();
+	} 
+
+}

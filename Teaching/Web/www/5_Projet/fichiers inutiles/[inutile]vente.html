@@ -1,0 +1,248 @@
+
+<!DOCTYPE html> <html> 
+<head> 
+	<meta charset="utf-8"> 
+	<title>Vendre un objet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet"
+ 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="vente.css">
+ 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		 $(document).ready(function(){
+		 $('.header').height($(window).height());
+		 });
+
+		 function typeItem() {
+			var pos = document.getElementById("select_base").value;
+			if (pos == 1) {
+				document.getElementById("livre").style.display = "block";
+				document.getElementById("musique").style.display = "none";
+				document.getElementById("vetement").style.display = "none";
+				document.getElementById("chaussures").style.display = "none";
+				document.getElementById("habits").style.display = "none";
+			}
+			if (pos == 2) {
+				document.getElementById("livre").style.display = "none";
+				document.getElementById("musique").style.display = "block";
+				document.getElementById("vetement").style.display = "none";
+				document.getElementById("chaussures").style.display = "none";
+				document.getElementById("habits").style.display = "none";
+
+			}
+			if (pos == 3) {
+		
+				document.getElementById("livre").style.display = "none";
+				document.getElementById("musique").style.display = "none";
+				document.getElementById("vetement").style.display = "block";
+				document.getElementById("chaussures").style.display = "block";
+				document.getElementById("habits").style.display = "none";
+				
+
+			}
+			if (pos == 4) {
+				document.getElementById("livre").style.display = "none";
+				document.getElementById("musique").style.display = "none";
+				document.getElementById("vetement").style.display = "none";
+				document.getElementById("habits").style.display = "block";
+				document.getElementById("chaussures").style.display = "none";
+				document.getElementById("habits").style.display = "none";
+			}
+		}
+
+		function typeVet() {
+			var pos2 = document.getElementById("select_base2").value;
+			if (pos2 == 1) {
+				document.getElementById("habits").style.display = "none";
+				document.getElementById("chaussures").style.display = "block";
+
+			}
+			if (pos2 == 2) {
+				document.getElementById("habits").style.display = "block";
+				document.getElementById("chaussures").style.display = "none";	
+			}
+		}
+	</script>
+	<style type="text/css">
+		#livre { display: block; }
+		#musique { display: none; }
+		#vetement { display: none; }
+		#chaussures { display: none; }
+		#habits { display: none; }
+
+	</style>
+	
+</head>
+<body>  
+
+	 	<nav class="navbar navbar-expand-md">      
+		<a class="nav-link" href = "accueil.php"><img class="Eceamazon" src="images/logo.jpg" alt="plsthumb" width="80" height="80"><br>  
+	 	<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+	 		<span class="navbar-toggler-icon"></span>
+	 	</button>
+		 <div class="collapse navbar-collapse" id="main-navigation">
+			 <ul class="navbar-nav">
+				  <li class="nav-item"><a class="nav-link" href="catagories.html">Nos 4 Catégories</a></li>             
+		    	 <li class="nav-item"><a class="nav-link" href="venteflash.html">Ventes flash</a></li>             
+		    	 <li class="nav-item"><a class="nav-link" href="vente.html">Vendre</a></li>      
+		    	 <li class="nav-item"><a class="nav-link" href="profil.php">Mon compte</a></li>  
+		    	 <li class="nav-item"><a class="nav-link" href = "moyenpaiement.html"><img  width="50" height="50" src="images/store.png"></a>
+		    	</li>
+			 </ul>
+		 </div>
+	</nav>
+
+	<div id="section">
+<h2>Vente d'un objet</h2>
+	<table>                
+		<tr>   
+			<td>Catégories :</td>    
+			<td>
+				<select  id="select_base" onchange="typeItem()">
+					<option value="1">Livre</option>
+					<option value="2">Musique</option>
+					<option value="3">Vêtement</option>
+					<option value="4">Loisir & Sport</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Nom : </td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+		<tr>
+			<td>Prix à l'unité : </td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+		<tr>
+			<td>Description : </td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+		<tr>
+			<td><label for="avatar">Photo:</label></td>
+			<td><input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"></td>
+		</tr>
+		<tr>
+			<td><label for="avatar2">Vidéo (si disponible):</label></td>
+			<td><input type="file" id="avatar2" name="avatar2" accept="image2/mov, image2/mp4"></td>
+		</tr>
+	</table>
+
+	<table id = "livre">
+		<tr>
+			<td>Auteur du livre : </td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+	</table>
+
+	<table id = "musique">
+		<tr>
+			<td>Artiste :</td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+	</table>
+	<table id = "vetement">
+		
+		<tr>
+			<td>Type de vêtement :</td>
+			<td><select id="select_base2" onchange="typeVet()">
+					<option value="1">Chaussures</option>
+					<option value="2">Habits</option>
+			</td>
+		</tr>
+		<tr>
+			<td>Vêtement pour :</td>
+			<td><select name="type">
+					<option value="Femme">Femme</option>
+					<option value="Homme">Homme</option>
+			</td>
+		</tr>
+		<tr>
+			<td>Couleur :</td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+	</table>
+
+	<table id = "habits">
+		<tr>
+			<td>Taille :</td>
+			<td><select type="text" name="test">
+				<option value ="Taille1">XS</option>
+                <option value ="Taille2">S</option>
+                <option value ="Taille3">M</option>
+                <option value ="Taille4">L</option>
+                <option value ="Taille5">XL</option>
+            	</select>
+			</td>
+		</tr>
+	</table>
+
+	<table id = "chaussures">
+		<tr>
+			<td>Pointure :</td>
+			<td><input type="text" name="test">
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>       
+			<td colspan="2" align="center">   
+				<input type="submit" value="Mise en vente">   
+			</td>  
+		</tr>
+
+
+	</table>
+	<p>
+		<br>
+	    <br>
+	    <br>
+		<a href="accueil.php">Retour</a> à la page d'accueil.
+	</p>
+	</div>
+	
+	
+
+</div>
+
+
+		
+
+	
+<footer class="page-footer">
+	<div class="container">
+	 	<div class="row">
+	 		<div class="col-lg-8 col-md-8 col-sm-12">
+				<h6 class="text-uppercase font-weight-bold">Information additionnelle</h6>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu.
+					Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu.
+					Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.
+				</p>
+	  		</div>
+	 		<div class="col-lg-4 col-md-4 col-sm-12">
+				<h6 class="text-uppercase font-weight-bold">Contact</h6>
+				<p>
+					37, quai de Grenelle, 75015 Paris, France <br>
+					info@webDynamique.ece.fr <br>
+					+33 01 02 03 04 05 <br>
+					+33 01 03 02 05 04
+				</p>
+	 		</div>
+		</div>
+	</div>
+	<div class="footer-copyright text-center">&copy; 2019 Copyright | Droit d'auteur: webDynamique.ece.fr</div>
+</footer>
+
+</body>
+</html> 

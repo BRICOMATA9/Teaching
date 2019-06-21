@@ -1,0 +1,70 @@
+en
+conf t
+hostname Bldg2
+
+vlan 2
+name LAB-A
+
+vlan 4
+name LAB-B
+
+vlan 8
+name LAB-C
+
+vlan 15
+name IT
+
+vlan 25
+name SW-ADMIN
+
+vlan 99
+name spare
+exit
+
+int vlan 25
+ip add 10.10.25.253 255.255.255.0
+no sh
+exit
+
+ip default-gat 10.10.25.1
+
+int range fa0/3-4
+sw mode trunk
+channel-group 2 mode active
+exit
+
+int port-channel 2
+sw mode trunk
+
+int range fa0/5-6
+sw mode trunk
+channel-group 3 mode active
+exit
+
+int port-channel 3
+sw mode trunk
+exit
+
+spanning-tree mode rapid
+
+ip domain-name ccnaPTSA.com
+hostname FL-B
+crypto key generate rsa ############################"
+ip ssh version 2
+
+line vty 0 15
+transport input ssh
+login local
+exit
+
+username netadmin secret SSHsecret9
+
+int g0/1
+sw mode trunk
+end
+
+copy run start ##############################""
+
+
+
+

@@ -1,0 +1,94 @@
+enable
+configure terminal
+hostname Nous
+
+interface f0/1
+ip address 192.168.2.2 255.255.255.0
+description interface avec Groupe_1
+no shutdown
+exit
+
+interface f0/0
+ip address 192.168.3.2 255.255.255.0
+description interface avec Groupe_2
+no shutdown
+exit
+
+router ospf 1
+network 192.168.2.0 0.0.0.255 area 0
+network 192.168.3.0 0.0.0.255 area 0
+default-information originate
+end
+
+################################################################
+
+enable
+configure terminal
+hostname Groupe_1
+
+interface f0/1
+ip address 192.168.2.1 255.255.255.0
+description interface avec Nous
+no shutdown
+exit
+
+interface f0/0
+ip address 192.168.1.1 255.255.255.0
+description Reseau du Groupe_1
+no shutdown
+exit
+
+router ospf 1
+network 192.168.2.0 0.0.0.255 area 0
+network 192.168.1.0 0.0.0.255 area 0
+default-information originate
+exit
+
+user groupe1 priv 15 secret 0 cisco
+line con 0
+login local
+line vty 0 4
+login local
+
+ip domain-name www.cisco.com
+crypto key generate rsa
+end
+
+################################################################
+
+enable
+configure terminal
+hostname Groupe_2
+
+interface f0/1
+ip address 192.168.3.1 255.255.255.0
+description interface avec Nous
+no shutdown
+exit
+
+interface f0/0
+ip address 192.168.4.1 255.255.255.0
+description Reseau du Groupe_2
+no shutdown
+exit
+
+router ospf 1
+network 192.168.3.0 0.0.0.255 area 0
+network 192.168.4.0 0.0.0.255 area 0
+default-information originate
+exit
+
+user groupe2 priv 15 secret 0 cisco
+line con 0
+login local
+line vty 0 4
+login local
+
+ip domain-name www.cisco.com
+crypto key generate rsa 
+end
+
+#################################################################
+ssh -l groupe2 192.168.3.1
+ssh -l groupe1 192.168.2.1
+

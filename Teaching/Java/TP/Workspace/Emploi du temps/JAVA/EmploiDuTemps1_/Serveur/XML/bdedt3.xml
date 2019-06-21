@@ -1,0 +1,126 @@
+<bdedt>
+    <inspecteurs>
+     <inspecteur id="i1" promotion="2006-GI-4">
+      <nom>Blanche</nom><prénom>Neige</prénom><mél>BlancheNeige@insa-tlse.fr</mél><login>blanche</login><pass>neige</pass></inspecteur>
+     <inspecteur id="i2" promotion="2006-GI-5">
+      <nom>Prince</nom><prénom>Charmant</prénom><mél>PrinceCharmant@insa-tlse.fr</mél><login>i2</login><pass>i2</pass></inspecteur>
+    </inspecteurs>
+    <enseignants>
+     <enseignant id="e1">
+      <nom>Simplet</nom><prénom>simp</prénom><mél>simplet@insa-tlse.fr</mél>
+      <login>simplet</login><pass>simp</pass>
+     </enseignant>
+     <enseignant id="e2">
+      <nom>Dormeur</nom><prénom>dodo</prénom><mél>dormeur@insa-tlse.fr</mél>
+      <login>dormeur</login><pass>dodo</pass>
+     </enseignant>
+     <enseignant id="e3">
+      <nom>Grincheux</nom><prénom>grgr</prénom><mél>grincheux@insa-tlse.fr</mél>
+      <login>grincheux</login><pass>grgr</pass>
+     </enseignant>
+     <enseignant id="e4">
+      <nom>Prof</nom><prénom>pro</prénom><mél>prof@insa-tlse.fr</mél>
+      <login>prof</login><pass>pro</pass>
+     </enseignant>
+     <enseignant id="e5">
+      <nom>Atchoum</nom><prénom>souhait</prénom><mél>atchoum@insa-tlse.fr</mél>
+      <login>atchoum</login><pass>souhait</pass>
+     </enseignant>
+     <enseignant id="e6">
+      <nom>Joyeux</nom><prénom>joie</prénom><mél>joyeux@insa-tlse.fr</mél>
+      <login>joyeux</login><pass>joie</pass>
+     </enseignant>
+     <enseignant id="e7">
+      <nom>Timide</nom><prénom>euh</prénom><mél>timide@insa-tlse.fr</mél>
+      <login>timide</login><pass>euh</pass>
+     </enseignant>
+    </enseignants>
+    <étudiants>
+     <promotion id="2006-GI-4">
+      <étudiant id="e41"><nom>Nom étudiant 41</nom><prénom>pr 41 GI-4</prénom><login>e41</login><pass>e41</pass></étudiant>
+      <étudiant id="e42"><nom>Nom étudiant 42</nom><prénom>pr 42 GI-4</prénom><login>e42</login><pass>e42</pass></étudiant>
+      <étudiant id="e43"><nom>Nom étudiant 43</nom><prénom>pr 43 GI-4</prénom><login>e43</login><pass>e43</pass></étudiant>
+      <étudiant id="e44"><nom>Nom étudiant 44</nom><prénom>pr 44 GI-4</prénom><login>e44</login><pass>e44</pass></étudiant>
+      <étudiant id="e45"><nom>Nom étudiant 45</nom><prénom>pr 45 GI-4</prénom><login>e45</login><pass>e45</pass></étudiant>
+      <étudiant id="e46"><nom>Nom étudiant 46</nom><prénom>pr 46 GI-4</prénom><login>e46</login><pass>e46</pass></étudiant>
+      <étudiant id="e47"><nom>Nom étudiant 47</nom><prénom>pr 47 GI-4</prénom><login>e47</login><pass>e47</pass></étudiant>
+      <étudiant id="e48"><nom>Nom étudiant 48</nom><prénom>pr 48 GI-4</prénom><login>e48</login><pass>e48</pass></étudiant>
+     </promotion>
+     <promotion id="2006-GI-5">
+      <étudiant id="e51"><nom>Nom étudiant 51</nom><prénom>pr 51 GI-5</prénom><login>e51</login><pass>e51</pass></étudiant>
+      <étudiant id="e52"><nom>Nom étudiant 52</nom><prénom>pr 52 GI-5</prénom><login>e52</login><pass>e52</pass></étudiant>
+      <étudiant id="e53"><nom>Nom étudiant 53</nom><prénom>pr 53 GI-5</prénom><login>e53</login><pass>e53</pass></étudiant>
+      <étudiant id="e54"><nom>Nom étudiant 54</nom><prénom>pr 54 GI-5</prénom><login>e54</login><pass>e54</pass></étudiant>
+      <étudiant id="e55"><nom>Nom étudiant 55</nom><prénom>pr 55 GI-5</prénom><login>e55</login><pass>e55</pass></étudiant>
+      <étudiant id="e56"><nom>Nom étudiant 56</nom><prénom>pr 56 GI-5</prénom><login>e56</login><pass>e56</pass></étudiant>
+      <étudiant id="e57"><nom>Nom étudiant 57</nom><prénom>pr 57 GI-5</prénom><login>e57</login><pass>e57</pass></étudiant>
+      <étudiant id="e58"><nom>Nom étudiant 58</nom><prénom>pr 58 GI-5</prénom><login>e58</login><pass>e58</pass></étudiant>
+      <étudiant id="e59"><nom>Nom étudiant 59</nom><prénom>pr 59 GI-5</prénom><login>e59</login><pass>e59</pass></étudiant>
+      <étudiant id="e60"><nom>Nom étudiant 60</nom><prénom>pr 60 GI-5</prénom><login>e60</login><pass>e60</pass></étudiant>
+      <étudiant id="e61"><nom>Nom étudiant 61</nom><prénom>pr 61 GI-5</prénom><login>e61</login><pass>e61</pass></étudiant>
+      <étudiant id="e62"><nom>Nom étudiant 62</nom><prénom>pr 62 GI-5</prénom><login>e62</login><pass>e62</pass></étudiant>
+      <étudiant id="e63"><nom>Nom étudiant 63</nom><prénom>pr 63 GI-5</prénom><login>e63</login><pass>e63</pass></étudiant>
+      <étudiant id="e64"><nom>Nom étudiant 64</nom><prénom>pr 64 GI-5</prénom><login>e64</login><pass>e64</pass></étudiant>
+     </promotion>
+    </étudiants>
+    <groupes>
+     <groupe id="40" étudiants="e41 e42 e43 e44 e45 e46 e47 e48"/>
+     <groupe id="41" étudiants="e41 e42 e43 e44"/>
+     <groupe id="42" étudiants="e45 e46 e47 e48"/>
+     <groupe id="43" étudiants="e41 e42"/>
+     <groupe id="44" étudiants="e43 e44"/>
+     <groupe id="45" étudiants="e45 e46"/>
+     <groupe id="46" étudiants="e47 e48"/>
+     <groupe id="50" étudiants="e51 e52 e53 e54 e55 e56 e57 e58"/>
+     <groupe id="51" étudiants="e51 e52 e53 e54"/>
+     <groupe id="52" étudiants="e55 e56 e57 e58"/>
+     <groupe id="53" étudiants="e51 e52"/>
+     <groupe id="54" étudiants="e53 e54"/>
+     <groupe id="55" étudiants="e55 e56"/>
+     <groupe id="56" étudiants="e57 e58"/>
+     <groupe id="57" étudiants="e59 e60"/>
+     <groupe id="58" étudiants="e61 e62"/>
+     <groupe id="59" étudiants="e63 e64"/>
+    </groupes>
+    <matières>
+     <matière id="me4-1" type="obligatoire">
+      <intitulé>Electronique 4e GI 1</intitulé>
+      <enseignements>
+       <CM enseignants="e1" groupes="40" volume="8:00"/>
+       <TD enseignants="e2 e3" groupes="41 42" volume="4:00"/>
+       <TP enseignants="e4 e5 e6 e7" groupes="43 43 45 46" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="me4-2" type="obligatoire">
+      <intitulé>Electronique 4e GI 2</intitulé>
+      <enseignements>
+       <BE enseignants="e4 e5 e6 e7" groupes="43 43 45 46" volume="4:00"/>
+      </enseignements>
+     </matière>
+     <matière id="me5-1">
+      <intitulé>Informatique 5e GI</intitulé>
+      <enseignements>
+       <CM enseignants="e1" groupes="50" volume="8:00"/>
+       <TD enseignants="e2 e3" groupes="51 52" volume="4:00"/>
+       <TP enseignants="e4 e5 e6" groupes="53 54 55" volume="4:00"/>
+       <BE enseignants="e7 e8 e9 e10" groupes="56 57 58 59" volume="4:00"/>
+      </enseignements>
+     </matière>
+    </matières>
+    <salles>
+     <salle id="Fourier" taille="100" type="amphi"/>
+     <salle id="Vinci" taille="100" type="amphi"/>
+     <salle id="Riquet" taille="100" type="amphi"/>
+     <salle id="STPI-109" taille="80" type="cours"/>
+     <salle id="STPI-110" taille="80" type="cours"/>
+     <salle id="STPI-111" taille="80" type="cours"/>
+     <salle id="GEI-107" taille="24" type="tp"/>
+     <salle id="GEI-108" taille="24" type="tp"/>
+     <salle id="GEI-109" taille="24" type="tp"/>
+     <salle id="GEI-110" taille="24" type="tp"/>
+    </salles>
+    <edt>
+     <réservation date="27/10/2006" durée="1:15" groupe="40" heure="8:00" matière="me4-1" salle="Fourier"/>
+     <réservation date="27/10/2006" durée="2:45" groupe="56" heure="8:00" matière="me5-1" salle="GEI-107"/>
+     <réservation date="27/10/2006" durée="2:45" groupe="55" heure="8:00" matière="me5-1" salle="GEI-108"/>
+    </edt></bdedt>

@@ -1,0 +1,53 @@
+<!-- 
+#	Le livre de Java 1er langage
+#	A. Tasso
+#	Chapitre 12 : Java et Internet
+#	Section  : Projet
+#	Fichier  : CB.html
+-->
+<html>
+<head> <title>Gestion de Comptes bancaires </title> </head>
+
+
+<body background="fond.gif" leftmargin="120" marginwidth="120">
+<Form ACTION="http://localhost:8080/projetJSP/servlet/ProjetP3Ch12" Method="GET">
+
+  <hr width="450" align="left">
+  <font face="Arial, Helvetica, sans-serif" size="+1">Création d'un Compte</font> <br>
+ 
+  <table width="350" border="0" height="40">
+  <tr> 
+    <td align="left" valign="middle"> <font face="Georgia, Times New Roman, Times, serif">Numero </font></td>
+    <td colspan=2> <font face="Georgia, Times New Roman, Times, serif">Valeur initiale</font></td>
+  </tr>
+  <tr align="left"> 
+    <td width=175 valign="top"><input type="text" size=7 name="numero"></td>
+    <td width=175 valign="top"><input type="text" size=12 name="initiale" value="100.0"> &euro;</td>
+  </tr>
+ </table>
+ <table width="325" border="0" height="40">
+  <tr align="left"> 
+    <td width="80" valign="top"><input type="Radio" name="type" value="c"> Courant </td>
+    <td width="120" valign="top"><input type="Radio" name="type" value="J"> Joint</td>    
+    <td width="125" align="right" valign="top"> <input type="submit" name="B1" value="Creer"></td>
+  </tr>
+  </table>
+  </FORM>
+
+ <hr width="450" align="left">
+ <Form ACTION="http://localhost:8080/projetJSP/servlet/ProjetP3Ch12" Method="GET">
+
+  <font face="Arial, Helvetica, sans-serif" size="+1">Afficher un Compte</font> <br>
+  <table width="325" border="0" height="40">
+  <tr> 
+    <td align="left" valign="middle" colspan="2"> <font face="Georgia, Times New Roman, Times, serif">Numéro </font></td>
+
+  </tr>
+  <tr align="left"> 
+    <td width=200 valign="top"><input type="text" size=15 name="numero"></td>
+    <td width="125" align="right" valign="top"> <input type="submit" name="B2" value="Afficher"></td> 
+  </tr>
+  </table>
+  </FORM>
+</body>
+</html>

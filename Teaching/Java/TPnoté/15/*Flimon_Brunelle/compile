@@ -1,0 +1,4 @@
+#!/bin/sh
+
+javac -d build/classes -sourcepath src src/flimon_brunelle/Personnel.java
+java -cp build/classes flimon_brunelle.Personnel

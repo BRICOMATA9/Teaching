@@ -1,0 +1,14 @@
+public interface MemoireStockage
+{
+	public int getCapacité();	//retourne la capacité de l'USB
+
+	//public int getEspaceUtilisé();	//retourne l'espace utilisé
+	
+	public boolean estPleine();	//verifier si la clé USB est pleine	
+	
+	public Fichier suppression (String name)  throws FullException;	//pour supprimer un fichier s'il existe
+		
+	public void ajout (Fichier f) throws FullException;	//pour ajouter un fichier 
+	
+	public Fichier getFichier (String name) throws FileNotFoundException;	//retourne un fichier  
+}

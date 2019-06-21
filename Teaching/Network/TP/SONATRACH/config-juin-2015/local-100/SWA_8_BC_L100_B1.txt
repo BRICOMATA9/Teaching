@@ -1,0 +1,818 @@
+SWA_8_BC_L100_B1
+
+IP ADRESSE/10.246.255.27
+
+Building configuration...
+
+Current configuration : 22879 bytes
+!
+! Last configuration change at 10:00:09 GMT Tue Jun 9 2015 by admin
+! NVRAM config last updated at 15:26:27 GMT Sun May 17 2015 by ADMIN
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname SWA_8_BC_L100_B1
+!
+boot-start-marker
+boot-end-marker
+!
+logging buffered critical
+enable secret 5 $1$R2zQ$/vUZ0WiCHA1pL5G2LKTi7/
+!
+username admin privilege 15 secret 5 $1$R2zQ$/vUZ0WiCHA1pL5G2LKTi7/
+no aaa new-model
+clock timezone GMT 1 0
+system mtu routing 1500
+!
+!
+ip dhcp snooping vlan 2-12,37
+no ip dhcp snooping information option
+ip dhcp snooping
+no ip domain-lookup
+!
+!
+crypto pki trustpoint TP-self-signed-1302386304
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1302386304
+ revocation-check none
+ rsakeypair TP-self-signed-1302386304
+!
+!
+crypto pki certificate chain TP-self-signed-1302386304
+ certificate self-signed 01
+  30820248 308201B1 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 31333032 33383633 3034301E 170D3933 30333031 30303031
+  32375A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 33303233
+  38363330 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+  8100A2C9 A420DCF0 EB6B0CA6 D74F9D19 591A43D8 7D11F8D6 D35C878F B477CC20
+  07861378 407D0D36 4C80E13A F5315A1C C0EE7F2A 0D5DF4DC E4F9BDA2 A23647F0
+  D0B554AF 333535C0 16247AC3 994F947E 774709E8 78B00AA0 D6BCA0FE D4DEFC0A
+  1FA80CE7 147A2ECD F6E0EC11 249D2C29 6A39B5E5 E5865F4C 6D6D56E1 2A00CF6D
+  B8DF0203 010001A3 70306E30 0F060355 1D130101 FF040530 030101FF 301B0603
+  551D1104 14301282 10535741 5F385F42 435F4C31 30305F42 31301F06 03551D23
+  04183016 80145305 1B4853B7 31C79188 D567A10F 934145D1 FDCE301D 0603551D
+  0E041604 1453051B 4853B731 C79188D5 67A10F93 4145D1FD CE300D06 092A8648
+  86F70D01 01040500 03818100 9509C892 8245385C 7A00CA49 A7F89019 B1F39E15
+  F1FE18BB 88582D70 EBB27770 FB060186 5CDCA4D2 5AE5666C ACDA4EDF 1A552565
+  11F969BE 1970ABDA CD8C6F8C D3889001 727CBA5E CC926FE7 AD7BBD09 81DC1368
+  B5FE06A1 BA68CA24 B2F1B3C4 2E61E835 9B8B6356 137A33E0 6FEDB072 199AEA83
+  D36F23B9 E84FE0F5 CEAF5EF2
+        quit
+dot1x system-auth-control
+!
+spanning-tree mode pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+spanning-tree uplinkfast
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet0/1
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/2
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ ip arp inspection trust
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/3
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/4
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/5
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/6
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/7
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/8
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/9
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/10
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/11
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/12
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/13
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/14
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/15
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/16
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/17
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/18
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/19
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/20
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/21
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/22
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/23
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/24
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/25
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/26
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/27
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/28
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/29
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/30
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/31
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/32
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/33
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/34
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/35
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/36
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/37
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/38
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/39
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/40
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/41
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/42
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/43
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/44
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/45
+ switchport access vlan 2
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/46
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/47
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/48
+ switchport access vlan 8
+ switchport mode access
+ switchport voice vlan 37
+ switchport port-security maximum 10
+ switchport port-security
+ switchport port-security violation restrict
+ power inline never
+ no cdp enable
+ spanning-tree portfast
+ spanning-tree bpdufilter enable
+ ip dhcp snooping limit rate 50
+!
+interface GigabitEthernet0/49
+ description Fo_Vers_SWD1_G0/8
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ ip arp inspection trust
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/50
+ description Fo_Vers_SWD2_G0/8
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ ip arp inspection trust
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/51
+!
+interface GigabitEthernet0/52
+!
+interface TenGigabitEthernet0/1
+!
+interface TenGigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan999
+ ip address 10.249.255.27 255.255.255.240
+!
+ip default-gateway 10.249.255.17
+ip http server
+ip http secure-server
+!
+!
+logging esm config
+logging trap warnings
+logging 10.249.254.64
+logging 10.249.254.62
+snmp-server community SH-Explo-Ro RO
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps transceiver all
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps license
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-c
+hange inconsistency
+snmp-server enable traps cluster
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps dot1x auth-fail-vlan guest-vlan no-auth-fail-vlan no-gu
+est-vlan
+snmp-server enable traps energywise
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps hsrp
+snmp-server enable traps cpu threshold
+snmp-server enable traps rep
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistenc
+y
+snmp-server enable traps syslog
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps flash insertion removal
+snmp-server enable traps port-security
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps mac-notification change move threshold
+snmp-server enable traps errdisable
+snmp-server enable traps vlan-membership
+snmp-server host 10.249.254.62 version 2c SH-Explo-Ro
+!
+banner login ^C
+********************************************************************************
+*     PROPRIETE SONATRACH EXPLORATION-UNAUTHORISED ACCESS PROHIBITED           *
+* This system is for the use of authorised users only. Individuals using this  *
+* computer system without authority, or in excess of their authority, are      *
+* subject to having all of their activities on this system monitored and       *
+* recorded by system personnel.                                                *
+*                                                                              *
+* In the course of monitoring individuals improperly using this system, or in  *
+* the course of system maintenance, the activities of authorised users may     *
+* also be monitored.                                                           *
+*                                                                              *
+* Anyone using this system expressly consents to such monitoring and is        *
+* advised that if such monitoring reveals possible evidence of criminal        *
+* activity, system personnel may provide evidence of such monitoring to        *
+* security officials.                                                          *
+*                                                                              *
+* The above notice also applies when using this system, or parts of it, to     *
+* gain access to other systems.                                                *
+********************************************************************************
+^C
+alias exec init05.03.2012 configure replace flash:conf/conf05.03.2012.txt force
+!
+line con 0
+ logging synchronous
+ login local
+line vty 0 4
+ password 7 1511021F0725
+ login local
+line vty 5 15
+ login
+!
+ntp server 10.249.0.1
+end

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+javac -d bin -cp bin:lib/* -sourcepath src src/com/upec/secu/ca/CA.java
+java -cp bin:lib/*  com/upec/secu/ca/CA
+
+javac -d bin -sourcepath src src/com/upec/secu/clients/Client.java
+java -cp bin:lib/* com/upec/secu/clients/Client

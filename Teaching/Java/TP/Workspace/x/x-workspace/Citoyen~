@@ -1,0 +1,18 @@
+public class Citoyen
+{ 
+ public String nom=new String[20];
+ public String prenom = new String  [20];
+ public Adresse adr;
+ public Citoyen (String nom ,String prenom ,Adresse adr)
+ { 
+  this.nom=nom;
+  this.prinom=prinom;
+  this.adr=adr;
+ }
+ public void affiche Citoyen()
+ { 
+   systeme.out.println (nom+prinom);
+   adr.Affiche Adresse ();
+ }
+}
+

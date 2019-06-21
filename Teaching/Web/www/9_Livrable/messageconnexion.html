@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/*Style de la page qui affiche un message lorsque l'utilisateur est connecté*/
+
+button {
+  background-color: #1799B5;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/*gestion de la fenetre d'affichage*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+  color: #1799B5;
+}
+
+/*gestion du contenu de la fenetre d'affichage*/
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; 
+  border: 10px solid #888;
+  width: 40%; 
+}
+
+/*Zoom sur l'animation*/
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+</style>
+</head>
+
+<body>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Connexion</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <p><center>Vous êtes connecté !<br/><br/> Bienvenue sur votre compte A MA ZONE !<br/><br/></center></p>
+  </form>
+
+</div>
+
+<script>
+//Fenetre d'affichage 
+var modal = document.getElementById('id01');
+
+// Si l'utilisateur clique en dehors de la fenetre elle se ferme
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

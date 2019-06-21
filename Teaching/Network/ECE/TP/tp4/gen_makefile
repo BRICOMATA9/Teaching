@@ -1,0 +1,50 @@
+#Le nom du programme
+EXEC=musicinfo
+
+#La racine du projet. Si le make est à la racine, c'est donc le dossier en cours. On force cependant le dossier à avoir le nom du projet
+BASE_DIR = ../$(EXEC)
+
+#Le compilateur, on utilisera gcc 
+CC=gcc
+
+#Les flags de compilation, on met un maximum de warning pour forcer un code "propre"
+CFLAGS=-W -Wall
+
+#Les flags de linkage, on en a pas besoin, mais c'est utile lorsque l'on veut linker une bibliotheque par exemple
+LDFLAGS=
+
+#le dossier source : pour nous c'est le dossier src dans le dossier racine
+SRC_DIR = $(BASE_DIR)/src
+
+#le dossier objet (contenant les .o) : pour nous c'est le dossier obj dans le dossier racine
+OBJ_DIR = $(BASE_DIR)/obj
+
+#Les fichiers sources sont tous les fichiers c contenus dans src
+SRC_FILES=$(wildcard $(SRC_DIR)/*.c)
+
+#Il y a un fichier objet par fichier c, ils ont même nom et même structure, on remplace juste "src" par "obj" et "c" par "o"
+OBJ_FILES=$(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o,$(SRC_FILES))
+
+#La cible all (cible par défaut) n'a pas d'intructions, on verifie juste que le programme est à jour
+all: $(EXEC)
+
+#Pour exec, on recréer les objs obsolètes si il y en a et on recompile
+$(EXEC): $(OBJ_FILES)
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+#Pour la cible obj_files, le dossier DOIT exister
+$(OBJ_FILES): OBJ_DIR_EXIST
+
+OBJ_DIR_EXIST:
+	@mkdir -p $(OBJ_DIR)
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+clean:
+	@rm -rf $(OBJ_DIR)/*.o
+
+mrproper: clean
+	@rm -rf $(EXEC) 
+
+.PHONY: clean, mrproper

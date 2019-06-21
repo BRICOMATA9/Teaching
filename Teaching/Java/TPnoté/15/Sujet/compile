@@ -1,0 +1,6 @@
+#!/bin/sh
+
+javac  -d bin -sourcepath src src/tpnoté/TPNoté.java
+java -cp bin tpnoté.TPNoté
+
+#-encoding iso-8859-1

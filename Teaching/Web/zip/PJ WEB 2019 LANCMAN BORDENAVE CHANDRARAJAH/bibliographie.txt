@@ -1,0 +1,83 @@
+BOOTSTRAP
+Formulaires - https://getbootstrap.com/docs/4.0/components/forms/
+Texte, police, alignement - https://getbootstrap.com/docs/4.0/utilities/text/
+Le panier - https://getbootstrap.com/docs/4.1/examples/checkout/ (et le view-source depuis chrome)
+Boutons - https://getbootstrap.com/docs/4.0/components/buttons/
+Carousel - https://codepen.io/chopfitzroy/pen/JoKMgG?editors=0110#0
+https://startbootstrap.com/snippets/full-slider/
+Les mêmes recherches sur
+https://www.w3schools.com
+
+
+XML
+history - What's the point of XML? - Stack-overflow
+
+
+CSS
+Bordude d'image - https://css-tricks.com/using-css-for-image-borders/
+CSS Layout - Horizontal & Vertical Align - w3schools
+CSS align-content property - w3schools
+css3 - Bootstrap carousel as website background - Stack-overflow
+css3 - Bootstrap class "text-center" not working  - Stack-overflow
+
+
+MYSQL
+SQL AND, OR, NOT Operators - w3schools
+SQL MIN() and MAX() Functions - w3schools
+mysql - Best practices to store CreditCard information into DataBase - Stack-overflow
+security - Best way to store password in database - Stack-overflow
+mysql - Error Code 1111. Invalid use of group function  - Stack-overflow
+
+
+PHP
+PHP file_put_contents() Function - w3schools
+PHP 5 Functions - w3schools
+PHP 5 MySQLi Functions - w3schools
+PHP mysqli_num_rows() Function - w3schools
+PHP Delete Data From MySQL - w3schools
+How to check if an email address is real or valid using PHP - Stack-overflow
+PHP & MySQL: mysqli_num_rows() expects parameter 1 to be mysqli_result - Stack-overflow
+html - PHP Login stay logged in (Session) - Stack-overflow
+php - How to keep form values after post - Stack-overflow
+php - Submit Multiple Forms With One Button - Stack-overflow
+php - Saving file into new directory using fwrite - Stack-overflow
+php - How to keep form values after post - Stack-overflow
+Best way to determine if a file is empty (php)? - Stack-overflow
+php - Check if specific input file is empty - Stack-overflow
+php - How to keep session alive without reloading page? - Stack-overflow
+php - Passing multiple variables to another page in url - Stack-overflow
+PHP: Show yes/no confirmation dialog - Stack-overflow
+
+
+JAVASCRIPT
+JavaScript Comparison and Logical Operators - w3schools
+javascript - open the file upload dialogue box onclick the image - Stack-overflow
+javascript - Displaying a form according to the selected value from dropdown list - Stack-overflow
+Show a popup when a dropdown value is selected with only js - Stack-overflow
+javascript - If Select tag option is selected shows another select tag - Stack-overflow
+javascript - PHP: Show yes/no confirmation dialog - Stack-overflow
+
+
+JQUERY
+jQuery Effects - Hide and Show - w3schools
+
+
+HTML
+HTML onchange Event Attribute - w3schools
+HTML input type="number" - w3schools
+HTML Input Types - w3schools
+HTML Input Attributes - w3schools
+HTML input maxlength Attribute - w3schools
+hyperlink - How to make a html page to show content from another url - Stack-overflow
+html - How to keep a user logged in? - Stack-overflow
+html - How to submit form on change of dropdown list? - Stack-overflow
+.htaccess - How to remove .html from URL - Stack-overflow
+html - How can I limit possible inputs in a HTML5 "number" element?  - Stack-overflow
+
+
+Tout ce qui est connexion, profil, inscription
+https://www.primfx.com/tuto-php-creer-espace-membre-1-3-inscription-156/
+https://www.primfx.com/tuto-php-ajouter-une-photo-profil-avatar-163/
+https://www.primfx.com/tuto-php-creer-espace-membre-3-3-edition-profil-162/
+https://www.primfx.com/tuto-php-creer-espace-membre-2-3-profil-connexion-deconnexion-158/
+

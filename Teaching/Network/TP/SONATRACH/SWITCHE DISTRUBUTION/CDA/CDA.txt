@@ -1,0 +1,397 @@
+SWD_1_CDA
+
+ip adresse : 10.249.255.65
+
+
+
+
+
+SWD_1_CDA#sh run
+Building configuration...
+
+Current configuration : 8213 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname SWD_1_CDA
+!
+boot-start-marker
+boot-end-marker
+!
+enable password cisco
+!
+username admin privilege 15 password 0 SWKBNY
+no aaa new-model
+system mtu routing 1500
+ip subnet-zero
+ip routing
+no ip domain-lookup
+no ip dhcp use vrf connected
+!
+ip dhcp pool Gp_Gios
+   network 172.22.6.0 255.255.254.0
+   default-router 172.22.6.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_Utilisateur
+   network 172.22.22.0 255.255.254.0
+   default-router 172.22.22.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_VIP
+   network 172.22.38.0 255.255.254.0
+   default-router 172.22.38.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Adm_RS
+   network 172.22.54.0 255.255.254.0
+   default-router 172.22.54.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Fn_Compt
+   network 172.22.86.0 255.255.254.0
+   default-router 172.22.86.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_GRHM
+   network 172.22.102.0 255.255.254.0
+   default-router 172.22.102.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_RTOM
+   network 172.22.118.0 255.255.254.0
+   default-router 172.22.118.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool Gp_Visio_conf
+   network 172.22.134.0 255.255.254.0
+   default-router 172.22.134.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Mrt
+   network 172.22.150.0 255.255.254.0
+   default-router 172.22.150.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Carto
+   network 172.22.166.0 255.255.254.0
+   default-router 172.22.166.1
+   option 43 hex 3a02.0025.ff
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+ip dhcp pool GP_Voix
+   network 172.22.182.0 255.255.254.0
+   next-server 172.22.178.13
+   default-router 172.22.182.1
+   option 43 hex 3a02.0025.ff
+   option 66 ip 172.22.178.13
+   dns-server 10.240.1.32 10.50.1.31
+   lease 356
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree etherchannel guard misconfig
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+interface Port-channel1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Port-channel10
+ description Fo_vers_VSS_6509_SHEXP_Core
+ no switchport
+ ip address 10.249.0.158 255.255.255.252
+!
+interface Port-channel11
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Port-channel12
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Port-channel15
+ no switchport
+ ip address 10.248.254.2 255.255.255.252
+ ip summary-address eigrp 100 172.22.0.0 255.255.0.0 5
+ ip summary-address eigrp 100 10.249.0.0 255.255.0.0 5
+!
+interface FastEthernet0
+ no ip address
+ no ip route-cache cef
+ no ip route-cache
+ no ip mroute-cache
+ shutdown
+!
+interface GigabitEthernet0/1
+ description Fo_Vers_SWA1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 11 mode on
+!
+interface GigabitEthernet0/2
+ description Fo_Vers_SWA2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 12 mode on
+!
+interface GigabitEthernet0/3
+ description Fo_Vers_SWA1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 11 mode on
+!
+interface GigabitEthernet0/4
+ description Fo_Vers_SWA2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 12 mode on
+!
+interface GigabitEthernet0/5
+!
+interface GigabitEthernet0/6
+!
+interface GigabitEthernet0/7
+!
+interface GigabitEthernet0/8
+!
+interface GigabitEthernet0/9
+!
+interface GigabitEthernet0/10
+!
+interface GigabitEthernet0/11
+!
+interface GigabitEthernet0/12
+!
+interface GigabitEthernet0/13
+!
+interface GigabitEthernet0/14
+!
+interface GigabitEthernet0/15
+ no switchport
+ no ip address
+ channel-group 15 mode on
+!
+interface GigabitEthernet0/16
+ no switchport
+ no ip address
+ channel-group 15 mode on
+!
+interface GigabitEthernet0/17
+!
+interface GigabitEthernet0/18
+!
+interface GigabitEthernet0/19
+!
+interface GigabitEthernet0/20
+!
+interface GigabitEthernet0/21
+!
+interface GigabitEthernet0/22
+!
+interface GigabitEthernet0/23
+!
+interface GigabitEthernet0/24
+!
+interface TenGigabitEthernet0/1
+!
+interface TenGigabitEthernet0/2
+!
+interface TenGigabitEthernet0/3
+!
+interface TenGigabitEthernet0/4
+!
+interface TenGigabitEthernet0/5
+!
+interface TenGigabitEthernet0/6
+!
+interface TenGigabitEthernet0/7
+!
+interface TenGigabitEthernet0/8
+!
+interface TenGigabitEthernet0/9
+!
+interface TenGigabitEthernet0/10
+!
+interface TenGigabitEthernet0/11
+ description Po_channel_10_link_1
+ no switchport
+ no ip address
+ channel-group 10 mode on
+!
+interface TenGigabitEthernet0/12
+ description Po_channel_10_link_2
+ no switchport
+ no ip address
+ channel-group 10 mode on
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan2
+ description Gp_Gios
+ ip address 172.22.6.3 255.255.254.0
+ standby 0 ip 172.22.6.1
+!
+interface Vlan3
+ description Gp_Utilisateur
+ ip address 172.22.22.3 255.255.254.0
+ standby 0 ip 172.22.22.1
+!
+interface Vlan4
+ description GP_VIP
+ ip address 172.22.38.3 255.255.254.0
+ standby 0 ip 172.22.38.1
+!
+interface Vlan5
+ description GP_Adm_RS
+ ip address 172.22.54.3 255.255.254.0
+ standby 0 ip 172.22.54.1
+!
+interface Vlan6
+ description GP_Wifi
+ ip address 172.22.65.3 255.255.255.192
+ ip helper-address 10.249.255.254
+ standby 0 ip 172.22.65.1
+!
+interface Vlan7
+ description GP_Fn_Compt
+ ip address 172.22.86.3 255.255.254.0
+ standby 0 ip 172.22.86.1
+!
+interface Vlan8
+ description GP_GRHM
+ ip address 172.22.102.3 255.255.254.0
+ standby 0 ip 172.22.102.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan9
+ description GP_RTOM
+ ip address 172.22.118.3 255.255.254.0
+ standby 0 ip 172.22.118.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan10
+ description GP_Visio_conf
+ ip address 172.22.134.3 255.255.254.0
+ standby 0 ip 172.22.134.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan11
+ description GP_Mrt
+ ip address 172.22.150.3 255.255.254.0
+ standby 0 ip 172.22.150.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan12
+ description GP_Fn_Carto
+ ip address 172.22.166.3 255.255.254.0
+ standby 0 ip 172.22.166.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan37
+ description GP_voix
+ ip address 172.22.182.3 255.255.254.0
+ standby 0 ip 172.22.182.1
+ standby 0 priority 110
+ standby 0 preempt
+!
+interface Vlan999
+ description management
+ ip address 10.249.255.66 255.255.255.0
+ standby 0 ip 10.249.255.65
+ standby 0 priority 110
+ standby 0 preempt
+!
+!
+router eigrp 100
+ redistribute static
+ no auto-summary
+ network 10.0.0.0
+ network 172.22.0.0
+!
+ip classless
+ip http server
+!
+!
+logging alarm minor
+logging 10.249.254.64
+logging 10.249.254.62
+!
+snmp-server community SH-Explo-Ro RO
+snmp-server community $H_EXpl0-rW RW
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps transceiver all
+snmp-server enable traps tty
+snmp-server enable traps eigrp
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf lsa
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps ospf cisco-specific lsa
+snmp-server enable traps license
+snmp-server enable traps cluster
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps event-manager
+snmp-server enable traps hsrp
+snmp-server enable traps ipmulticast
+snmp-server enable traps isis
+!
+control-plane
+!
+!
+line con 0
+line vty 0 4
+ password cisco
+ login local
+line vty 5 15
+ login
+!
+end
