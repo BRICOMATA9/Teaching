@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d bin -sourcepath src src/Principale.java
-java -cp bin Principale

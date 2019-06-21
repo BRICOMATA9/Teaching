@@ -1,1 +1,0 @@
-var gapi={plusone:{render:function(){},go:function(){}}};

@@ -1,6 +1,0 @@
-import java.lang.Exception;
-@SuppressWarnings ("serial")
-public final class FileNotFoundException extends Exception{
- public FileNotFoundException() {}
-}
-

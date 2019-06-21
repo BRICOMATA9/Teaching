@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -sourcepath src src/Employe/Main.java
-java -cp build/classes Employe.Main

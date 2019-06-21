@@ -1,5 +1,0 @@
-package javamyadmin.Interface;
-
-public Interface supplier <T> {
-	public T get() throws Exception;
-}

@@ -1,6 +1,0 @@
-public class f2{
-	public static  int i=2;
-	public  int stat(){
-		return i++;
-	}
-}

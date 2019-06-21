@@ -1,6 +1,0 @@
-cd ~/Bureau/sofiane/schedular
-
-javac -d bin -cp lib/Mysql.jar -sourcepath src src/*/*.java
-
-java -cp bin:lib/Mysql.jar schedular.Schedular
-

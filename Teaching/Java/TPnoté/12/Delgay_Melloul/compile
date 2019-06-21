@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -sourcepath src src/delgay_melloul/Delgay_Melloul.java
-java -cp build/classes delgay_melloul.Delgay_Melloul

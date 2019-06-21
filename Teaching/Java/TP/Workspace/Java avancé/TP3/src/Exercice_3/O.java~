@@ -1,7 +1,0 @@
-package Exercice_3;
-
-public abstract class O {
-
-	public abstract void f();		
-
-}

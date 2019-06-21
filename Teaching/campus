@@ -1,6 +1,0 @@
-#!/bin/bash
-
-firefox https://pedago-ece.campusonline.me/my/ \
-	https://planning-paris.inseecu.net/enseignant?identifiant=WWYGR5aVZaszvTYT \
-	https://www.office.com/?ref=logout
-

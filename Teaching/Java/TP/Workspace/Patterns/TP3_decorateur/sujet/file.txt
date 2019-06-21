@@ -1,8 +1,0 @@
-This is the
-message we want 
-to turn
-i
-n
-t
-o
-a Flame!

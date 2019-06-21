@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/home/aghiles/p/java/.metadata/.plugins/org.eclipse.jdt.core
-2210145402.index
-436744212.index

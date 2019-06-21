@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE groupe SYSTEM "groupe.dtd">
-<groupe>
-  <étudiant nom="Remen" prénom="Alexander" mél="alex.remen@gmail.com" />
-  <étudiant nom="Vo Thanh" prénom="Tonya" mél="sadako22@free.fr" />
-</groupe>

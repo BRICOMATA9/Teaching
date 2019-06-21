@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -sourcepath src src/duchemann_safi/Dreyfus_Barras.java
-java -cp build/classes duchemann_safi.Dreyfus_Barras

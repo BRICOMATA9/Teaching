@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d bin -cp bin:lib/* -sourcepath src src/com/mkyong/core/App.java
-java -cp bin:lib/* com/mkyong/core/App

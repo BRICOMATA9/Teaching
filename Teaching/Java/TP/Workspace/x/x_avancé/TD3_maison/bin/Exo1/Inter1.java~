@@ -1,6 +1,0 @@
-package Exo1;
-
-@FunctionalInterface
-public interface Inter1<T> {
-	public static T f(Apple a);
-}

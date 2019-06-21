@@ -1,5 +1,0 @@
-package Test1;
-
-public interface Interface<T,S> {
-	T f (S s);
-}

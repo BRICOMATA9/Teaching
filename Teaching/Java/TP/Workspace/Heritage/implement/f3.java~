@@ -1,3 +1,0 @@
-public interface f3{
-	public static int test(int i);
-}

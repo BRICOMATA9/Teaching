@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -sourcepath src src/nawal_idriss/Nawal_idriss.java
-java -cp build/classes nawal_idriss/Nawal_idriss

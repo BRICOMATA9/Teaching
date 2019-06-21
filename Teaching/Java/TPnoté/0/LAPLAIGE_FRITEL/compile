@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -sourcepath src src/laplaige_fritel/LAPLAIGE_FRITEL.java
-java -cp build/classes laplaige_fritel.LAPLAIGE_FRITEL

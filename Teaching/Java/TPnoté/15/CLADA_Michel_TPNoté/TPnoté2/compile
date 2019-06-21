@@ -1,4 +1,0 @@
-#!/bin/sh
-
-javac -d build/classes -sourcepath src src/tpnoté2/TPnoté2.java
-java -cp build/classes tpnoté2.TPnoté2
