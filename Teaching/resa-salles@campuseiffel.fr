@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo | basename $0
-`xdg-email $0`
