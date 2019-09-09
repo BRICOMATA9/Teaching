@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<!-- Mirrored from bertrandmasson.free.fr/index.php?article30/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2019 18:36:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Eh non Mlle Michu les beaux documents ne sont pas réservés uniquement aux geeks ! - Les fiches de Bébert</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="icon" href="themes/fiches/img/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="themes/fiches/style.css" media="screen" />
+		<link rel="alternate" type="application/atom+xml" title="Atom articles" href="feed3e10.php?atom" />
+	<link rel="alternate" type="application/rss+xml" title="Rss articles" href="feed8bb8.php?rss" />
+	<link rel="alternate" type="application/atom+xml" title="Atom commentaires" href="feed1a12.php?atom/commentaires" />
+	<link rel="alternate" type="application/rss+xml" title="Rss commentaires" href="feedef42.php?rss/commentaires" />
+</head>
+<body>
+<div id="top">
+	<ul id="access">
+		<li><a href="index47e2.html?article30/#content" title="Aller au contenu">Aller au contenu</a></li>
+		<li><a href="index47e2.html?article30/#menu" title="Aller au menu">Aller au menu</a></li>
+	</ul>
+	<div id="header">
+		<h1><a href="index.html" title="Les fiches de Bébert">Les fiches de Bébert</a></h1>
+		<p>pour une véritable Publication Assistée par Ordinateur</p>
+	</div>
+	<div id="menu">
+		<ul class="left">
+			<li id="static-home"><a href="index.html" class="noactive" title="Accueil">Accueil</a></li>					</ul>
+		<ul class="right">
+			<li><a href="feed1a12.php?atom/commentaires" title="Fil Atom des commentaires">Commentaires</a></li>
+			<li><a href="feed3e10.php?atom" title="Fil Atom des articles">Articles</a></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+<div id="page">
+	<div id="content">
+		<h2 class="title">Eh non Mlle Michu les beaux documents ne sont pas réservés uniquement aux geeks !</h2>
+		<p class="info_top">R&eacute;dig&eacute; par Bertrand Masson | Class&eacute; dans : <a class="noactive" href="index6766.html?categorie3/latex" title="LaTeX">LaTeX</a>, <a class="noactive" href="index0df5.html?categorie7/planet-edu" title="planet-edu">planet-edu</a></p>
+		<p class="date"><span>26</span><br />01 | 11</p>		
+		<div class="post">
+<p>Toi aussi tu peux utiliser LaTeX. Ce n'est pas très compliqué.</p>
+
+<p>Le but du document joint "<strong>Le premier rapport de Mlle Michu, étudiante en sciences humaines, réalisé tout en LaTeX</strong>, avec des illustrations, des tableaux, une bibliographie, une table des matières, une table des ﬁgures et tout ça les doigts dans le nez" est de démystifier LaTeX et de t'aider à réaliser un rapport pas à pas.</p>
+
+<p>On va essayer de le faire avec le moins de réglages possibles, le plus « brut de décoﬀrage », pour ne pas te noyer dans les arcanes de la programmation LaTeXiènne.</p>
+
+<p>Le document ﬁnal sera un ﬁchier PDF au format a4, en recto-verso et une police de taille 10 pt, prêt pour l’impression et lisible sur tout type d’ordinateur (Mac, Linux, Windows. . .) avec une très grande qualité typographique.</p>
+
+<p>Pour la qualité du fond je ne peux pas faire grand chose pour toi, mais après tout c’est ton boulot ! Toutefois comme tu vas t’en rendre compte, LaTeX te déchargeant d’une grande partie du travail de mise en page, tu seras plus libre de te concentrer sur le fond. Avec LaTeX tu gagnes sur les deux tableaux.</p>
+
+<p>Pour illustrer notre propos, je vais te montrer comment réaliser le rapport de la fouille d’un site préhistorique. Ce choix s’explique, d’une part parce que je suis archéologue préhistorien et inventer un site factice ne m’est pas très difficile et aussi parce qu’un tel rapport contient de nombreux éléments variés, comme des photos, des dessins au trait, des plans pleines pages, des graphiques, des tableaux et donc nous permettra d’aborder de nombreux aspects de la programmation LaTeXiène.</p>
+
+<p>Tu vas étudier les fonctions LaTeX exactement dans l’ordre ou vont apparaître les difficultés. On aura un récit chronologique et non pas thématique. Ce ne sera pas forcément l’ordre dans lequel tu vas rencontrer les problèmes, lors de la rédaction de ton propre rapport, mais il ne devrait pas y avoir de grosses différences et de toute façon, je pense qu’à la ﬁn de la lecture de ce tutoriel tu
+devrais être en mesure de réaliser ton document.</p>
+
+<p>Dans ces temps d'incertitude quant au devenir des suites bureautiques libres, faire le choix de LaTeX, qui résiste au temps depuis 1985, semble être une idée judicieuse. Même Cyrille Borne y songe "<a href="http://www.cyrille-borne.com/index.php?post/2010/10/16/Cyrille-BORNE,-blogueur-aigri-et-maintenant-fain%C3%A9ant,-tout-pour-plaire">si ça commence vraiment à me peser je vais faire comme Christophe et passer à Latex</a>".</p>
+
+<p>Il n'est pas le seul. D'autres qui ne sont pas des profs de math barbu et à sandales s'y mettent. Par exemple, le premier ouvrage d'@rret sur image <a href="http://www.arretsurimages.net/sarkozistan/">Crise au Sarkozistan</a> est réalisé avec LaTeX. </p>
+
+<p>Voici un extrait de l'émission sur @rret sur image qui présente l'ouvrage, où est mentionnée l'utilisation de LaTeX :</p>
+<video width="400" height="222" controls="controls"> 
+<p><source src="data/documents/latex/CriseAuSarkozistanExtrait.ogv" type="video/ogg" /> 
+ Vous n'avez pas de navigateur moderne, sans balise vidéo, donc pas de vidéo.</p>
+</video>
+
+
+
+<p>Donc Mlle Michu n'hésite pas, lance toi et tu ne vas pas le regretter.</p>
+
+<p>Le fichier : <a href="premierRapportc6e9.pdf?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,">premierRapport.pdf</a></p>
+<p>Plusieurs personnes ayant eu des difficultés pour télécharger le document <a href="http://dl.free.fr/rRO84fGX2">voici un autre lien</a></p>
+
+<!-- phpmyvisites -->
+ <a href="http://st.free.fr/" title="phpMyVisites | Open source web analytics" 
+ onclick="window.open(this.href);return(false);"><script type="text/javascript">
+ <!--
+ var a_vars = Array();
+var pagename = document.title;
+
+ var phpmyvisitesSite = 241711;
+ var phpmyvisitesURL = "http://st.free.fr/phpmyvisites.php";
+ //-->
+ </script>
+ <script language="javascript" src="http://st.free.fr/phpmyvisites.js" type="text/javascript"></script>
+ <object><noscript><p>phpMyVisites | Open source web analytics
+ <img src="http://st.free.fr/phpmyvisites.php" alt="Statistics" style="border:0" />
+ </p></noscript></object></a>
+ <!-- /phpmyvisites -->
+</div>
+		<p class="info_bottom">Mots cl&eacute;s : <a class="noactive" href="indexdbfd.html?tag/latex" title="LaTeX">LaTeX</a><a class="noactive" href="index1f51.html?tag/debutant" title="débutant">débutant</a></p>
+					<div id="comments">
+		<h2>Commentaires</h2>
+					<div id="c1296084920-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 Greg a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296084920-1" title="#1">#1</a></p>
+					<p class="content_com">Bonjour<br />
+<br />
+Je n&#039;ai pas réussi à ouvrir le pdf ... (fichier cassé)<br />
+<br />
+Greg</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296085930-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296085930-1" title="#2">#2</a></p>
+					<p class="content_com"><a href="#c1296084920-1">@Greg</a> :<br />
+Bonsoir,<br />
+Je ne comprends pas, je viens d'essayer sur une autre machine (un macbook) et je n'ai pas rencontré de problèmes !<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296086586-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 Greg a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296086586-1" title="#3">#3</a></p>
+					<p class="content_com">Re-bonsoir<br />
+<br />
+Après avoir essayé sur linux et windows ...<br />
+Avez vous essayé de télécharger le fichier puis de le réouvrir. Perso, je ne vois qu&#039;un problème d&#039;upload du fichier sur le serveur<br />
+<br />
+Greg</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296110596-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 utodeb a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296110596-1" title="#4">#4</a></p>
+					<p class="content_com">Bonjour,<br />
+<br />
+Moi non plus sous Ubuntu 10.10 je peux pas l&#039;ouvrir.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296112158-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 Cyril Rouiller a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296112158-1" title="#5">#5</a></p>
+					<p class="content_com">Un grand merci pour ces fiches !<br />
+<br />
+Même soucis que Greg. avec un wget j&#039;ai :<br />
+$  wget http://bertrandmasson.free.fr/?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,<br />
+--2011-01-27 08:05:48--  http://bertrandmasson.free.fr/?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,<br />
+Résolution de bertrandmasson.free.fr... 212.27.63.101<br />
+Connexion vers bertrandmasson.free.fr|212.27.63.101|:80... connecté.<br />
+requête HTTP transmise, en attente de la réponse... 200 OK<br />
+Longueur: 18860095 (18M) [application/download]<br />
+Sauvegarde en : «index.html?telechargement%2FLi4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,»<br />
+<br />
+99% [===============================================================================================&gt; ] 18&#039;855&#039;999  --.-K/s  eta 0s      <br />
+<br />
+Et cela reste bloqué...</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296129240-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 <a href="http://www.gesnel.fr/ubuntu/" title="Yves">Yves</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296129240-1" title="#6">#6</a></p>
+					<p class="content_com">Bonjour,<br />
+Bravo pour ce document !<br />
+page 60, il manque les références :(voir section ??, page ??)<br />
+Yves</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296130594-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 Ludovic a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296130594-1" title="#7">#7</a></p>
+					<p class="content_com">salut<br />
+<br />
+sous ubuntu maverick, pareil que tout le monde : impossible d&#039;ouvrir que ce soit avec Adobe Reader ou le visionneur système [Evince je crois] : &quot;fichier pdf corrompu&quot;<br />
+<br />
+merci</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296159216-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 Winael a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296159216-1" title="#8">#8</a></p>
+					<p class="content_com">Pareil que tout le monde sur Android. Pourriez-vous retenter d&#039;uploader le fichier ?<br />
+<br />
+Cordialement</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296159853-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296159853-1" title="#9">#9</a></p>
+					<p class="content_com">Bien, je ne comprends pas ce qui ce passe j'ai réussi à télécharger le pdf avec 3 systèmes différents debian macOsX et windows XP sans problème. Quoi qu'il en soit je viens de mettre une nouvelle version prenant en compte la correction de Yves et quelques autres trouvées dans les dernières pages. <br />
+<br />
+J'espère que cela va résoudre vos problèmes<br />
+<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296163538-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 <a href="http://www.twitter.com/stefroan" title="stef">stef</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296163538-1" title="#10">#10</a></p>
+					<p class="content_com">toujours pas..<br />
+une fois téléchargé, le fichier fait 18,885,883 octets ; est-ce bien la taille de ton fichier original ?<br />
+<br />
+debian sid</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296164885-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 <a href="http://hugoroy.eu/latex.html" title="Hugo">Hugo</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296164885-1" title="#11">#11</a></p>
+					<p class="content_com">&quot;PDF is damaged&quot; pour moi.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296165605-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 27 janvier 2011 Greg a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296165605-1" title="#12">#12</a></p>
+					<p class="content_com">Perso ça marche toujours pas ...<br />
+<br />
+Il me manque toujours quelques octets, c&#039;est aussi bizarre mais mon ordi considère que c&#039;est un fichier video/clip.<br />
+<br />
+Bon bah dommage ...<br />
+<br />
+Greg</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296170526-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 28 janvier 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296170526-1" title="#13">#13</a></p>
+					<p class="content_com"><a href="#c1296165605-1">@stef</a> :<br />
+Non la bonne taille est 18 859 979. Je ne comprend pas ce qui ce passe je viens encore d'essayer sur debian avec firefox, SRWare Iron, et avec un  <br />
+wget http://bertrandmasson.free.fr/?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,<br />
+<br />
+aucun problème.<br />
+Avez-vous les mêmes difficultés avec les autres fiches ?<br />
+<br />
+Si ça peut vous aider je viens de déposer le fichier à cette adresse :<br />
+http://dl.free.fr/rRO84fGX2<br />
+<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296171126-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 28 janvier 2011 Greg a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296171126-1" title="#14">#14</a></p>
+					<p class="content_com">Merci beaucoup le lien à l&#039;adresse dl.free.fr marche super<br />
+<br />
+Greg</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296544385-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 01 f&eacute;vrier 2011 utodeb a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296544385-1" title="#15">#15</a></p>
+					<p class="content_com">Salut,<br />
+<br />
+Je n&#039;arrive tjs pas à le télécharger avec ubuntu 10.10.<br />
+Pas de problème pour les autres fiches.<br />
+Le lien free fonctionne et je peux ouvrir le document sans pb.<br />
+<br />
+Avec wget cela bloque *toujours* à l&#039;octet 18857107.<br />
+<br />
+J&#039;essaierai tout à l&#039;heure depuis un autre ordi sous ubuntu/win et je te dirai.<br />
+<br />
+A+</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296549831-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 01 f&eacute;vrier 2011 Hervé a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296549831-1" title="#16">#16</a></p>
+					<p class="content_com">Merci beaucoup pour ce nouveau document sur Latex.<br />
+J&#039;ai utilisé l&#039;adresse dl.free.fr pour le récupérer car j&#039;ai moi aussi rencontré un problème avec le lien du site.<br />
+C&#039;est bizzare ....</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1296644458-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 02 f&eacute;vrier 2011 gaelle a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1296644458-1" title="#17">#17</a></p>
+					<p class="content_com">Tout simplement fantastique !!!!<br />
+J&#039;ai eu un peu de mal à le récupérer moi aussi mais le lien free marche bien.<br />
+En tous cas merci beaucoup c&#039;est exactement ce qu&#039;il me fallait !!!</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1304026892-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 28 avril 2011 Michel a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1304026892-1" title="#18">#18</a></p>
+					<p class="content_com">Toutes ces fiches sont un super travail !<br />
+Félicitations.<br />
+<br />
+Mais quelle est la meilleure façon de remonter les coquilles trouvées ?</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1304077461-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 29 avril 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1304077461-1" title="#19">#19</a></p>
+					<p class="content_com"><a href="#c1304026892-1">@Michel</a> :<br />
+Merci pour le compliment,<br />
+Pour faire remonter les coquilles tu peux utiliser les commentaires.<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1304758240-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 07 mai 2011 Michel a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1304758240-1" title="#20">#20</a></p>
+					<p class="content_com">Des coquilles… il y en a beaucoup :-P<br />
+Via les commentaires, ça va être aussi insupportable pour celui qui remonte les typos, que pour toi les ré-intégrer !<br />
+<br />
+Un truc à la mode, c&#039;est de publier ses sources sur https://github.com/. Comme ça, celui qui veut faire des corrections (petites ou grandes), fait un &quot;fork&quot; du projet, travaille dans son coin puis fait un &quot;pull request&quot; pour que ses modifs soient intégrées au projet d&#039;origine.<br />
+<br />
+L&#039;inconvénient (ou pas), c&#039;est que tu &quot;libères&quot; tes sources et que tu facilites le travail de qqn qui voudrait copier ton travail sans lui en donner de crédit.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1304758412-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 07 mai 2011 Michel a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1304758412-1" title="#21">#21</a></p>
+					<p class="content_com">J&#039;ai oublié de préciser que les comptes &quot;publics&quot; de github sont gratuits (et que je n&#039;ai pas d&#039;actions dans l&#039;entreprise ;-) ).</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1304844809-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 08 mai 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1304844809-1" title="#22">#22</a></p>
+					<p class="content_com"><a href="#c1304758240-1">@Michel</a> :<br />
+libérer mes sources ne me pose aucun problème. En ce moment j'ai peu de temps à consacrer aux fiches, mais dès que j'en trouve je publie les sources sur github<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1306102104-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 23 mai 2011 Maïeul a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1306102104-1" title="#23">#23</a></p>
+					<p class="content_com">Bon document. Je prépare moi même un livre sur l&#039;usage de LaTeX en sciences humaines, mais avec une orientation un peu différente, puisque je me concentre essentiellement sur la gestion de la bibliographie avec biblatex et les possibilités avancés de tri, de personnalisation de l&#039;apparence etc.<br />
+<br />
+Il est dommage que vous ne parliez de csquotes que pour la gestion des guillemets français dans la bibliographie. Ce package est bien plus puissant : par exemple je suis fan de la commande \enquote{} qui permet d&#039;avoir une bonne qualité typographique sur les guillemets.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1307958064-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 13 juin 2011 René a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1307958064-1" title="#24">#24</a></p>
+					<p class="content_com">Bonjour Bertrand, <br />
+<br />
+Bravo pour votre site. Depuis un an j&#039;utilise LyX, et je viens de découvrir, enfin, le rapport de Mlle Michu. <br />
+Depuis une semaine, je lis, je relis vos conseils.<br />
+<br />
+Impossible pour moi d&#039;insérer une image ?<br />
+<br />
+Vous parler dans : 7.1 Mlle Michu insère un petit pingouin<br />
+d&#039;utiliser le  \usepackage{graphicx}, et il n&#039;apparait pas dans la construction du document ?<br />
+<br />
+Est-ce une erreur ? Ai-je oublié une ligne de commande ? <br />
+Je refais le document pas à pas ..., je suis toujours bloqué !<br />
+<br />
+<br />
+Vous remerciant par avance de votre vision LaTeX<br />
+<br />
+Cordialement<br />
+<br />
+René</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1307967580-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 13 juin 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1307967580-1" title="#25">#25</a></p>
+					<p class="content_com"><a href="#c1307958064-1">@René</a> :<br />
+Bonjour René,<br />
+Pour pouvoir vous aider il faudrait que vous joignez un EMC (exemple minimum complet), c'est à dire un fichier .tex qui reproduit l'erreur et qui ne contient que ce qui est nécessaire à la reproduction de l'erreur, un truc du genre<br />
+<br />
+\documentclass{scrreprt}<br />
+\usepackage{graphicx}<br />
+\begin{document}<br />
+\includegraphics{pingouin.jpg}<br />
+\end{document}<br />
+<br />
+Les premières pistes :<br />
+<br />
+l'image se trouve-t-elle dans le même répertoire que le fichier .tex ?<br />
+si non il faut indiquer le chemin complet de l'illustration.<br />
+Qu'elle est l'extension de l'image ? pdflatex ne peut travailler qu'avec du png ou du jpg.<br />
+Attention à l'extension jpg qui peut être écrite de différente manière jpg, jpeg, JPG,...<br />
+LaTeX exige le nom exact.<br />
+<br />
+Continuez vous à utiliser LyX ? Dans ce cas je vais avoir du mal à vous aider car ne n'ai jamais utilisé ce logiciel.<br />
+<br />
+Votre LyX compile avec latex ou pdflatex ?<br />
+S'il compile avec latex il faut transformer vos image en .eps car latex ne reconnais que ce format, ou lui demander de compiler avec pdflatex<br />
+<br />
+<br />
+Recopiez le code ci-dessus (dans un éditeur) en replaçant pingouin.jpg par le nom de votre image, sauvegarder le fichier avec l'extension .tex dans le même répertoire que votre image. Importez ce fichier sous LyX et compilez. Obtenez vous l'image ?<br />
+<br />
+Avez-vous essayé avec un éditeur du type TeXworks ou texmaker ?<br />
+<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1312659445-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 06 ao&ucirc;t 2011 Loic a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1312659445-1" title="#26">#26</a></p>
+					<p class="content_com">Bonjour,<br />
+<br />
+Tout d&#039;abord bravo pour ce site qui regorge d&#039;informations très pertinentes.<br />
+<br />
+J&#039;aimerai néanmoins quelques précisions sur 2 points. J&#039;utilise MacTeX et dans l&#039;utilitaire qui me permet de manager les différents packages, le package &quot;xspace&quot; n&#039;y est plus. Je pense qu&#039;il a été retiré en tant que package dans la version 2010 si ma mémoire est bonne. Donc ma question est de savoir si un autre package le charge ?<br />
+<br />
+Ensuite en ce qui concerne les compilations si je prends un éditeur comme par exemple TeXmaker j&#039;ai plusieurs options pour avoir un fichier pdf :<br />
+- pdfLaTeX<br />
+- LaTeX + dvipdfm<br />
+- LaTeX + dvips + ps2pdf<br />
+- ...<br />
+Cela sert juste à sortir différents formats tels qu&#039;un format .dvi ou .ps ou est ce que par rapport au pdf final cela va intervenir sur la compression/qualité du fichier ?<br />
+<br />
+Merci d&#039;avance.<br />
+<br />
+ps: désolé si ces questions ont déjà été posées je n&#039;ai pas fouillé tout le site.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1313594178-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 17 ao&ucirc;t 2011 Francis GERNET a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1313594178-1" title="#27">#27</a></p>
+					<p class="content_com">Je ne pratique que de temps en temps, mais avec persévérance, depuis plusieurs années. Vos documents de présentations de LaTeX (et et ses satellites) sont vraiment excellents. Un regret sur le format Beamer, utilisé par exemple pour graphiques.pdf, qui rend l&#039;édition papier un peu plus compliquée.<br />
+<br />
+Cordialement,<br />
+-- <br />
+Francis Gernet<br />
+PS : 2 coquilles trouvées dans premierRapport.pdf, sur la page 59 : au 7.3.1 Cadaratin, dernier alinéa, &quot;qui se met&quot;, et au 7.3.3 Système propre à LaTeX, pour la deuxième ligne moitié plus petite, la commande : &quot;\rule{0.5 \textwidth}{0.5ex}&quot;.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1314459123-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 27 ao&ucirc;t 2011 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1314459123-1" title="#28">#28</a></p>
+					<p class="content_com"><a href="#c1313594178-1">@Francis GERNET</a> :<br />
+Merci pour les compliments et les coquilles que je vais corriger.<br />
+<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1330634788-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 01 mars 2012 Yves PARIS a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1330634788-1" title="#29">#29</a></p>
+					<p class="content_com">Je suis débutant latex et je suis fasciné par la clarté des présentation Beamer?. Serait il possible d&#039; avoir le code de quelques pages types  pour mieux comprendre comment se construit une telle présentation?</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1330859481-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 04 mars 2012 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1330859481-1" title="#30">#30</a></p>
+					<p class="content_com"><a href="#c1330634788-1">@Yves PARIS</a> :<br />
+Bonjour,<br />
+<br />
+Tout d'abord merci pour tes compliments et pour tes corrections. Concernant Beamer j'ai réalisé 3 fiches qui permettent de débuter :<br />
+<br />
+<a href="indexe071.html?categorie8/beamer">http://bertrandmasson.free.fr/index.php?categorie8/beamer</a><br />
+<br />
+La plupart des fiches sont faite avec Beamer, tu trouveras un exemple de code pour la fiche sur les illustrations où j'ai mis le fichier illustration.tex :<br />
+<br />
+<a href="index38e1.html?article25/latex-inserer-des-illustrations-et-triturer-du-texte">http://bertrandmasson.free.fr/index.php?article25/latex-inserer-des-illustrations-et-triturer-du-texte</a><br />
+<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1331736142-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 14 mars 2012 René a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1331736142-1" title="#31">#31</a></p>
+					<p class="content_com">Bonjour Bertrand,<br />
+<br />
+Serait-il possible d&#039;avoir les indications pour intégrer dans un fichier LaTeX, le pied de page comme dans le premier rapport de Mlle Michu.<br />
+<br />
+Avec page impaire : n° page à droite et intitulé à gauche<br />
+Avec page  paire : n° page à gauche et intitulé à droite<br />
+<br />
+Vous remerciant par avance<br />
+Bien cordialement<br />
+René</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1331756370-1" class="comment type-admin">
+				<blockquote>
+					<p class="info_comment">Le 14 mars 2012 <a href="index.html" title="Bertrand Masson">Bertrand Masson</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1331756370-1" title="#32">#32</a></p>
+					<p class="content_com"><a href="#c1331736142-1">@René</a> :<br />
+Bonsoir,<br />
+<br />
+Voici un extrait du fichier .tex de mise en page de la fiche "premier rapport...". Ce fichier est compilable. J'utilise scrpage2 de Koma. Comme tu peux le voir j'ai un peu bidouillé pour arriver à mes fins, notamment pour la gestion de l'espace entre le trait de bas de page et le texte.J'ai pas trouvé dans scrpage2 comment augmenter cet espace donc j'ai ajouté manuellement celui-ci.<br />
+<br />
+<a href="mise-en-page07ba.tex?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvbWlzZS1lbi1wYWdlLnRleCpkMTc3Y2M,">mise-en-page.tex</a><br />
+<br />
+Bertrand</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+					<div id="c1356392569-1" class="comment type-normal">
+				<blockquote>
+					<p class="info_comment">Le 25 d&eacute;cembre 2012 <a href="http://univ-annonces.fr/" title="comment vendre en ligne">comment vendre en ligne</a> a dit :</p>
+					<p class="num_comment"><a href="index47e2.html?article30/#c1356392569-1" title="#33">#33</a></p>
+					<p class="content_com">Toujours des articles pertinents.</p>
+				</blockquote>
+				<div class="clearer"></div>
+			</div>
+						<div class="feed_article"><a href="feede4aa.php?atom/commentaires/article30" title="Fil Atom des commentaires de cet article">Fil des commentaires de cet article</a></div>
+	</div>
+	<div id="form">
+		<h2>Ecrire un commentaire</h2>
+		<p class="message_com"></p>
+		<form action="http://bertrandmasson.free.fr/index.php?article30/eh-non-mlle-michu-les-beaux-documents-ne-sont-pas-reserves-uniquement-aux-geeks#form" method="post">
+			<fieldset>
+				<div class="form_left">
+					<label>Nom&nbsp;:</label>
+					<input name="name" type="text" size="20" value="" maxlength="30" /><br />
+					<label>Site (facultatif)&nbsp;:</label>
+					<input name="site" type="text" size="20" value="" /><br />
+					<label>E-mail (facultatif)&nbsp;:</label>
+					<input name="mail" type="text" size="20" value="" /><br />
+				</div>
+				<label class="lab_com">Commentaire&nbsp;:</label>
+				<textarea name="content" cols="35" rows="6"></textarea>
+				<div class="clearer"></div>
+				<p class="button">
+											Quelle est la <span class="capcha-letter">premi&egrave;re</span> lettre du mot <span class="capcha-word">thit</span> ?&nbsp;:&nbsp;<input name="rep" type="text" size="10" />
+						<input name="rep2" type="hidden" value="476ed4a5ac6b6b8ba8cea1a74f9807b5" />
+										<span class="buttons"><input type="reset" value="Effacer" />&nbsp;&nbsp;&nbsp;<input type="submit" value="Envoyer" /></span>
+				</p>
+			</fieldset>
+		</form>
+	</div>
+	</div>
+	<div id="sidebar">
+	<div class="item-1">
+		<h2>Cat&eacute;gories</h2>
+		<ul>
+			<li id="cat-2" class="noactive"><a href="indexd3bc.html?categorie2/context" title="ConTeXt">ConTeXt</a> (3)</li><li id="cat-3" class="noactive"><a href="index6766.html?categorie3/latex" title="LaTeX">LaTeX</a> (29)</li><li id="cat-4" class="noactive"><a href="indexc4ea.html?categorie4/latex-tableau" title="Tableau">Tableau</a> (5)</li><li id="cat-5" class="noactive"><a href="indexf36d.html?categorie5/latex-koma-script" title="Koma-Script">Koma-Script</a> (3)</li><li id="cat-6" class="noactive"><a href="index714c.html?categorie6/latex-pgf-tikz" title="PGF-Tikz">PGF-Tikz</a> (5)</li><li id="cat-7" class="noactive"><a href="index0df5.html?categorie7/planet-edu" title="planet-edu">planet-edu</a> (4)</li><li id="cat-8" class="noactive"><a href="indexe071.html?categorie8/beamer" title="Beamer">Beamer</a> (3)</li>		</ul>
+	</div>
+	<div class="item-2">
+		<h2>Derniers articles</h2>
+		<ul>
+			<li class="noactive"><a href="indexb94d.html?article35/ce-site-n-est-plus-maintenu" title="Ce site n&#039;est plus maintenu">Ce site n&#039;est plus maintenu</a></li><li class="noactive"><a href="index488e.html?article34/beamer-controler-l-affichage-des-differents-elements-d-une-diapo-deuxieme-partie-les-commandes-overlay" title="Beamer : contrôler l&#039;affichage des différents éléments d&#039;une diapo, deuxième partie les commandes \overlay">Beamer : contrôler l&#039;affichage des différents éléments d&#039;une diapo, deuxième partie les commandes \overlay</a></li><li class="noactive"><a href="index2733.html?article33/beamer-controler-l-affichage-des-differents-elements-d-une-diapo-premiere-partie-la-commande-pause" title="Beamer : contrôler l&#039;affichage des différents éléments d&#039;une diapo. Première partie la commande \pause">Beamer : contrôler l&#039;affichage des différents éléments d&#039;une diapo. Première partie la commande \pause</a></li><li class="noactive"><a href="index193e.html?article32/beamer-ou-comment-realiser-une-presentation-tout-en-latex-premiere-partie-bases-et-mise-en-page" title="Beamer ou comment réaliser une présentation tout en LaTeX.">Beamer ou comment réaliser une présentation tout en LaTeX.</a></li><li class="noactive"><a href="indexcf3f.html?article31/latex-les-compteurs" title="LaTeX &amp; les compteurs">LaTeX &amp; les compteurs</a></li>		</ul>
+	</div>
+	<div class="item-3">
+		<h2>Derniers commentaires</h2>
+		<ul>
+			<li><a href="indexc736.html?article5/#c1372443412-1">Sylvie a dit : Merci pour la fiche. J&#039;ai réus...</a></li><li><a href="indexc736.html?article5/#c1369150913-1">Claire a dit : Merci pour le partage. 
+PS: j&#039;...</a></li><li><a href="index478a.html?article35/#c1366105835-1">Sylvia a dit : Bonjour,
+pourquoi as-tu délai...</a></li><li><a href="index5de3.html?article27/#c1365707537-1">Bertrand Masson a dit : @MaxPe :
+Voici une adresse pou...</a></li><li><a href="index5de3.html?article27/#c1365614920-1">MaxPe a dit : Bonjour, pourriez-vous (comme v...</a></li>		</ul>
+	</div>
+	<div class="item-4">
+		<h2>Mots cl&eacute;s</h2>
+		<ul>
+			<li class="noactive"><a href="index1b14.html?tag/unites-hfill" title="unités\hfill">unités\hfill</a></li><li class="noactive"><a href="indexa88e.html?tag/longueurs" title="longueurs">longueurs</a></li><li class="noactive"><a href="indexe106.html?tag/listes-a-puces" title="listes à puces">listes à puces</a></li><li class="noactive"><a href="index2816.html?tag/lettre" title="lettre">lettre</a></li><li class="noactive"><a href="indexa1a4.html?tag/tableaux" title="tableaux">tableaux</a></li><li class="noactive"><a href="index1f51.html?tag/debutant" title="débutant">débutant</a></li><li class="noactive"><a href="index23c6.html?tag/beamer" title="Beamer">Beamer</a></li><li class="noactive"><a href="indexcad7.html?tag/presentation" title="Présentation">Présentation</a></li><li class="noactive"><a href="indexa62c.html?tag/compteur" title="compteur">compteur</a></li><li class="noactive"><a href="indexd84b.html?tag/context" title="ConText">ConText</a></li><li class="noactive"><a href="index3ab4.html?tag/recto-verso" title="recto-verso">recto-verso</a></li><li class="noactive"><a href="index40bc.html?tag/tableau-en-couleur" title="tableau en couleur">tableau en couleur</a></li><li class="noactive"><a href="indexfd8b.html?tag/fusionner-les-lignes" title="fusionner les lignes">fusionner les lignes</a></li><li class="noactive"><a href="index7668.html?tag/fusionner-les-colonnes" title="fusionner les colonnes">fusionner les colonnes</a></li><li class="noactive"><a href="indexafaa.html?tag/entete" title="entête">entête</a></li><li class="noactive"><a href="index004b.html?tag/marge" title="marge">marge</a></li><li class="noactive"><a href="index86cb.html?tag/pied-de-page" title="pied de page">pied de page</a></li><li class="noactive"><a href="index6622.html?tag/numeration-des-pages" title="numération des pages">numération des pages</a></li><li class="noactive"><a href="indexa83e.html?tag/mise-en-page" title="mise en page">mise en page</a></li><li class="noactive"><a href="indexdbfd.html?tag/latex" title="LaTeX">LaTeX</a></li>			<li class="last_li">&nbsp;</li>
+		</ul>
+	</div>
+    <div class="item-5">
+        <h2>Archives</h2>
+        <ul>
+            <li id="archives-2011" class="noactive"><a href="index6b63.html?archives/2011" title="2011">2011 (7)</a></li><li id="archives-2010" class="noactive"><a href="index2f2f.html?archives/2010" title="2010">2010 (9)</a></li><li id="archives-2009" class="noactive"><a href="index59a6.html?archives/2009" title="2009">2009 (18)</a></li>        </ul>
+    </div>	
+</div>
+<div class="clearer"></div>
+</div>
+<div id="footer">
+	<p>&copy; <a href="index.html" title="Les fiches de Bébert">Les fiches de Bébert</a> - 
+		G&eacute;n&eacute;r&eacute; par <a href="http://pluxml.org/" title="Blog ou Cms sans base de donn&eacute;es">PluXml</a> 
+		en 0.429s  
+			</p>
+	<p class="right"><a class="admin" href="core/admin/index.html" title="Administration">Administration</a><a class="top" href="index47e2.html?article30/#top" title="Remonter en haut de page">Haut de page</a></p>
+</div>
+</body>
+
+<!-- Mirrored from bertrandmasson.free.fr/index.php?article30/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2019 18:36:53 GMT -->
+</html>

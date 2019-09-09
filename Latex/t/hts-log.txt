@@ -1,0 +1,60 @@
+HTTrack3.48-24 launched on Sun, 08 Sep 2019 20:24:30 at http://bertrandmasson.free.fr/
+(httrack http://bertrandmasson.free.fr/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+20:26:45	Warning: 	file not stored in cache due to bogus state (broken size, expected 18859979 got 629850): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,
+20:30:05	Warning: 	file not stored in cache due to bogus state (broken size, expected 924167 got 743945): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi
+20:33:38	Warning: 	file not stored in cache due to bogus state (broken size, expected 827922 got 823826): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw
+20:34:46	Warning: 	file not stored in cache due to bogus state (broken size, expected 1561491 got 1560311): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4
+20:35:21	Warning: 	file not stored in cache due to bogus state (broken size, expected 937055 got 932959): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE,
+20:35:24	Warning: 	file not stored in cache due to bogus state (broken size, expected 922419 got 776777): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvYmlibGF0ZXhtaWNodS5wZGYqZWQyMTRh
+20:35:27	Warning: 	Moved Temporarily for bertrandmasson.free.fr/core/admin/
+20:35:27	Warning: 	File has moved from bertrandmasson.free.fr/core/admin/ to auth.php?p=/core/admin/
+20:35:32	Warning: 	Retry after error -4 (Incorrect length (629850 Bytes, 18859979 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,, (from bertrandmasson.free.fr/index.php?categorie3/latex)
+20:35:55	Warning: 	file not stored in cache due to bogus state (broken size, expected 910733 got 670779): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZm9ybWF0dGV4dGUucGRmKjI3NTU1ZA,,
+20:36:08	Warning: 	Retry after error -4 (Incorrect length (743945 Bytes, 924167 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi (from bertrandmasson.free.fr/index.php?page7)
+20:36:33	Warning: 	Retry after error -4 (Incorrect length (1560311 Bytes, 1561491 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4 (from bertrandmasson.free.fr/index.php?categorie5/latex-koma-script)
+20:36:34	Warning: 	Retry after error -4 (Incorrect length (823826 Bytes, 827922 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw (from bertrandmasson.free.fr/index.php?categorie6/latex-pgf-tikz)
+20:36:44	Warning: 	Retry after error -4 (Incorrect length (932959 Bytes, 937055 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE, (from bertrandmasson.free.fr/index.php?categorie6/latex-pgf-tikz)
+20:36:45	Warning: 	Retry after error -4 (Incorrect length (776777 Bytes, 922419 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvYmlibGF0ZXhtaWNodS5wZGYqZWQyMTRh (from bertrandmasson.free.fr/index.php?article27/)
+20:36:50	Warning: 	Retry after error -4 (Incorrect length (670779 Bytes, 910733 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZm9ybWF0dGV4dGUucGRmKjI3NTU1ZA,, (from bertrandmasson.free.fr/index.php?archives/2009)
+20:38:07	Warning: 	file not stored in cache due to bogus state (broken size, expected 2418797 got 760006): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvY291bGV1ci5wZGYqNmQyODEw
+20:38:08	Warning: 	Retry after error -4 (Incorrect length (760006 Bytes, 2418797 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvY291bGV1ci5wZGYqNmQyODEw (from bertrandmasson.free.fr/index.php?page6)
+20:38:36	Warning: 	file not stored in cache due to bogus state (broken size, expected 670408 got 621674): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmxvdHRhbnQucGRmKjQwMDA0MQ,,
+20:38:50	Warning: 	file not stored in cache due to bogus state (broken size, expected 18859979 got 728058): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,
+20:39:03	Warning: 	file not stored in cache due to bogus state (broken size, expected 924167 got 759841): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi
+20:39:10	Warning: 	Retry after error -4 (Incorrect length (728058 Bytes, 18859979 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,, (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,)
+20:39:11	Warning: 	Retry after error -4 (Incorrect length (621674 Bytes, 670408 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmxvdHRhbnQucGRmKjQwMDA0MQ,, (from bertrandmasson.free.fr/index.php?article26/latex-et-les-flottants)
+20:39:12	Warning: 	Retry after error -4 (Incorrect length (759841 Bytes, 924167 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi)
+20:40:20	Warning: 	file not stored in cache due to bogus state (broken size, expected 827922 got 793536): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw
+20:40:39	Warning: 	file not stored in cache due to bogus state (broken size, expected 937055 got 935815): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE,
+20:40:53	Warning: 	file not stored in cache due to bogus state (broken size, expected 1561491 got 1557395): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4
+20:40:53	Warning: 	Retry after error -4 (Incorrect length (1557395 Bytes, 1561491 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4 (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4)
+20:40:53	Warning: 	Retry after error -4 (Incorrect length (793536 Bytes, 827922 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw)
+20:40:53	Warning: 	Retry after error -4 (Incorrect length (935815 Bytes, 937055 expected)) at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE, (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE,)
+20:40:53	Warning: 	Found for bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvYmlibGF0ZXhtaWNodS5wZGYqZWQyMTRh
+20:40:53	Warning: 	File has moved from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvYmlibGF0ZXhtaWNodS5wZGYqZWQyMTRh to http://perso99-g5.free.fr/overload.html
+20:40:53	Warning: 	Found for bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZm9ybWF0dGV4dGUucGRmKjI3NTU1ZA,,
+20:40:53	Warning: 	File has moved from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZm9ybWF0dGV4dGUucGRmKjI3NTU1ZA,, to http://perso99-g5.free.fr/overload.html
+20:40:53	Error: 	"Not Found" (404) at link bertrandmasson.free.fr/core/admin/img/index.png (from bertrandmasson.free.fr/core/admin/admin.css)
+20:40:53	Warning: 	Found for bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,,
+20:40:53	Warning: 	File has moved from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvcHJlbWllclJhcHBvcnQucGRmKmFiNzEzMQ,, to http://perso99-g5.free.fr/overload.html
+20:40:53	Warning: 	Found for bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmxvdHRhbnQucGRmKjQwMDA0MQ,,
+20:40:53	Warning: 	File has moved from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmxvdHRhbnQucGRmKjQwMDA0MQ,, to http://perso99-g5.free.fr/overload.html
+20:40:53	Warning: 	Found for bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi
+20:40:53	Warning: 	File has moved from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZmljaGVzbGV0dHJleC5wZGYqZGFiMzVi to http://perso99-g5.free.fr/overload.html
+20:40:53	Warning: 	Found for bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvY291bGV1ci5wZGYqNmQyODEw
+20:40:53	Warning: 	File has moved from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvY291bGV1ci5wZGYqNmQyODEw to http://perso99-g5.free.fr/overload.html
+20:42:33	Warning: 	file not stored in cache due to bogus state (broken size, expected 827922 got 824066): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw
+20:42:35	Warning: 	file not stored in cache due to bogus state (broken size, expected 937055 got 842641): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE,
+20:43:04	Warning: 	file not stored in cache due to bogus state (broken size, expected 1561491 got 1557395): bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4
+20:43:04	Error: 	"Incorrect length (1557395 Bytes, 1561491 expected)" (-4) after 2 retries at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4 (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgva29tYS5wZGYqZjY3ZTA4)
+20:43:04	Error: 	"Incorrect length (824066 Bytes, 827922 expected)" (-4) after 2 retries at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvZ3JhcGhpcXVlcy5wZGYqNGViOWIw)
+20:43:04	Error: 	"Incorrect length (842641 Bytes, 937055 expected)" (-4) after 2 retries at link bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE, (from bertrandmasson.free.fr/index.php?telechargement/Li4vLi4vZGF0YS9kb2N1bWVudHMvbGF0ZXgvaW50cm90aWt6LnBkZiphZjU2YjE,)
+
+HTTrack Website Copier/3.48-24 mirror complete in 18 minutes 34 seconds : 226 links scanned, 189 files written (11968389 bytes overall) [27595420 bytes received at 24771 bytes/sec]
+(4 errors, 45 warnings, 0 messages)

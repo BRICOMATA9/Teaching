@@ -1,0 +1,57 @@
+\documentclass[11pt,dvipsnames]{scrbook}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{xspace}
+\usepackage[frenchb]{babel} 
+
+
+%%%%
+%%gestion des entêtes et pied de page sous koma-script
+\usepackage{scrpage2}
+\clearscrheadings
+\automark[section]{chapter}
+\ihead[]{}
+\chead[]{}
+\ohead{\headmark}
+\ifoot[]{Le premier rapport de \michu,\\étudiante en sciences humaines,\\ réalisé tout en \LaTeX.\\\vspace{-2cm}}%j'ajoute un espace sinon le trait est collé au texte
+\cfoot[]{}
+\ofoot[\pagemark]{\pagemark\\\vspace{-1.25cm}}%j'ajoute un espace sinon le trait est collé au texte
+\setheadsepline{1pt}
+\setfootsepline{1pt}
+\setheadwidth[0pt]{text}
+\setfootwidth[0pt]{text}
+%fin gestion des entêtes et pied de page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%       Pour avoir de gros    %%%
+%%%        numéro de page       %%%
+%%%                             %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addtokomafont{pagenumber}{\bfseries\huge}
+
+
+\newcommand{\michu}{M\up{lle} Michu\xspace}
+
+\begin{document}
+
+\pagestyle{scrheadings} % à ne pas oublier sinon le style d'entête de koma n'est pas pris en compte
+
+
+\chapter{Au commencement était \LaTeX}\label{chapcommencement}
+ \dictum[Hans \bsc{Hagen}, l'auteur de Con\TeX t]{Il faut du temps pour apprendre à penser structure et contenu.}
+\section{\LaTeX\ qu'est-ce?}\label{secquestce}
+\LaTeX\ n'est pas un traitement de texte, c'est un ensemble de commandes informatiques, qui va construire ton texte, à partir des ordres que tu vas lui donner, en respectant les règles typographiques de la langue choisie et en prenant en compte l'ensemble de ton document. 
+\subsection{\LaTeX\ et la programation}\label{subprogramation}
+
+Rassure toi, ces ordres n'ont pas besoins forcement d'être nombreux, mais pour obtenir un bon résultat, il faut au minimum indiquer la langue dans laquelle tu travailles, le format du papier, sa division (partie, chapitre section\dots) et le type de document que tu souhaites obtenir. On ne fabrique pas de la même manière un livre, un rapport de stage ou un article.
+
+\newpage
+
+\section{\michu n'est pas M\up{r}\,Jourdain}\index{latex@\LaTeX\!distribution}
+  
+ On ne peut pas faire du \LaTeX\  sans le savoir, ni sans avoir une distribution \LaTeX{} en état de marche. Ce tutoriel sera basé sur la TexLive 2010. Son gros avantage est d'être multiplateforme, Linux, Mac, et Windows. Si comme moi tu travailles sur plusieurs environnements, ton document passera de l'un à l'autre de façon totalement transparente, sans aucun problème. 
+ \newpage
+  \section{\michu n'est pas une neuneu}\index{texlive@\TeX Live|textbf}\index{latex@\LaTeX\!distribution}\label{secneuneu}
+L'installation d'une distribution \LaTeX\ n'est pas l'objet de cette fiche. L'installation de la \TeX Live2010 est assez triviale et je te renvoie au site suivant qui te l'explique pas à pas
+\end{document}

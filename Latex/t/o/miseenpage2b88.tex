@@ -1,0 +1,38 @@
+\mainlanguage[fr]
+
+\language [fr]
+
+\setuppapersize[A4][A4]
+\setupcolors[state=start]
+%\setuplayout [backspace=1.75cm,topspace=2.475cm,width=16.7825cm,height=23.735cm]
+%\setuppagenumbering  [alternative=doublesided,location=]
+%\setupheadertexts[Les fiches à Bébert][\CONTEXT et le sectionnement][ ][section]
+%\setupheader [state=empty]
+%\setupfootertexts[ ][pagenumber]
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% des boites colorées %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%          
+\defineframedtext[Remarque][width=0.7\makeupwidth,location=middle,framecolor=darkgreen,
+rulethickness=3pt,corner=round,radius=10pt
+]%attention si l'on met corner il faut automatiquement préciser radius (valeur 0 par défaut et erreur de compilation)
+
+\defineframedtext[Attention][width=0.9\makeupwidth,location=middle,frame=off,
+background=color,backgroundcolor=middlered,backgroundcorner=round,backgroundradius=10pt]
+\def\Alert#1{\startalignment[middle]\Attention{#1}\stopalignment}
+
+\defineframed
+[cadreVert]
+[corner=round,framecolor=darkgreen]
+\defineframed[boiteBleue]
+[frame=off,
+background=color,
+backgroundcolor=blue]
+
+\setupinteraction
+  [state=start,color=blue]
+\useURL [garden][http://contextgarden.net][][Context garden]
+\useURL[pragma][http://www.pragma-ade.com/][][Pragma ADE]
+\useURL[gutenberg][http://www.gutenberg.eu.org/spip.php?article110][][GUTenberg le Groupe francophone des Utilisateurs de \TeX, \LaTeX]
+\useURL[wikiFrame][http://wiki.contextgarden.net/Reference/en/framed][][ConTeXt command reference]
+\useURL[svnTexworks][http://code.google.com/p/texworks/wiki/Building][][site \TeX works]

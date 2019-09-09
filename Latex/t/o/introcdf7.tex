@@ -1,0 +1,362 @@
+\environment miseenpage
+\starttext
+    {\tfb Les fiches de Bébert}
+\blank[2*big]
+\startalignment[center]
+  \blank[5*big]
+    {\tfd Première fiche \CONTEXT}
+  \blank[3*medium]
+    {\tfa Bertrand {\sc Masson}}
+  \blank[2*medium]
+    {\tfa \date}
+  \blank[3*medium]
+\stopalignment
+\subject{Introduction}
+L'esprit des fiches de Bébert sur \CONTEXT\ est différent de celles concernant \LaTeX. J'ai décidé pour des raisons que l'on verra plus-tard de me mettre à \CONTEXT. Comme à chaque foi que je me lance dans de nouveaux apprentissages je prend des notes, beaucoup de notes. Et dans le cas de \CONTEXT\ encore plus car la documentation en français est quasi inexistante et mon anglais indigent. Je me suis rendu compte que la réalisation des fiches sur \LaTeX\ m'avait permis de mieux clarifier et structurer mes connaissances de \LaTeX\ et finalement d'être plus productif. Donc réaliser des fiches sur \CONTEXT\ devrait avoir le même résultat. Enfin pour moi, pour vous je ne suis pas sûr, car la qualité des fiches risque d'être moins bonne. Je ne maîtrise pas \CONTEXT\ (et peu l'anglais) et donc ces fiches sont un état de ma compréhension de la bête. Il risque d'y avoir des erreurs. Vous voilà prévenu. De plus ces fiches sont loin d'être exhaustives, car pour l'instant je survol, plus que j'approfondis, pour me faire une idée et voir si \CONTEXT\ va répondre aux problèmes de mise en page que j'ai rencontré avec \LaTeX. 
+\startRemarque
+N'hésitez pas, si vous rencontrez des erreurs, des incompréhensions, d'autres manières de faire plus subtiles de m'en faire part. Cela aura le double objectif de me faire progresser (et je le vaux bien) et d'améliorer la qualité de ces fiches. On obtiendra un début de documentation en français sur \CONTEXT\ (et vous le valez bien).
+\stopRemarque
+\Alert{
+N'hésitez pas, non plus a me faire des remarques sur l'orthographe, car si mon anglais est indigent, mon orthographe française est pitoyable.}
+
+ Ces fiches sont réalisées avec \CONTEXT\, elles sont donc le reflet de mes connaissances, leur qualité esthétique devrait logiquement s'améliorer avec le temps. Elles me serviront aussi de laboratoire et donc devraient passer par des phases plus ou moins farfelues comme ci-dessus. Pour cette première fiche je ne suis pas allé très loin dans la mise en page, je me suis contenté de celle par défaut.
+ 
+ Une dernière remarque. Les \quote{fiches de Bébert}  sur \CONTEXT\ sont basées sur l'abondante documentation fournie par \from[garden] et \from[pragma]. Certains passages ou exemples sont des traductions de cette documentation.
+\section{\CONTEXT\ c'est quoi\,?}
+\CONTEXT\ est l'\oe uvre de Hans {\sc Hagen} rejoint par Taco {\sc Hoekwater}. Il est développé, depuis 1990, au sein d'une entreprise de création d'ouvrages scientifiques, éducatifs et de manuels (\from[pragma], basée aux Pays-Bas). Comme \LaTeX\ il est basé sur le moteur \TeX. 
+
+Si tous les deux essayent par des commandes de haut niveau d'aider les auteurs à utiliser \TeX, leur philosophie est différente. Le but poursuivit par les auteurs de \LaTeX\ était de faciliter la création de documents scientifiques en déchargeant l'auteur de toutes préoccupations typographiques. L'auteur écrit son texte, \LaTeX\ fait la mise en page.
+
+Pour \CONTEXT, si les commandes aident toujours l'utilisateur à réaliser son document, elles permettent aussi un contrôle très fin de la mise en page. On peut très facilement, sans se plonger dans les arcanes de \TeX\, réaliser de nouvelles mises en page très sophistiquées. Par contre pour obtenir une belle mise en page, il va falloir te la fabriquer toi même. \CONTEXT\ ne possède pas de classe comme {\tt scrartcl} de Koma-script qui te mâche le boulot.
+
+Une autre différence majeur avec \LaTeX, est que \CONTEXT\ est monolithique. Toutes les macros font partie de \CONTEXT\, il n'est pas nécessaire de charger des packages. L'avantage est de ne pas avoir de conflit entre les packages comme par exemple entre {\em enumitem} et {\em french - babel}. 
+
+ConTEXt s'appuie sur Plain \TeX, et la plupart des commandes de Plain \TeX\ sont donc disponibles ; on peut en particulier définir des commandes avec \type{\def}.
+
+
+Enfin \CONTEXT\ se veut plus respectueux de la syntaxe de \TeX. Notamment il s'appuie sur le principe {\em une commande des options}, alors que \LaTeX\ multiplie les commandes. \CONTEXT\ utilise plus les [ ] que les \{ \}. Le cas des listes est un bon exemple des différences entre les deux systèmes. Avec \LaTeX\ tu as une commande pour les listes normales :
+\starttyping[option=TEX]
+\begin{itemize}
+\item
+\end{itemize}
+\stoptyping
+
+et une autre pour les énumérations
+\starttyping[option=TEX]
+\begin{enumerate}
+\item
+\end{enumerate}
+\stoptyping
+Avec \CONTEXT\ une seule commande 
+\starttyping[option=TEX]
+\startitemize[options]
+\item 
+\stopitemize
+\stoptyping
+et des options comme {\em n} pour une liste numérotée de 1, 2 à n, l'option {\em a} pour une liste de a, b, c,\dots, {\em dot} pour une liste avec des petit \bullet\ et {\em dash} pour des tiretés -- \dots
+
+À la différence de \LaTeX\ \CONTEXT\ est toujours en développent et tire profit des dernières avancées dans les moteurs \TeX, puisqu'il peut utiliser pdf\TeX, Xe\TeX\ et Lua\TeX\ avec les mêmes fichiers.  Ce développement actif est à l'origine de l'existence de deux \CONTEXT, Mark II (MkII) et Mark IV (MkIV). Le premier, MkII, est figé, mais toujours maintenu, il utilise les moteurs  pdf\TeX\ et Xe\TeX.
+
+ Mark IV est la version de développement, il est basé sur le moteur Lua\TeX. Ce changement est complètement transparent pour l'utilisateur, et jusqu'à présent j'ai toujours pu compiler mes documents sous l'une ou l'autre version. Enfin ça s'était vrai avec mes premiers documents. Plus j'avance dans \CONTEXT\ plus je rencontre des incompatibilités entre MkII et MkIV. Dans ces fiches je n'utiliserais et ne ferais référence qu'à MkIV.
+\section{Pourquoi vouloir l'utiliser ?}
+La raison pour laquelle je me suis intéressé à \CONTEXT\ et que dans le cadre de mon boulot, je me suis vu confier la réalisation, tous les ans, d'une grosse publication (200 à 300 pages) destinée au public, avec une mise en page figée (pas très folichonne de surcroît), qui si elle semble faisable sans trop de problème avec un logiciel de PAO, s'avère être un peu plus galère avec \LaTeX. Et comme mon service ne possède pas de logiciel de PAO et que je n'ai nulle envie d'apprendre à maîtriser un tel outil, j'ai relevé le défi avec \LaTeX. Finalement ça n'a pas été aussi difficile que je le pensais au premier abord, mais il m'a fallu quand même utiliser de nombreux packages, pas mal bidouiller, me confronter à des incompatibilité de packages, donc re-bidouiller\dots Et il reste deux trois bricoles dont je ne suis pas très satisfait.
+
+\CONTEXT\ étant réalisé par des imprimeurs pour réaliser des ouvrages scientifiques, je me suis dis qu'il pourrait peut être une solution plus élégante et plus efficace pour réaliser mes ouvrages. Donc je me lance et voici les premières fiches issues de mon apprentissage.
+
+
+\section{Installation de \CONTEXT}
+Si tu es un fan des \quote{Fiches à Bébert} tu sais que je n'utilise comme distribution \TeX\ que la \TeX Live, aussi bien chez moi sur une {\em Debian} (joie et bonheur) qu'au bureau sur un windows XP ({\it vade retro satanas !\/}). Dans les deux cas une \TeX Live 2010 à jour. Enfin pas vraiment et en tout cas pas pour \CONTEXT et lua\TeX. Pour les mettre à jour il va falloir utiliser le dépôt {\em TLContrib}. Pour les explications je reprends les propos du site \from[gutenberg] :
+\blank[big]
+
+\startnarrower[2*middle]
+TLContrib est un site internet ainsi qu'un dépôt qui héberge certaines extensions, ou applications pour TEXlive 2010. Ces dernières n'étant pas distribuées dans TEXlive pour une des raisons suivantes : 
+\startitemize[2]
+\item elles ne sont pas libre au sens de Debian ;
+\item ce sont des applications binaires ;
+\item elles ne sont pas accessibles sur le CTAN ;
+\item ce sont des versions intermédiaire destinées aux tests.
+\stopitemize
+\stopnarrower
+
+Donc pour installer les dernières versions de \CONTEXT\ et lua\TeX, voici les explications toujours fournies par GUTenberg :
+\blank[big]
+\startnarrower[2*middle]
+Si vous voulez utiliser TLContrib comme un dépôt supplémentaire au TEXlive package manager (tlmgr) plusieurs options s'offre à vous : 
+ lancez tlmgr en ligne de commande avec l'option suivante :
+
+\type {$ tlmgr --repository http://tlcontrib.metatex.org/2010}
+
+
+ Pour la version graphique (gui), selectionnez, dans le menu tlmgr,
+ \crlf \type {Load other repository ...} et indiquez \crlf \type {http://tlcontrib.metatex.org/2010}
+\stopnarrower\blank[big]
+Puis tu fais une mise à jour. À propos le dépot TLContrib est maintenu par Taco {\sc Hoekwater}. 
+
+La version MkII devrait marcher sans problème par contre pour la version MkIV, il reste une petite configuration manuelle à effectuer. Il te faut exécuter dans un terminal les deux commandes suivante :
+
+\type{$ luatools --generate}
+  
+\type{$ context --make}
+
+\CONTEXT\ utilise des scripts en perl, ruby et lua, il faut donc que ces langages soit présents sur ta machine.
+\subsection{Ça marche ?}
+Pour vérifier si ton installation est correcte, tu crées à l'aide d'un éditeur (gedit sous Debian ou blocnote sous windows) le fichier suivant :
+\starttyping[option=TEX]
+\starttext
+Hello word.
+\stoptext
+\stoptyping
+Tu sauvegardes le fichier sous par exemple \type{essai.tex} et dans une console tu exécutes
+
+si tu veux utiliser MkIV :
+
+\type{$ context essai.tex}
+
+context est une abréviation pour
+
+\type{$ texexec --lua essai.tex}
+
+Pour utiliser MkII :
+
+\type{$ texexec essai.tex}
+
+\type{$ texexec --pdf essai.tex}
+
+\type{$ texexec --xtx essai.tex}
+
+La première commande te fourni un fichier \type{.dvi}, la seconde un fichier \type{.pdf} et la troisième utilise Xe\TeX.
+
+Avec \type{texexec} on a la première grande différence avec \LaTeX. \type{texexec} est un script en perl qui se charge de la plupart des détails de compilation, notamment :
+\startitemize[n]
+\item la nécessité de compiler un fichier plusieurs fois ;
+\item l'appel de programmes externes comme
+METAPOST ;
+\item le tri des index, des références bibliographiques, etc.
+\stopitemize
+ Tu n'as plus à te préoccuper des multiples compilations, des appels à makeindex et ce genre de chose. En une seule commande tout est fait. Par défaut texexec lance deux fois pdftex.
+
+
+
+
+\section{\CONTEXT\ et \TeX works}
+\TeX works est configuré d'origine pour pouvoir utiliser \CONTEXT, La colorattion syntaxique pour \CONTEXT\ est présente ainsi que les lanceurs pour MkII : 
+
+
+\blank
+\externalfigure[texworksLanceur.png]
+\blank
+\CONTEXT\ lance \type{texexec --pdf} et Xe\CONTEXT\ \type{texexec --xtx}
+Pour utiliser MkIV tu dois créer un lanceur. Menu {\em Édition} $\hookrightarrow$ {\em Préférence \dots} tu obtient la fenêtre suivante :
+
+\blank
+\externalfigure[texworksConfig1.png]
+\blank
+Tu cliques sur le petit +  bleu de la partie {\em Outils de traitement} et tu remplis la nouvelle fenêtre comme ci-dessous :
+Le {\em nom} tu mets ce que tu veux, {\em programme} est le chemin vers context.sh, les {\em arguments} : \type{$synctexoption} permet d'avoir la synchronisation source pdf et \type{$fullname} pour utiliser le nom complet avec l'extension.
+\blank
+\externalfigure[texworksConfig2.png]
+\blank
+J'utilise la version svn de \TeX works, donc je ne sais pas si ce que je viens de dire est valable pour des versions plus ancienne. Si tu veux installer la version svn voici la page sur le \from[svnTexworks] qui indique la marche à suivre.
+\blank
+\startalignment[middle]
+\Alert{À partir de maintenant je ne parlerais plus de MkII, et \CONTEXT\ sera égal à MkIV.}
+\stopalignment
+
+\section{Les commandes \CONTEXT}
+\subsection{Les commandes sans options}
+Rien que du très classique, voici quelques exemples :
+
+\type{{\em un texte en emphase}} donne {\em un texte en emphase}
+
+\type{\CONTEXT} = \CONTEXT
+
+\type{\crlf} pour forcer un saut de ligne.
+
+Elles sont beaucoup plus nombreuses qu'avec \LaTeX\ surtout en ce qui concerne la typographie. Il y a par exemple 9 commandes pour changer la casse d'une fonte (l'alternative entre capitale (ou majuscule) et minuscule) :
+
+\type{\cap{} \Cap{} \CAP{} \Caps{} \nocap{} \Word{} \Words{} \WORD{} \sc} 
+\subsection{Les commandes à options}
+Avec ces dernières les différences avec \LaTeX\ sont importantes. Pour l'illustrer je vais prendre l'exemple de \type{\framed{texte}} qui trace un cadre autour d'un texte.
+
+\type{\framed{texte}} = \framed{texte}
+
+Tu peux ajouter des options :
+
+\type{\framed[corner=round,framecolor=darkgreen]{texte}} = \framed[corner=round,framecolor=darkgreen]{texte}
+
+Jusque la rien de très différent avec \LaTeX. Sauf si tu commences à t'intéresser aux options. La liste est plutôt impressionnante :
+
+\starttabulate[|l|l|]
+\NC {\bf Nom}\NC {\bf valeurs}\NC \NR
+\NC height \NC 	fit broad dimension\NC \NR
+\NC width 	\NC fit broad fixed local dimension\NC \NR
+\NC autowidth 	\NC yes no force\NC \NR
+\NC offset\NC  	none overlay default dimension\NC \NR
+\NC location\NC  	depth hanging high lohi low top middle bottom\NC \NR
+\NC option\NC  	none empty\NC \NR
+\NC strut\NC  	yes no global local\NC \NR
+\NC align \NC 	no flushleft flushright middle normal high low lohi\NC \NR
+\NC bottom\NC  	command\NC \NR
+\NC top \NC 	command\NC \NR
+\NC frame\NC  	on off none overlay\NC \NR
+\NC topframe\NC  	on off\NC \NR
+\NC bottomframe \NC 	on off\NC \NR
+\NC leftframe\NC  	on off\NC \NR
+\NC rightframe\NC  	on off\NC \NR
+\NC frameoffset\NC  	dimension\NC \NR
+\NC framedepth \NC 	dimension\NC \NR
+\NC framecorner \NC 	round rectangular\NC \NR
+\NC frameradius \NC 	dimension\NC \NR
+\NC framecolor \NC 	name\NC \NR
+\NC background \NC 	screen color none foreground name\NC \NR
+\NC backgroundscreen 	\NC number\NC \NR\blank
+\NC backgroundcolor \NC 	name\NC \NR
+\NC backgroundoffset\NC  	frame dimension\NC \NR
+\NC backgrounddepth \NC 	dimension\NC \NR
+\NC backgroundcorner \NC 	round rectangular\NC \NR
+\NC backgroundradius \NC 	dimension\NC \NR
+\NC depth 	\NC dimension\NC \NR
+\NC corner\NC  	round rectangular\NC \NR
+\NC radius \NC 	dimension\NC \NR
+\NC empty\NC  	yes no\NC \NR
+\NC foregroundcolor \NC 	name\NC \NR
+\NC foregroundstyle \NC 	name\NC \NR
+\NC rulethickness \NC 	dimension\NC \NR
+\stoptabulate
+De plus si tu t'intéresses à l'option {\em corner} outre les valeurs {\em round} et {\em rectangle} tu as 28 autres possibilités, numérotées de 00 à 28. Par exemple 
+
+\type{\framed[corner=08,framecolor=darkgreen]{texte}} = \framed[corner=08,framecolor=darkgreen]{texte}
+\blank
+ou bien
+\type{\framed[corner=20,framecolor=darkgreen]{texte}} = \framed[corner=20,framecolor=darkgreen]{texte}
+\blank
+Tu trouveras sur \from[wikiFrame] le résultat des autres numéros. De quoi régler finement tes encadrements de texte.
+\subsubsection{\type{setupQuelquechose}}
+
+Toutes les commandes qui présentent des possibilités de réglage, possèdent une commande du type \type{\setupNomCommande[variable1=valeur1, variable2=valeur2, option1, option2,...]} qui permettent de régler les options dans le préambule du source, pour affecter toutes les commandes du document. Par exemple si l'on reprend {\em framed} :
+
+\type{\setupframed[....]}
+\subsubsection{\type{defineQuelquechose}}
+
+Elles présentent également la commande \type{\defineNomCommande} qui permet de définir ces propres éléments. Si tu places dans le préambule de ton source les commandes suivantes :
+\starttyping[option=TEX]
+\defineframed[cadreVert][framecolor=darkgreen]
+\defineframed[boiteBleue][frame=off,background=color,
+backgroundcolor=blue]
+\stoptyping
+Maintenant dans ton texte tu peux utiliser \type{\cadreVert{texte}} pour obtenir \cadreVert{texte} et \type{\boiteBleue{texte}} pour \boiteBleue{texte}.
+
+
+\subsection{Attention à la façon d'écrire les options}
+
+Pour faciliter l'écriture des réglages tu peux passer à la ligne entre les [ ] et même entre les options. Tu peux écrire :
+\starttyping[option=TEX]
+\defineframed
+[cadreVert]
+[framecolor=darkgreen]
+\stoptyping
+ou bien
+\starttyping[option=TEX]
+\defineframed[boiteBleue]
+[frame=off,
+background=color,
+backgroundcolor=blue]
+\stoptyping
+Par contre attention aux espaces, tu ne peux en mettre qu'après la virgule, jamais avant, ni entourant le signe égal ni avant le crochet terminal ]. Donc pas de saut de ligne avant une virgule et le ]. Tous les exemples suivant ne donneront pas le résultat escompté.
+\starttyping[option=TEX]
+\defineframed[boiteBleue][background=color ,backgroundcolor=blue]
+
+\defineframed[boiteBleue][background=color,backgroundcolor=blue ]
+
+\defineframed[boiteBleue][background = color,backgroundcolor= blue]
+\stoptyping
+\page
+\starttyping[option=TEX]
+\defineframed[boiteBleue][frame=off
+,background=color,backgroundcolor=blue]
+
+\defineframed[boiteBleue][frame=off,
+background=color,backgroundcolor=blue 
+]
+\stoptyping
+Donc en gros évite les espaces et passe à la ligne uniquement après une virgule. Une ligne blanche à l'intérieur de la commande, provoque également une erreur.
+
+%Certaine commandes présentent une autre façon de définir plusieurs éléments ayant des caractéristiques différentes. C'est le cas de la commande {\em inmargin} qui permet d'écrire dans la marge \type{\inmargin{texte}}.\inmargin[after=\blank]{texte}\margintext[1]{le 1}\margintext[2]{le 2}\margintext[3]{le 3} La commande qui règle les options \type{\setupinmargin[option a][option b]} possède un groupe d'option supplémentaire (option a) qui ne peut prendre comme valeur que {\em left right nombre}. Ce groupe d'option est lui-même optionnel, tu peux utiliser \type{\setupinmargin[option b]}. Le groupe option b présente le même fonctionnement\setupinmargin[1][align=right,  line=1,style=slanted] que les option de {\em framed}, vue ci-dessus.
+%
+%Les option {\em left right} permette de régler séparément le comportement des texte dans les marges de gauche et de droite. L'option {\em nombre} va permettre de définir plusieurs comportement numéroté de 1, 2 à n qui affecteront dans l'ordre les différents {\em inmarin}. Un petit exemple les commandes suivante dans le préambule :
+%\starttyping[option=TEX]
+%\setupinmargin[1][align=right,  line=1,style=slanted]
+%\setupinmargin[2][align=middle,line=2,style=boldslanted]
+%\setupinmargin[3][align=left,    line=3,style=bold]
+%\stoptyping
+%vont provoquer si je met dans mon texte \type{\inmargin{le 1} \inmargin{le 2} 
+%\inmargin{le 3}}
+%
+%  le résultat que tu peux voir dans la marge.
+
+
+\section{les start\dots stop\dots}
+Beaucoup de modificateurs typographiques sont sous la forme
+\starttyping[option=TEX]
+\startquelquechose
+.....
+\stopquelquechose
+\stoptyping
+
+C'est un peu l'équivalent des environnements sous \LaTeX\ 
+\starttyping[option=TEX]
+\begin{environnement}
+.....
+\end{environnement}
+\stoptyping
+
+Ils acceptent un ou plusieurs groupes d'options
+\starttyping[option=TEX]
+\startquelquechose[liste options a][liste options b]
+.....
+\stopquelquechose
+\stoptyping
+Tu peux également prédéfinir leur comportement dans le préambule à l'aide de la commande 
+\starttyping[option=TEX]
+\setupquelquechose[liste options a][liste options b]
+\stoptyping
+Et tu peux définir tes propres start-stop à l'aide de 
+\starttyping[option=TEX]
+\definetyping[Raoul][liste options]
+\stoptyping
+que tu utilises comme ceci :
+\starttyping[option=TEX]
+\startRaoul
+.......
+\stopRaoul
+\stoptyping
+\section{Une autre façon de faire du \TeX}
+Tu vois bien qu'avec cet ensemble de commandes, tu vas pouvoir fabriquer un certain nombre d'objets qui vont participer à l'élaboration de ton document. De toute façon tu n'as pas le choix, car contrairement à \LaTeX\ et ses nombreux packages, avec \CONTEXT\ tu ne trouveras pas de modules tout fait pour t'aider. Par contre l'importance du degré de configuration vas te permette de faire exactement ce que tu veux où tu veux, enfin j'espère et c'est pour cette raison que je me lance dans \CONTEXT.
+
+\section{Quelques remarques avant de réaliser son premier source}
+Si grâce aux multiples options tu peux paramétrer très finement ton document, avec \CONTEXT, il n'existe pas de module pré-fabriqué comme les classes book, article ou les classes koma. Tu dois fabriquer ta mise en page toi-même. La francisation n'est pas très poussée non plus, te ne trouveras rien d'équivalent à {\em french} et {\em babel}. Tu peux tout de même indiquer dans le préambule de ton source la commande :
+\type{\mainlanguage[fr]}, qui aura pour effet de franciser les {\it chapter} en chapitre et de remplacer les \type{' ‘} en «
+» quand tu utilises \type{\quote}. Pour l'instant je n'en sais pas plus sur la francisation des documents avec \CONTEXT.
+
+\CONTEXT\ travail directement en \type{utf8} donc tu n'as pas d'encodage à préciser comme les trucs \LaTeX iens  :
+\starttyping[option=TEX]
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\stoptyping
+
+\section{Conclusion}
+Nous voila au bout de cette première fiche consacrée à \CONTEXT. Elle ne permet pas d'aller bien loin dans l'apprentissage de \CONTEXT, mais son but est de découvrir \CONTEXT\ d'en comprendre la philosophie et de te faire une petite idée, afin que tu puisses te rendre compte si toi aussi tu vas te lancer dans son apprentissage.
+
+Un document \CONTEXT\ de base n'a besoin que des deux balises suivantes :
+\starttyping[option=TEX]
+\starttext
+
+\stoptext
+\stoptyping
+Entre les deux, tu places ton texte et tu peux le compiler. Pour l'agrémenter un peu plus tu peux utiliser les balises de sectionnement que tu utilises avec \LaTeX (\type{\section{}, \chapter{}, \subsection{}},\dots).
+
+
+
+
+
+\stoptext
