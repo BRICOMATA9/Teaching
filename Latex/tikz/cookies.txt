@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-bertrandmasson.free.fr	TRUE	/	FALSE	1999999999	PHPSESSID	4a262bcda07fdf7091543b264645ee2e
-
